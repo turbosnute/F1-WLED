@@ -4,7 +4,7 @@ while :
 do
   date
   echo "--- Start F1-WLED App"
-  python3 f1-wled.py
+  python3 /app/f1wled.py
   RET=$?
   if [ ${RET} -ne 0 ];
   then
