@@ -14,6 +14,7 @@ WORKDIR /app/
 COPY /src/* /app/
 
 # Install requirements
+COPY /requirements.txt .
 RUN pip3 install --no-cache-dir -r requirements.txt
 
 # Clean Up

@@ -20,6 +20,7 @@ sudo docker run -it f1-wled bash
 ```
 
 ## TO-DO
+- Run deploy.py in dockerfile
 - Add environment variables with default values.
 - Decode data from livetiming signalr?
 - Write function in clientmod.py that calls the WLED API instead of writing to a file.
