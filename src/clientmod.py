@@ -132,7 +132,7 @@ class SignalRClientMod:
                 if 'Messages' in json_obj['R']['RaceControlMessages']:
                     # Messages exists!
                     for message in json_obj['R']['RaceControlMessages']['Messages']:
-                        # Message exists!
+                        # Loop through messages
                         if message['Category'] == 'Flag':
                             if message['Flag'] == 'GREEN':
                                 print(Fore.GREEN + "Green Flag" + Fore.RESET + " " + message['Message'])
@@ -141,11 +141,11 @@ class SignalRClientMod:
                             elif message['Flag'] == 'RED':
                                 print(Fore.RED + "Red Flag" + Fore.RESET)
                             elif message['Flag'] == 'CLEAR':
-                                print(Fore.GREEN + "Clear Flag" + Fore.RESET + " " + message['Message'])
+                                print(Fore.CYAN + "Clear Flag" + Fore.RESET + " " + message['Message'])
                             elif message['Flag'] == 'CHEQUERED':
                                 print(Fore.MAGENTA + "Chequered Flag" + Fore.RESET + " " + message['Message'])
                         elif message['Category'] == 'SafetyCar':
-                            print(Fore.YELLOW + "Safety Car" + Fore.RESET + " " + message['Message'])
+                            print(Back.YELLOW + "Safety Car" + Back.RESET + " " + message['Message'])
 
 
     def _to_file(self, msg):
