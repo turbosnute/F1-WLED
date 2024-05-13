@@ -14,11 +14,15 @@ WORKDIR /app/
 COPY /src/* /app/
 
 # Install requirements
-COPY /requirements.txt .
-RUN pip3 install --no-cache-dir -r requirements.txt
+#COPY /requirements.txt .
+#RUN pip3 install --no-cache-dir -r requirements.txt
+RUN pip3 install --no-cache-dir fastf1==3.3.5
+
+# Deploy Code
+RUN bash /app/deploy.sh
 
 # Clean Up
-RUN rm /app/requirements.txt /app/deploy.py
+RUN rm /app/deploy.sh
 
 # Permissions
 RUN chmod 755 /app/app.sh

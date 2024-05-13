@@ -82,14 +82,16 @@ class SignalRClientMod:
         self.headers = {'User-agent': 'BestHTTP',
                         'Accept-Encoding': 'gzip, identity',
                         'Connection': 'keep-alive, Upgrade'}
+        
+        #self.topics = ["Heartbeat", "CarData.z", "Position.z",
+        #               "ExtrapolatedClock", "TopThree", "RcmSeries",
+        #               "TimingStats", "TimingAppData",
+        #               "WeatherData", "TrackStatus", "DriverList",
+        #               "RaceControlMessages", "SessionInfo",
+        #               "SessionData", "LapCount", "TimingData"]
 
-        self.topics = ["Heartbeat", "CarData.z", "Position.z",
-                       "ExtrapolatedClock", "TopThree", "RcmSeries",
-                       "TimingStats", "TimingAppData",
-                       "WeatherData", "TrackStatus", "DriverList",
-                       "RaceControlMessages", "SessionInfo",
-                       "SessionData", "LapCount", "TimingData"]
-
+        self.topics = ["RaceControlMessages"]   
+         
         self.debug = debug
         self.filename = filename
         self.filemode = filemode
