@@ -1,6 +1,6 @@
 # F1-WLED
 
-## THIS THIGN IS NOT YET WORKING
+## THIS THING IS NOT YET WORKING
 
 ## Requirements
 - WLED lamp/panel/something with API and presets for Green, yellow, red, chequered flag + safetycar.
