@@ -3,16 +3,16 @@ import concurrent.futures
 import json
 import logging
 import time
+
 from typing import (
     Iterable,
     Optional
 )
-
+from colorama import Fore, Back, Style
 import requests
 
 import fastf1
 from fastf1.signalr_aio import Connection
-
 
 def messages_from_raw(r: Iterable):
     """Extract data messages from raw recorded SignalR data.
@@ -91,7 +91,7 @@ class SignalRClientMod:
         #               "SessionData", "LapCount", "TimingData"]
 
         self.topics = ["RaceControlMessages"]   
-         
+
         self.debug = debug
         self.filename = filename
         self.filemode = filemode
@@ -109,6 +109,18 @@ class SignalRClientMod:
         self._output_file = None
         self._t_last_message = None
 
+    
+    def fix_json(self, msg):
+        msg = msg.replace("'", '"') \
+            .replace('True', 'true') \
+            .replace('False', 'false')
+        return msg
+
+    def _to_wled(self, msg):
+        # this should contact wled api
+        print(Fore.YELLOW + msg + " <-|-> " + Fore.RESET)
+        print(Fore.BLUE + self.fix_json(msg) + Fore.RESET)
+
     def _to_file(self, msg):
         self._output_file.write(msg + '\n')
         self._output_file.flush()
@@ -124,7 +136,7 @@ class SignalRClientMod:
         try:
             with concurrent.futures.ThreadPoolExecutor() as pool:
                 await loop.run_in_executor(
-                    pool, self._to_file, str(msg)
+                    pool, self._to_wled, str(msg)
                 )
         except Exception:
             self.logger.exception("Exception while writing message to file")
@@ -137,7 +149,7 @@ class SignalRClientMod:
         try:
             with concurrent.futures.ThreadPoolExecutor() as pool:
                 await loop.run_in_executor(
-                    pool, self._to_file, str(data)
+                    pool, self._to_wled, str(data)
                 )
         except Exception:
             self.logger.exception("Exception while writing message to file")
