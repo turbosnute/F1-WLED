@@ -118,8 +118,35 @@ class SignalRClientMod:
 
     def _to_wled(self, msg):
         # this should contact wled api
-        print(Fore.YELLOW + msg + " <-|-> " + Fore.RESET)
-        print(Fore.BLUE + self.fix_json(msg) + Fore.RESET)
+        #print(Fore.YELLOW + msg + " <-|-> " + Fore.RESET)
+        #Debug:
+        print(Fore.CYAN + self.fix_json(msg) + Fore.RESET)
+        #Fix and load json
+        msg = self.fix_json(msg)
+        json_obj = json.loads(msg)
+
+        if 'R' in json_obj:
+            # R
+            if 'RaceControlMessages' in json_obj['R']:
+                # RaceControlMessages exists!
+                if 'Messages' in json_obj['R']['RaceControlMessages']:
+                    # Messages exists!
+                    for message in json_obj['R']['RaceControlMessages']['Messages']:
+                        # Message exists!
+                        if message['Category'] == 'Flag':
+                            if message['Flag'] == 'GREEN':
+                                print(Fore.GREEN + "Green Flag" + Fore.RESET + " " + message['Message'])
+                            elif message['Flag'] == 'YELLOW':
+                                print(Fore.YELLOW + "Yellow Flag" + Fore.RESET + " " + message['Message'])
+                            elif message['Flag'] == 'RED':
+                                print(Fore.RED + "Red Flag" + Fore.RESET)
+                            elif message['Flag'] == 'CLEAR':
+                                print(Fore.GREEN + "Clear Flag" + Fore.RESET + " " + message['Message'])
+                            elif message['Flag'] == 'CHEQUERED':
+                                print(Fore.MAGENTA + "Chequered Flag" + Fore.RESET + " " + message['Message'])
+                        elif message['Category'] == 'SafetyCar':
+                            print(Fore.YELLOW + "Safety Car" + Fore.RESET + " " + message['Message'])
+
 
     def _to_file(self, msg):
         self._output_file.write(msg + '\n')

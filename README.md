@@ -24,7 +24,6 @@ sudo docker run -it f1-wled bash
 ```
 
 ## TO-DO
-- Add environment variables with default values.
-- Decode data from livetiming signalr?
+- Script should look for "TRACK CLEAR" message to turn off SC light.
 - Write function in clientmod.py that calls the WLED API instead of writing to a file.
 - wrapper script should be automatically ran when container starts.
