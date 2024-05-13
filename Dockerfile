@@ -10,19 +10,15 @@ ENV PATH="/opt/venv/bin:$PATH"
 RUN mkdir /app/
 WORKDIR /app/
 
+# Install requirements
+COPY /requirements.txt .
+RUN pip3 install --no-cache-dir -r requirements.txt
+
 # Copy Code
 COPY /src/* /app/
 
-# Install requirements
-#COPY /requirements.txt .
-#RUN pip3 install --no-cache-dir -r requirements.txt
-RUN pip3 install --no-cache-dir fastf1==3.3.5
-
 # Deploy Code
-RUN bash /app/deploy.sh
-
-# Clean Up
-RUN rm /app/deploy.sh
+RUN bash /app/deploy.sh && rm /app/deploy.sh
 
 # Permissions
-RUN chmod 755 /app/app.sh
+RUN chmod 755 /app/app.sh /app/f1wled.py
