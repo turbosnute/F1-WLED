@@ -24,6 +24,4 @@ sudo docker run -it -e WLED_GREEN=9 -e WLED_RED=8 -e WLED_YELLOW=10 -e WLED_SC=7
 ```
 
 ## TO-DO
-- Script should look for "TRACK CLEAR" message to turn off SC light.
-- Write function in clientmod.py that calls the WLED API instead of writing to a file.
 - wrapper script should be automatically ran when container starts.
