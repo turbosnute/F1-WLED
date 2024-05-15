@@ -193,26 +193,20 @@ class SignalRClientMod:
     async def _on_message(self, msg):
         self._t_last_message = time.time()
         loop = asyncio.get_running_loop()
-        try:
-            with concurrent.futures.ThreadPoolExecutor() as pool:
-                await loop.run_in_executor(
-                    pool, self._to_wled, str(msg)
-                )
-        except Exception:
-            self.logger.exception("Exception while writing message to file")
+        with concurrent.futures.ThreadPoolExecutor() as pool:
+            await loop.run_in_executor(
+                pool, self._to_wled, str(msg)
+            )
 
     async def _on_debug(self, **data):
         if 'M' in data and len(data['M']) > 0:
             self._t_last_message = time.time()
 
         loop = asyncio.get_running_loop()
-        try:
-            with concurrent.futures.ThreadPoolExecutor() as pool:
-                await loop.run_in_executor(
-                    pool, self._to_wled, str(data)
-                )
-        except Exception:
-            self.logger.exception("Exception while writing message to file")
+        with concurrent.futures.ThreadPoolExecutor() as pool:
+            await loop.run_in_executor(
+                pool, self._to_wled, str(data)
+            )
 
     async def _run(self):
         self._output_file = open(self.filename, self.filemode)
