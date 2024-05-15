@@ -77,7 +77,7 @@ class SignalRClientMod:
     _connection_url = 'https://livetiming.formula1.com/signalr'
 
     def __init__(self, filename: str, filemode: str = 'w', debug: bool = False,
-                 timeout: int = 60, logger: Optional = None):
+                 timeout: int = 60, logger: Optional = None, WLED_HOST: str, WLED_GREEN: int, WLED_YELLOW: int, WLED_RED: int, WLED_CHEQUERED: int, WLED_SC: int):
 
         self.headers = {'User-agent': 'BestHTTP',
                         'Accept-Encoding': 'gzip, identity',
@@ -121,6 +121,10 @@ class SignalRClientMod:
         #print(Fore.YELLOW + msg + " <-|-> " + Fore.RESET)
         #Debug:
         print(Fore.CYAN + self.fix_json(msg) + Fore.RESET)
+
+        baseuri = "http://" + WLED_HOST + "/win&PL="
+        #http://192.168.137.17/win&PL=3
+
         #Fix and load json
         msg = self.fix_json(msg)
         json_obj = json.loads(msg)
@@ -136,17 +140,31 @@ class SignalRClientMod:
                         if message['Category'] == 'Flag':
                             if message['Flag'] == 'GREEN':
                                 print(Fore.GREEN + "Green Flag" + Fore.RESET + " " + message['Message'])
+                                preset = 9
                             elif message['Flag'] == 'YELLOW':
                                 print(Fore.YELLOW + "Yellow Flag" + Fore.RESET + " " + message['Message'])
+                                preset = 10
                             elif message['Flag'] == 'RED':
                                 print(Fore.RED + "Red Flag" + Fore.RESET)
+                                preset = 8
                             elif message['Flag'] == 'CLEAR':
                                 print(Fore.CYAN + "Clear Flag" + Fore.RESET + " " + message['Message'])
                             elif message['Flag'] == 'CHEQUERED':
                                 print(Fore.MAGENTA + "Chequered Flag" + Fore.RESET + " " + message['Message'])
+                                preset = 9
                         elif message['Category'] == 'SafetyCar':
                             print(Back.YELLOW + "Safety Car" + Back.RESET + " " + message['Message'])
+                            preset = 7
+                        # Build the URL
+                        url = f"http://{WLED_HOST}/win&PL={preset}"
 
+                        # Send the GET request
+                        if WLED_HOST != '':
+                            response = requests.get(url)
+                        else:
+                            print("WLED_HOST not set")
+
+                        response = requests.get(url)
 
     def _to_file(self, msg):
         self._output_file.write(msg + '\n')
