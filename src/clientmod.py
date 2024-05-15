@@ -176,8 +176,13 @@ class SignalRClientMod:
                         url = "http://" + self.WLED_HOST + "/win&PL=" + str(preset)
                         # Send the GET request
                         if self.WLED_HOST != '' and preset != 0:
-                            #response = requests.get(url)
-                            print(Fore.RED, url, Fore.RESET)
+                            try:
+                                print(Fore.RED, url, Fore.RESET)
+                                # Try to send a GET request
+                                response = requests.get(url)
+                            except requests.exceptions.RequestException as e:
+                                # Handle the exception
+                                print(f"An error occurred: {e}")
                         elif self.WLED_HOST == '':
                             print("WLED_HOST not set")
 
@@ -193,26 +198,20 @@ class SignalRClientMod:
     async def _on_message(self, msg):
         self._t_last_message = time.time()
         loop = asyncio.get_running_loop()
-        try:
-            with concurrent.futures.ThreadPoolExecutor() as pool:
-                await loop.run_in_executor(
-                    pool, self._to_wled, str(msg)
-                )
-        except Exception:
-            self.logger.exception("Exception while writing message to file")
+        with concurrent.futures.ThreadPoolExecutor() as pool:
+            await loop.run_in_executor(
+                pool, self._to_wled, str(msg)
+            )
 
     async def _on_debug(self, **data):
         if 'M' in data and len(data['M']) > 0:
             self._t_last_message = time.time()
 
         loop = asyncio.get_running_loop()
-        try:
-            with concurrent.futures.ThreadPoolExecutor() as pool:
-                await loop.run_in_executor(
-                    pool, self._to_wled, str(data)
-                )
-        except Exception:
-            self.logger.exception("Exception while writing message to file")
+        with concurrent.futures.ThreadPoolExecutor() as pool:
+            await loop.run_in_executor(
+                pool, self._to_wled, str(data)
+            )
 
     async def _run(self):
         self._output_file = open(self.filename, self.filemode)
