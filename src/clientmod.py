@@ -76,7 +76,7 @@ class SignalRClientMod:
     """
     _connection_url = 'https://livetiming.formula1.com/signalr'
 
-    def __init__(self, filename: str, WLED_GREEN: int, WLED_YELLOW: int, WLED_RED: int, WLED_CHEQUERED: int, WLED_SC: int, WLED_HOST: str = '', filemode: str = 'w', debug: bool = False,
+    def __init__(self, filename: str, WLED_GREEN: int, WLED_TRACKCLEAR: int, WLED_YELLOW: int, WLED_RED: int, WLED_CHEQUERED: int, WLED_SC: int, WLED_HOST: str = '', filemode: str = 'w', debug: bool = False,
                  timeout: int = 60, logger: Optional = None):
 
         self.headers = {'User-agent': 'BestHTTP',
@@ -92,6 +92,7 @@ class SignalRClientMod:
 
         self.topics = ["RaceControlMessages"]   
         self.WLED_GREEN = WLED_GREEN
+        self.WLED_TRACKCLEAR = WLED_TRACKCLEAR
         self.WLED_YELLOW = WLED_YELLOW
         self.WLED_RED = WLED_RED
         self.WLED_CHEQUERED = WLED_CHEQUERED
@@ -142,16 +143,16 @@ class SignalRClientMod:
         if 'R' in json_obj:
             # R
             if 'RaceControlMessages' in json_obj['R']:
-                print(Fore.MAGENTA + "RaceControlMessages" + Fore.RESET)
-                self.logger.info("RaceControlMessages")
+                #print(Fore.MAGENTA + "RaceControlMessages" + Fore.RESET)
+                #self.logger.info("RaceControlMessages")
                 # RaceControlMessages exists!
                 if 'Messages' in json_obj['R']['RaceControlMessages']:
-                    print(Fore.MAGENTA + "Messages" + Fore.RESET)
-                    self.logger.info("Messages")
+                    #print(Fore.MAGENTA + "Messages" + Fore.RESET)
+                    #self.logger.info("Messages")
                     # Messages exists!
                     for message in json_obj['R']['RaceControlMessages']['Messages']:
-                        print(Fore.MAGENTA + "Message" + Fore.RESET)
-                        self.logger.debug("Message")
+                        #print(Fore.MAGENTA + "Message" + Fore.RESET)
+                        #self.logger.debug("Message")
                         # Loop through messages
                         if message['Category'] == 'Flag':
                             if message['Flag'] == 'GREEN':
@@ -164,16 +165,21 @@ class SignalRClientMod:
                                 print(Fore.RED + "Red Flag" + Fore.RESET)
                                 preset = self.WLED_RED
                             elif message['Flag'] == 'CLEAR':
-                                print(Fore.CYAN + "Clear Flag" + Fore.RESET + " " + message['Message'])
-                                preset = self.WLED_GREEN
+                                if message['Message'] == 'TRACK CLEAR':
+                                   print(Fore.CYAN + "Clear Flag" + Fore.RESET + " " + message['Message'])
+                                   preset = self.WLED_TRACKCLEAR
+                                else:
+                                   print(Back.CYAN + Fore.Black + message['Message'] + Fore.RESET + Back.RESET)
+                                   preset = 0
                             elif message['Flag'] == 'CHEQUERED':
                                 print(Fore.MAGENTA + "Chequered Flag" + Fore.RESET + " " + message['Message'])
                                 preset = self.WLED_CHEQUERED
                             else:
                                 preset = 0
+                                print(Fore.MAGENTA + message['Message'] + Fore.RESET)
                         elif message['Category'] == 'SafetyCar':
                             print(Back.YELLOW + "Safety Car" + Back.RESET + " " + message['Message'])
-                            preset = 7
+                            preset = self.WLED_SC
                         else:
                             preset = 0
                         # Build the URL
@@ -184,6 +190,7 @@ class SignalRClientMod:
                                 print(Fore.RED, url, Fore.RESET)
                                 #Try to send a GET request
                                 response = requests.get(url, timeout=1)
+                                time.sleep(3)
                             except requests.exceptions.RequestException as e:
                                 # Handle the exception
                                 continue
@@ -271,3 +278,4 @@ class SignalRClientMod:
         except KeyboardInterrupt:
             self.logger.warning("Keyboard interrupt - exiting...")
             return
+
