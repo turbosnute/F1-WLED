@@ -176,8 +176,13 @@ class SignalRClientMod:
                         url = "http://" + self.WLED_HOST + "/win&PL=" + str(preset)
                         # Send the GET request
                         if self.WLED_HOST != '' and preset != 0:
-                            #response = requests.get(url)
-                            print(Fore.RED, url, Fore.RESET)
+                            try:
+                                print(Fore.RED, url, Fore.RESET)
+                                # Try to send a GET request
+                                response = requests.get(url)
+                            except requests.exceptions.RequestException as e:
+                                # Handle the exception
+                                print(f"An error occurred: {e}")
                         elif self.WLED_HOST == '':
                             print("WLED_HOST not set")
 
