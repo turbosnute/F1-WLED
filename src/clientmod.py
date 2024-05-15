@@ -156,18 +156,19 @@ class SignalRClientMod:
                         if message['Category'] == 'Flag':
                             if message['Flag'] == 'GREEN':
                                 print(Fore.GREEN + "Green Flag" + Fore.RESET + " " + message['Message'])
-                                preset = 9
+                                preset = self.WLED_GREEN
                             elif message['Flag'] == 'YELLOW':
                                 print(Fore.YELLOW + "Yellow Flag" + Fore.RESET + " " + message['Message'])
-                                preset = 10
+                                preset = self.WLED_YELLOW
                             elif message['Flag'] == 'RED':
                                 print(Fore.RED + "Red Flag" + Fore.RESET)
-                                preset = 8
+                                preset = self.WLED_RED
                             elif message['Flag'] == 'CLEAR':
                                 print(Fore.CYAN + "Clear Flag" + Fore.RESET + " " + message['Message'])
+                                preset = self.WLED_GREEN
                             elif message['Flag'] == 'CHEQUERED':
                                 print(Fore.MAGENTA + "Chequered Flag" + Fore.RESET + " " + message['Message'])
-                                preset = 9
+                                preset = self.WLED_CHEQUERED
                             else:
                                 preset = 0
                         elif message['Category'] == 'SafetyCar':
@@ -182,7 +183,7 @@ class SignalRClientMod:
                             try:
                                 print(Fore.RED, url, Fore.RESET)
                                 #Try to send a GET request
-                                response = requests.get(url, timeout=3)
+                                response = requests.get(url, timeout=1)
                             except requests.exceptions.RequestException as e:
                                 # Handle the exception
                                 continue
