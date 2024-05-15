@@ -76,8 +76,8 @@ class SignalRClientMod:
     """
     _connection_url = 'https://livetiming.formula1.com/signalr'
 
-    def __init__(self, filename: str, filemode: str = 'w', debug: bool = False,
-                 timeout: int = 60, logger: Optional = None, WLED_HOST: str, WLED_GREEN: int, WLED_YELLOW: int, WLED_RED: int, WLED_CHEQUERED: int, WLED_SC: int):
+    def __init__(self, filename: str, WLED_GREEN: int, WLED_YELLOW: int, WLED_RED: int, WLED_CHEQUERED: int, WLED_SC: int, WLED_HOST: str = '', filemode: str = 'w', debug: bool = False,
+                 timeout: int = 60, logger: Optional = None):
 
         self.headers = {'User-agent': 'BestHTTP',
                         'Accept-Encoding': 'gzip, identity',
@@ -91,12 +91,19 @@ class SignalRClientMod:
         #               "SessionData", "LapCount", "TimingData"]
 
         self.topics = ["RaceControlMessages"]   
+        self.WLED_GREEN = WLED_GREEN
+        self.WLED_YELLOW = WLED_YELLOW
+        self.WLED_RED = WLED_RED
+        self.WLED_CHEQUERED = WLED_CHEQUERED
+        self.WLED_SC = WLED_SC
+        self.WLED_HOST = WLED_HOST
 
         self.debug = debug
         self.filename = filename
         self.filemode = filemode
         self.timeout = timeout
         self._connection = None
+
 
         if not logger:
             logging.basicConfig(
@@ -122,20 +129,26 @@ class SignalRClientMod:
         #Debug:
         print(Fore.CYAN + self.fix_json(msg) + Fore.RESET)
 
-        baseuri = "http://" + WLED_HOST + "/win&PL="
+        baseuri = "http://" + self.WLED_HOST + "/win&PL="
         #http://192.168.137.17/win&PL=3
+
 
         #Fix and load json
         msg = self.fix_json(msg)
         json_obj = json.loads(msg)
 
+        preset = 0
+
         if 'R' in json_obj:
             # R
             if 'RaceControlMessages' in json_obj['R']:
+                print(Fore.MAGENTA + "RaceControlMessages" + Fore.RESET)
                 # RaceControlMessages exists!
                 if 'Messages' in json_obj['R']['RaceControlMessages']:
+                    print(Fore.MAGENTA + "Messages" + Fore.RESET)
                     # Messages exists!
                     for message in json_obj['R']['RaceControlMessages']['Messages']:
+                        print(Fore.MAGENTA + "Message" + Fore.RESET)
                         # Loop through messages
                         if message['Category'] == 'Flag':
                             if message['Flag'] == 'GREEN':
@@ -152,19 +165,21 @@ class SignalRClientMod:
                             elif message['Flag'] == 'CHEQUERED':
                                 print(Fore.MAGENTA + "Chequered Flag" + Fore.RESET + " " + message['Message'])
                                 preset = 9
+                            else:
+                                preset = 0
                         elif message['Category'] == 'SafetyCar':
                             print(Back.YELLOW + "Safety Car" + Back.RESET + " " + message['Message'])
                             preset = 7
-                        # Build the URL
-                        url = f"http://{WLED_HOST}/win&PL={preset}"
-
-                        # Send the GET request
-                        if WLED_HOST != '':
-                            response = requests.get(url)
                         else:
+                            preset = 0
+                        # Build the URL
+                        url = "http://" + self.WLED_HOST + "/win&PL=" + str(preset)
+                        # Send the GET request
+                        if self.WLED_HOST != '' and preset != 0:
+                            #response = requests.get(url)
+                            print(Fore.RED, url, Fore.RESET)
+                        elif self.WLED_HOST == '':
                             print("WLED_HOST not set")
-
-                        response = requests.get(url)
 
     def _to_file(self, msg):
         self._output_file.write(msg + '\n')
