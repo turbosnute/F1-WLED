@@ -143,12 +143,15 @@ class SignalRClientMod:
             # R
             if 'RaceControlMessages' in json_obj['R']:
                 print(Fore.MAGENTA + "RaceControlMessages" + Fore.RESET)
+                self.logger.info("RaceControlMessages")
                 # RaceControlMessages exists!
                 if 'Messages' in json_obj['R']['RaceControlMessages']:
                     print(Fore.MAGENTA + "Messages" + Fore.RESET)
+                    self.logger.info("Messages")
                     # Messages exists!
                     for message in json_obj['R']['RaceControlMessages']['Messages']:
                         print(Fore.MAGENTA + "Message" + Fore.RESET)
+                        self.logger.debug("Message")
                         # Loop through messages
                         if message['Category'] == 'Flag':
                             if message['Flag'] == 'GREEN':
@@ -178,11 +181,11 @@ class SignalRClientMod:
                         if self.WLED_HOST != '' and preset != 0:
                             try:
                                 print(Fore.RED, url, Fore.RESET)
-                                # Try to send a GET request
-                                response = requests.get(url)
+                                #Try to send a GET request
+                                response = requests.get(url, timeout=3)
                             except requests.exceptions.RequestException as e:
                                 # Handle the exception
-                                print(f"An error occurred: {e}")
+                                continue
                         elif self.WLED_HOST == '':
                             print("WLED_HOST not set")
 
