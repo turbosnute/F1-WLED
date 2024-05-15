@@ -11,7 +11,7 @@ sudo docker build -t f1-wled .
 ```
 
 ## Environment Variables
-- WLED_SERVER (String)
+- WLED_HOST (String)
 - YELLOW (integer)
 - RED (integer)
 - GREEN (integer)
@@ -20,7 +20,7 @@ sudo docker build -t f1-wled .
 
 ## Run
 ```
-sudo docker run -it f1-wled bash
+sudo docker run -it -e WLED_GREEN=9 -e WLED_RED=8 -e WLED_YELLOW=10 -e WLED_SC=7 -e WLED_CHEQUERED=9 -e WLED_HOST="192.168.137.17" f1-wled /app/f1wled.py
 ```
 
 ## TO-DO
