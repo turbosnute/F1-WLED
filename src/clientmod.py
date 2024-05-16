@@ -158,7 +158,7 @@ class SignalRClientMod:
                             if message['Flag'] == 'GREEN':
                                 print(Fore.GREEN + "Green Flag" + Fore.RESET + " " + message['Message'])
                                 preset = self.WLED_GREEN
-                            elif message['Flag'] == 'YELLOW':
+                            elif message['Flag'] == 'YELLOW' or message['Flag'] == 'DOUBLE YELLOW':
                                 print(Fore.YELLOW + "Yellow Flag" + Fore.RESET + " " + message['Message'])
                                 preset = self.WLED_YELLOW
                             elif message['Flag'] == 'RED':
@@ -190,7 +190,7 @@ class SignalRClientMod:
                                 print(Fore.RED, url, Fore.RESET)
                                 #Try to send a GET request
                                 response = requests.get(url, timeout=1)
-                                time.sleep(3)
+                                #time.sleep(3)
                             except requests.exceptions.RequestException as e:
                                 # Handle the exception
                                 continue
