@@ -138,8 +138,9 @@ class SignalRClientMod:
         msg = self.fix_json(msg)
         json_obj = json.loads(msg)
 
+        # Initialize variables
         preset = 0
-
+        messages = None
 
         if 'R' in json_obj:
             # R
@@ -151,52 +152,57 @@ class SignalRClientMod:
                     #print(Fore.MAGENTA + "Messages" + Fore.RESET)
                     #self.logger.info("Messages")
                     # Messages exists!
-                    for message in json_obj['R']['RaceControlMessages']['Messages']:
-                        #print(Fore.MAGENTA + "Message" + Fore.RESET)
-                        #self.logger.debug("Message")
-                        # Loop through messages
-                        if message['Category'] == 'Flag':
-                            if message['Flag'] == 'GREEN':
-                                print(Fore.GREEN + "Green Flag" + Fore.RESET + " " + message['Message'])
-                                preset = self.WLED_GREEN
-                            elif message['Flag'] == 'YELLOW' or message['Flag'] == 'DOUBLE YELLOW':
-                                print(Fore.YELLOW + "Yellow Flag" + Fore.RESET + " " + message['Message'])
-                                preset = self.WLED_YELLOW
-                            elif message['Flag'] == 'RED':
-                                print(Fore.RED + "Red Flag" + Fore.RESET)
-                                preset = self.WLED_RED
-                            elif message['Flag'] == 'CLEAR':
-                                if message['Message'] == 'TRACK CLEAR':
-                                    print(Fore.CYAN + "Clear Flag" + Fore.RESET + " " + message['Message'])
-                                    preset = self.WLED_TRACKCLEAR
-                                else:
-                                    print(Back.CYAN + Fore.Black + message['Message'] + Fore.RESET + Back.RESET)
-                                    preset = 0
-                            elif message['Flag'] == 'CHEQUERED':
-                                print(Fore.MAGENTA + "Chequered Flag" + Fore.RESET + " " + message['Message'])
-                                preset = self.WLED_CHEQUERED
-                            else:
-                                preset = 0
-                                print(Fore.MAGENTA + message['Message'] + Fore.RESET)
-                        elif message['Category'] == 'SafetyCar':
-                            print(Back.YELLOW + "Safety Car" + Back.RESET + " " + message['Message'])
-                            preset = self.WLED_SC
+                    messages = json_obj['R']['RaceControlMessages']['Messages']
+            elif 'RaceControlMessage' in json_obj:
+                print(Back.RED, Fore.BLACK, "TYPE 2 TYPE 2", Fore.RESET, Back.RESET)
+                messages = json_obj['RaceControlMessage']['Messages']
+
+            for message in messages:
+                #print(Fore.MAGENTA + "Message" + Fore.RESET)
+                #self.logger.debug("Message")
+                # Loop through messages
+                if message['Category'] == 'Flag':
+                    if message['Flag'] == 'GREEN':
+                        print(Fore.GREEN + "Green Flag" + Fore.RESET + " " + message['Message'])
+                        preset = self.WLED_GREEN
+                    elif message['Flag'] == 'YELLOW' or message['Flag'] == 'DOUBLE YELLOW':
+                        print(Fore.YELLOW + "Yellow Flag" + Fore.RESET + " " + message['Message'])
+                        preset = self.WLED_YELLOW
+                    elif message['Flag'] == 'RED':
+                        print(Fore.RED + "Red Flag" + Fore.RESET)
+                        preset = self.WLED_RED
+                    elif message['Flag'] == 'CLEAR':
+                        if message['Message'] == 'TRACK CLEAR':
+                            print(Fore.CYAN + "Clear Flag" + Fore.RESET + " " + message['Message'])
+                            preset = self.WLED_TRACKCLEAR
                         else:
+                            print(Back.CYAN + Fore.Black + message['Message'] + Fore.RESET + Back.RESET)
                             preset = 0
-                        # Build the URL
-                        url = "http://" + self.WLED_HOST + "/win&PL=" + str(preset)
-                        # Send the GET request
-                        if self.WLED_HOST != '' and preset != 0:
-                            try:
-                                print(Fore.RED, url, Fore.RESET)
-                                #Try to send a GET request
-                                response = requests.get(url, timeout=1)
-                                #time.sleep(3)
-                            except requests.exceptions.RequestException as e:
-                                # Handle the exception
-                                continue
-                        elif self.WLED_HOST == '':
-                            print("WLED_HOST not set")
+                    elif message['Flag'] == 'CHEQUERED':
+                        print(Fore.MAGENTA + "Chequered Flag" + Fore.RESET + " " + message['Message'])
+                        preset = self.WLED_CHEQUERED
+                    else:
+                        preset = 0
+                        print(Fore.MAGENTA + message['Message'] + Fore.RESET)
+                elif message['Category'] == 'SafetyCar':
+                    print(Back.YELLOW + "Safety Car" + Back.RESET + " " + message['Message'])
+                    preset = self.WLED_SC
+                else:
+                    preset = 0
+                # Build the URL
+                url = "http://" + self.WLED_HOST + "/win&PL=" + str(preset)
+                # Send the GET request
+                if self.WLED_HOST != '' and preset != 0:
+                    try:
+                        print(Fore.RED, url, Fore.RESET)
+                        #Try to send a GET request
+                        response = requests.get(url, timeout=1)
+                        #time.sleep(3)
+                    except requests.exceptions.RequestException as e:
+                        # Handle the exception
+                        continue
+                elif self.WLED_HOST == '':
+                    print("WLED_HOST not set")
 
     def _to_file(self, msg):
         self._output_file.write(msg + '\n')
