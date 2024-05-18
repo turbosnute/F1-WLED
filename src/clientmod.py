@@ -140,6 +140,7 @@ class SignalRClientMod:
 
         preset = 0
 
+
         if 'R' in json_obj:
             # R
             if 'RaceControlMessages' in json_obj['R']:
@@ -278,4 +279,3 @@ class SignalRClientMod:
         except KeyboardInterrupt:
             self.logger.warning("Keyboard interrupt - exiting...")
             return
-
