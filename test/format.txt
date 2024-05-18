@@ -1,0 +1,1 @@
+{["RaceControlMessages",{"Messages":{"1":{"Utc":"2024-05-18T14:04:28","Category":"Other","Message":"CAR 2 (SAR) TIME 1:17.188 DELETED - TRACK LIMITS AT TURN 18 LAP 3 16:03:19"}}},"2024-05-18T14:04:28.558Z"]}

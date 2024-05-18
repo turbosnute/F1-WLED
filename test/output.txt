@@ -1,0 +1,67 @@
+{'C': 'd-574D6C21-B,0|sJE,0|sJF,1', 'S': 1, 'M': []}
+{'C': 'd-574D6C21-B,0|sJE,0|sJF,2|d,29F', 'G': 'k2GnDXc2QwRjXYBdKZWaAiikLF2Da2QzKaZimQf+dXW0q6lQR3kFwkl9fx5kHtZYlViVfIqWmProHzIjtwPGLMQxz3CxENxUlm633UjAV7pSrgBVJliUlVyjug2DbIXUUwhWsYhYgnEk4xbtadXXBw==', 'M': []}
+{'C': 'd-574D6C21-B,0|sJE,0|sJF,3|d,29F|BK,30', 'G': '3kMVeafXpxi/qFnVtxfu58ob6PxOzruENPkGnYKHiVytkdLuZ5T5Fg9NoLagc/UNTdwTL3m53TIicijFCvSZWAH5k5CL/p3sJYdDHwKDuR+vbF7xDrYVZzOt195zHSdsgeAgJtesFAZ2c089jfB71sCMQZgVvrAIiQf3pq95K6ObOIP4KWuDR90xPnW1CHNB', 'M': []}
+{'R': {'Heartbeat': {'Utc': '2024-05-18T14:57:15.9674551Z', '_kf': True}, 'RaceControlMessages': {'Messages': [{'Utc': '2024-05-18T14:00:00', 'Category': 'Flag', 'Flag': 'GREEN', 'Scope': 'Track', 'Message': 'GREEN LIGHT - PIT EXIT OPEN'}, {'Utc': '2024-05-18T14:04:28', 'Category': 'Other', 'Message': 'CAR 2 (SAR) TIME 1:17.188 DELETED - TRACK LIMITS AT TURN 18 LAP 3 16:03:19'}, {'Utc': '2024-05-18T14:06:25', 'Category': 'Other', 'Message': 'CAR 23 (ALB) TIME 1:17.414 DELETED - TRACK LIMITS AT TURN 18 LAP 3 16:05:53'}, {'Utc': '2024-05-18T14:09:58', 'Category': 'Flag', 'Flag': 'YELLOW', 'Scope': 'Sector', 'Sector': 7, 'Message': 'YELLOW IN TRACK SECTOR 7'}, {'Utc': '2024-05-18T14:10:03', 'Category': 'Flag', 'Flag': 'CLEAR', 'Scope': 'Sector', 'Sector': 7, 'Message': 'CLEAR IN TRACK SECTOR 7'}, {'Utc': '2024-05-18T14:11:40', 'Category': 'Other', 'Message': 'CAR 2 (SAR) LAP DELETED - TRACK LIMITS AT TURN 6 LAP 6 16:09:55 (PIT)'}, {'Utc': '2024-05-18T14:13:18', 'Category': 'Other', 'Message': 'CAR 14 (ALO) LAP DELETED - TRACK LIMITS AT TURN 4 LAP 6 16:11:47 (PIT)'}, {'Utc': '2024-05-18T14:18:00', 'Category': 'Flag', 'Flag': 'CHEQUERED', 'Scope': 'Track', 'Message': 'CHEQUERED FLAG'}, {'Utc': '2024-05-18T14:18:35', 'Category': 'Other', 'Message': 'FIRST CAR TO TAKE THE FLAG - CAR 16 (LEC)'}, {'Utc': '2024-05-18T14:19:06', 'Category': 'Other', 'Message': 'CORRECTION: FIRST CAR TO TAKE THE FLAG - CAR 11 (PER)'}, {'Utc': '2024-05-18T14:20:03', 'Category': 'Other', 'Message': 'TURN 2 INCIDENT INVOLVING CARS 81 (PIA) AND 20 (MAG) NOTED - IMPEDING'}, {'Utc': '2024-05-18T14:21:19', 'Category': 'Other', 'Message': 'FIA STEWARDS: Q1 INCIDENT INVOLVING CARS 24 (ZHO), 1 (VER), 11 (PER), 55 (SAI), 10 (GAS), 16 (LEC), 2 (SAR), 3 (RIC) NOTED - FAILING TO FOLLOW RACE DIRECTORS INSTRUCTIONS - MAXIMUM DELTA TIME'}, {'Utc': '2024-05-18T14:21:28', 'Category': 'Other', 'Message': 'CAR 2 (SAR) TIME 1:16.731 DELETED - TRACK LIMITS AT TURN 9 LAP 8 16:16:43'}, {'Utc': '2024-05-18T14:22:13', 'Category': 'Other', 'Message': 'FIA STEWARDS: Q1 INCIDENT INVOLVING CARS 24 (ZHO), 1 (VER), 11 (PER), 55 (SAI), 10 (GAS), 16 (LEC), 2 (SAR), 3 (RIC) WILL BE INVESTIGATED AFTER THE SESSION - FAILING TO FOLLOW RACE DIRECTORS INSTRUCTIONS - MAXIMUM DELTA TIME'}, {'Utc': '2024-05-18T14:22:54', 'Category': 'Other', 'Message': 'FIA STEWARDS: TURN 2 INCIDENT INVOLVING CARS 81 (PIA) AND 20 (MAG) WILL BE INVESTIGATED AFTER THE SESSION - IMPEDING'}, {'Utc': '2024-05-18T14:22:59', 'Category': 'Flag', 'Flag': 'YELLOW', 'Scope': 'Sector', 'Sector': 5, 'Message': 'YELLOW IN TRACK SECTOR 5'}, {'Utc': '2024-05-18T14:23:30', 'Category': 'Flag', 'Flag': 'CLEAR', 'Scope': 'Sector', 'Sector': 5, 'Message': 'CLEAR IN TRACK SECTOR 5'}, {'Utc': '2024-05-18T14:25:00', 'Category': 'Flag', 'Flag': 'GREEN', 'Scope': 'Track', 'Message': 'GREEN LIGHT - PIT EXIT OPEN'}, {'Utc': '2024-05-18T14:39:40', 'Category': 'Other', 'Message': 'CAR 10 (GAS) TIME 1:16.283 DELETED - TRACK LIMITS AT TURN 17 LAP 14 16:38:41'}, {'Utc': '2024-05-18T14:40:00', 'Category': 'Flag', 'Flag': 'CHEQUERED', 'Scope': 'Track', 'Message': 'CHEQUERED FLAG'}, {'Utc': '2024-05-18T14:40:12', 'Category': 'Other', 'Message': 'FIRST CAR TO TAKE THE FLAG - CAR 55 (SAI)'}, {'Utc': '2024-05-18T14:42:52', 'Category': 'Other', 'Message': 'FIA STEWARDS: Q2 INCIDENT INVOLVING CAR 55 (SAI) NOTED - FAILING TO FOLLOW RACE DIRECTORS INSTRUCTIONS - MAXIMUM DELTA TIME'}, {'Utc': '2024-05-18T14:43:01', 'Category': 'Other', 'Message': 'FIA STEWARDS: Q2 INCIDENT INVOLVING CAR 55 (SAI) WILL BE INVESTIGATED AFTER THE SESSION - FAILING TO FOLLOW RACE DIRECTORS INSTRUCTIONS - MAXIMUM DELTA TIME'}, {'Utc': '2024-05-18T14:48:00', 'Category': 'Flag', 'Flag': 'GREEN', 'Scope': 'Track', 'Message': 'GREEN LIGHT - PIT EXIT OPEN'}], '_kf': True}}, 'I': '0'}
+{}
+{'C': 'd-574D6C21-B,0|sJE,0|sJF,3|d,2A0|BK,30', 'M': [{'H': 'Streaming', 'M': 'feed', 'A': ['Heartbeat', {'Utc': '2024-05-18T14:57:30.9673845Z', '_kf': True}, '2024-05-18T14:57:30.766Z']}]}
+{}
+{'C': 'd-574D6C21-B,0|sJE,0|sJF,3|d,2A1|BK,30', 'M': [{'H': 'Streaming', 'M': 'feed', 'A': ['Heartbeat', {'Utc': '2024-05-18T14:57:45.9829603Z', '_kf': True}, '2024-05-18T14:57:45.791Z']}]}
+{}
+{}
+{'C': 'd-574D6C21-B,0|sJE,0|sJF,3|d,2A2|BK,30', 'M': [{'H': 'Streaming', 'M': 'feed', 'A': ['Heartbeat', {'Utc': '2024-05-18T14:58:00.9985915Z', '_kf': True}, '2024-05-18T14:58:00.841Z']}]}
+{}
+{'C': 'd-574D6C21-B,0|sJE,0|sJF,3|d,2A3|BK,30', 'M': [{'H': 'Streaming', 'M': 'feed', 'A': ['Heartbeat', {'Utc': '2024-05-18T14:58:16.0141429Z', '_kf': True}, '2024-05-18T14:58:15.876Z']}]}
+{}
+{}
+{'C': 'd-574D6C21-B,0|sJE,0|sJF,3|d,2A4|BK,30', 'M': [{'H': 'Streaming', 'M': 'feed', 'A': ['Heartbeat', {'Utc': '2024-05-18T14:58:31.0141003Z', '_kf': True}, '2024-05-18T14:58:30.922Z']}]}
+{}
+{'C': 'd-574D6C21-B,0|sJE,0|sJF,3|d,2A5|BK,30', 'M': [{'H': 'Streaming', 'M': 'feed', 'A': ['Heartbeat', {'Utc': '2024-05-18T14:58:46.0140796Z', '_kf': True}, '2024-05-18T14:58:45.985Z']}]}
+{}
+{}
+{'C': 'd-574D6C21-B,0|sJE,0|sJF,3|d,2A6|BK,30', 'M': [{'H': 'Streaming', 'M': 'feed', 'A': ['Heartbeat', {'Utc': '2024-05-18T14:59:01.0296668Z', '_kf': True}, '2024-05-18T14:59:01.01Z']}]}
+{}
+{'C': 'd-574D6C21-B,0|sJE,0|sJF,3|d,2A7|BK,30', 'M': [{'H': 'Streaming', 'M': 'feed', 'A': ['Heartbeat', {'Utc': '2024-05-18T14:59:16.0296373Z', '_kf': True}, '2024-05-18T14:59:14.01Z']}]}
+{}
+{}
+{'C': 'd-574D6C21-B,0|sJE,0|sJF,3|d,2A8|BK,30', 'M': [{'H': 'Streaming', 'M': 'feed', 'A': ['Heartbeat', {'Utc': '2024-05-18T14:59:31.0296027Z', '_kf': True}, '2024-05-18T14:59:28.922Z']}]}
+{}
+{'C': 'd-574D6C21-B,0|sJE,0|sJF,3|d,2A9|BK,30', 'M': [{'H': 'Streaming', 'M': 'feed', 'A': ['Heartbeat', {'Utc': '2024-05-18T14:59:46.0452587Z', '_kf': True}, '2024-05-18T14:59:44.011Z']}]}
+{}
+{}
+{'C': 'd-574D6C21-B,0|sJE,0|sJF,3|d,2AA|BK,30', 'M': [{'H': 'Streaming', 'M': 'feed', 'A': ['Heartbeat', {'Utc': '2024-05-18T15:00:01.0452154Z', '_kf': True}, '2024-05-18T14:59:59.01Z']}]}
+{'C': 'd-574D6C21-B,0|sJE,0|sJF,3|d,2AA|BK,31', 'M': [{'H': 'Streaming', 'M': 'feed', 'A': ['RaceControlMessages', {'Messages': {'24': {'Utc': '2024-05-18T15:00:00', 'Category': 'Flag', 'Flag': 'CHEQUERED', 'Scope': 'Track', 'Message': 'CHEQUERED FLAG'}}}, '2024-05-18T15:00:00.199Z']}]}
+{}
+{'C': 'd-574D6C21-B,0|sJE,0|sJF,3|d,2AA|BK,32', 'M': [{'H': 'Streaming', 'M': 'feed', 'A': ['RaceControlMessages', {'Messages': {'25': {'Utc': '2024-05-18T15:00:07', 'Category': 'Other', 'Message': 'FIRST CAR TO TAKE THE FLAG - CAR 63 (RUS)'}}}, '2024-05-18T15:00:06.769Z']}]}
+{'C': 'd-574D6C21-B,0|sJE,0|sJF,3|d,2AB|BK,32', 'M': [{'H': 'Streaming', 'M': 'feed', 'A': ['Heartbeat', {'Utc': '2024-05-18T15:00:16.0452874Z', '_kf': True}, '2024-05-18T15:00:14.01Z']}]}
+{}
+{}
+{'C': 'd-574D6C21-B,0|sJE,0|sJF,3|d,2AC|BK,32', 'M': [{'H': 'Streaming', 'M': 'feed', 'A': ['Heartbeat', {'Utc': '2024-05-18T15:00:31.0614175Z', '_kf': True}, '2024-05-18T15:00:28.997Z']}]}
+{}
+{'C': 'd-574D6C21-B,0|sJE,0|sJF,3|d,2AD|BK,32', 'M': [{'H': 'Streaming', 'M': 'feed', 'A': ['Heartbeat', {'Utc': '2024-05-18T15:00:46.0612689Z', '_kf': True}, '2024-05-18T15:00:44.001Z']}]}
+{}
+{}
+{'C': 'd-574D6C21-B,0|sJE,0|sJF,3|d,2AE|BK,32', 'M': [{'H': 'Streaming', 'M': 'feed', 'A': ['Heartbeat', {'Utc': '2024-05-18T15:01:01.0768573Z', '_kf': True}, '2024-05-18T15:00:59.009Z']}]}
+{}
+{'C': 'd-574D6C21-B,0|sJE,0|sJF,3|d,2AF|BK,32', 'M': [{'H': 'Streaming', 'M': 'feed', 'A': ['Heartbeat', {'Utc': '2024-05-18T15:01:16.0768321Z', '_kf': True}, '2024-05-18T15:01:14.009Z']}]}
+{}
+{}
+{'C': 'd-574D6C21-B,0|sJE,0|sJF,3|d,2B0|BK,32', 'M': [{'H': 'Streaming', 'M': 'feed', 'A': ['Heartbeat', {'Utc': '2024-05-18T15:01:31.0924182Z', '_kf': True}, '2024-05-18T15:01:29.01Z']}]}
+{}
+{'C': 'd-574D6C21-B,0|sJE,0|sJF,3|d,2B0|BK,33', 'M': [{'H': 'Streaming', 'M': 'feed', 'A': ['RaceControlMessages', {'Messages': {'26': {'Utc': '2024-05-18T15:01:42', 'Category': 'Other', 'Message': 'FIA STEWARDS: Q1 INCIDENT INVOLVING CARS 24 (ZHO), 1 (VER), 11 (PER), 55 (SAI), 10 (GAS), 16 (LEC), 2 (SAR), 3 (RIC) NO FURTHER ACTION - FAILING TO FOLLOW RACE DIRECTORS INSTRUCTIONS - MAXIMUM DELTA TIME'}}}, '2024-05-18T15:01:42.301Z']}]}
+{'C': 'd-574D6C21-B,0|sJE,0|sJF,3|d,2B1|BK,33', 'M': [{'H': 'Streaming', 'M': 'feed', 'A': ['Heartbeat', {'Utc': '2024-05-18T15:01:46.1080014Z', '_kf': True}, '2024-05-18T15:01:44.007Z']}]}
+{}
+{}
+{'C': 'd-574D6C21-B,0|sJE,0|sJF,3|d,2B2|BK,33', 'M': [{'H': 'Streaming', 'M': 'feed', 'A': ['Heartbeat', {'Utc': '2024-05-18T15:02:01.1236206Z', '_kf': True}, '2024-05-18T15:01:59.002Z']}]}
+{}
+{'C': 'd-574D6C21-B,0|sJE,0|sJF,3|d,2B3|BK,33', 'M': [{'H': 'Streaming', 'M': 'feed', 'A': ['Heartbeat', {'Utc': '2024-05-18T15:02:16.1548121Z', '_kf': True}, '2024-05-18T15:02:14.01Z']}]}
+{}
+{}
+{'C': 'd-574D6C21-B,0|sJE,0|sJF,3|d,2B4|BK,33', 'M': [{'H': 'Streaming', 'M': 'feed', 'A': ['Heartbeat', {'Utc': '2024-05-18T15:02:31.1548281Z', '_kf': True}, '2024-05-18T15:02:29.01Z']}]}
+{}
+{'C': 'd-574D6C21-B,0|sJE,0|sJF,3|d,2B5|BK,33', 'M': [{'H': 'Streaming', 'M': 'feed', 'A': ['Heartbeat', {'Utc': '2024-05-18T15:02:46.1703772Z', '_kf': True}, '2024-05-18T15:02:44.0365685Z']}]}
+{}
+{}
+{'C': 'd-574D6C21-B,0|sJE,0|sJF,3|d,2B6|BK,33', 'M': [{'H': 'Streaming', 'M': 'feed', 'A': ['Heartbeat', {'Utc': '2024-05-18T15:03:01.1703493Z', '_kf': True}, '2024-05-18T15:02:59.001Z']}]}
+{}
+{'C': 'd-574D6C21-B,0|sJE,0|sJF,3|d,2B7|BK,33', 'M': [{'H': 'Streaming', 'M': 'feed', 'A': ['Heartbeat', {'Utc': '2024-05-18T15:03:16.1702894Z', '_kf': True}, '2024-05-18T15:03:07.24Z']}]}
+{}
