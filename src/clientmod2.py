@@ -9,6 +9,7 @@ from typing import (
 )
 
 import requests
+from colorama import Fore, Back, Style
 
 import fastf1
 from fastf1.signalr_aio import Connection
@@ -92,6 +93,13 @@ class SignalRClientMod2:
                        "SessionData", "LapCount", "TimingData"]
         """
         self.topics = ["Heartbeat", "RaceControlMessages"]
+        self.WLED_GREEN = WLED_GREEN
+        self.WLED_TRACKCLEAR = WLED_TRACKCLEAR
+        self.WLED_YELLOW = WLED_YELLOW
+        self.WLED_RED = WLED_RED
+        self.WLED_CHEQUERED = WLED_CHEQUERED
+        self.WLED_SC = WLED_SC
+        self.WLED_HOST = WLED_HOST
 
         self.debug = debug
         self.filename = filename
@@ -116,12 +124,10 @@ class SignalRClientMod2:
         self._output_file.flush()
 
     def fix_json(self, msg):
-        msg = msg.replace("'", '"') \
-            .replace('True', 'true') \
-            .replace('False', 'false')
+        msg = msg.replace("'", '"') .replace('True', 'true').replace('False', 'false')
         return msg
 
-    async def to_wled(self, action):
+    def to_wled(self, action):
         # action should be one of: GREEN, TRACKCLEAR, YELLOW, RED, CHEQUERED, SC
         if action == 'GREEN':
             preset = self.WLED_GREEN
@@ -139,13 +145,14 @@ class SignalRClientMod2:
             return
 
         url = "http://" + self.WLED_HOST + "/win&PL=" + str(preset)
+        print(Fore.GREEN, url, Fore.RESET)
         response = requests.get(url, timeout=1)
         #print(response.status_code)
 
     def handle_message(self, msg):
         #Fix and load json
         msg = self.fix_json(msg)
-        json_obj = json.loads(msg)
+        msg = json.loads(msg)
 
         # If M exist in msg and is not empty, set the activities to M. If not, set activities to empty dict.
         activities = msg['M'] if 'M' in msg and len(msg['M']) > 0 else {}
