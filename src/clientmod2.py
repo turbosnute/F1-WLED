@@ -201,7 +201,7 @@ class SignalRClientMod2:
         try:
             with concurrent.futures.ThreadPoolExecutor() as pool:
                 await loop.run_in_executor(
-                    pool, self._to_file, str(msg)
+                    pool, self.handle_message, str(msg)
                 )
         except Exception:
             self.logger.exception("Exception while writing message to file")
@@ -214,7 +214,7 @@ class SignalRClientMod2:
         try:
             with concurrent.futures.ThreadPoolExecutor() as pool:
                 await loop.run_in_executor(
-                    pool, self._to_file, str(data)
+                    pool, self.handle_message, str(data)
                 )
         except Exception:
             self.logger.exception("Exception while writing message to file")
