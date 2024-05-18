@@ -1,7 +1,7 @@
 # F1-WLED
 
 ## DISCLAIMER
-```
+```diff
 - This is just a personal little project, do not expect it to work
 ```
 
