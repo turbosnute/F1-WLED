@@ -20,7 +20,7 @@ WLED_SC=str(os.getenv('WLED_SC', 5)) # Preset ID for Safety Car
 log = logging.getLogger()
 log.setLevel(logging.DEBUG)
 
-client = SignalRClientMod(filename="output.txt", WLED_GREEN=WLED_GREEN, WLED_TRACKCLEAR=WLED_TRACKCLEAR, WLED_YELLOW=WLED_YELLOW, WLED_RED=WLED_RED, WLED_CHEQUERED=WLED_CHEQUERED, WLED_SC=WLED_SC, WLED_HOST=WLED_HOST, debug=True)
+client = SignalRClientMod(filename="output.txt", WLED_GREEN=WLED_GREEN, WLED_TRACKCLEAR=WLED_TRACKCLEAR, WLED_YELLOW=WLED_YELLOW, WLED_RED=WLED_RED, WLED_CHEQUERED=WLED_CHEQUERED, WLED_SC=WLED_SC, WLED_HOST=WLED_HOST, debug=True, timeout=666)
 #client = SignalRClientMod(filename="output.txt", debug=False)
 
 client.start()
