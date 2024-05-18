@@ -140,15 +140,17 @@ class SignalRClientMod:
 
         preset = 0
 
-        if 'RaceControlMessages' in json_obj:
-            #print(Fore.MAGENTA + "RaceControlMessages" + Fore.RESET)
-            #self.logger.info("RaceControlMessages")
-            # RaceControlMessages exists!
-            if 'Messages' in json_obj['RaceControlMessages']:
-                #print(Fore.MAGENTA + "Messages" + Fore.RESET)
-                #self.logger.info("Messages")
-                # Messages exists!
-                for message in json_obj['RaceControlMessages']['Messages']:
+        if 'R' in json_obj:
+            # R
+            if 'RaceControlMessages' in json_obj['R']:
+                #print(Fore.MAGENTA + "RaceControlMessages" + Fore.RESET)
+                #self.logger.info("RaceControlMessages")
+                # RaceControlMessages exists!
+                if 'Messages' in json_obj['R']['RaceControlMessages']:
+                    #print(Fore.MAGENTA + "Messages" + Fore.RESET)
+                    #self.logger.info("Messages")
+                    # Messages exists!
+                    for message in json_obj['R']['RaceControlMessages']['Messages']:
                     #print(Fore.MAGENTA + "Message" + Fore.RESET)
                     #self.logger.debug("Message")
                     # Loop through messages
