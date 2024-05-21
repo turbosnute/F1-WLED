@@ -1,4 +1,9 @@
-FROM ubuntu:noble-20240429 AS builder-image
+FROM php:8.3-apache-bullseye
+# Configure Apache to listen on port 8800  
+RUN sed -i '/Listen 80/c\Listen 8800' /etc/apache2/ports.conf  
+# Inform Docker that the container is listening on port 8800  
+EXPOSE 8800
+
 RUN apt-get update && apt-get install --no-install-recommends -y python3 python3-dev python3-venv python3-pip python3-wheel build-essential nano && \
    apt-get clean && rm -rf /var/lib/apt/lists/*
 
