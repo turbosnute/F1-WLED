@@ -1,12 +1,12 @@
 <?php
-    $wled_green = $_POST['wled_green'];
-    $wled_yellow = $_POST['wled_yellow'];
-    $wled_red = $_POST['wled_red'];
-    $wled_sc = $_POST['wled_sc'];
-    $wled_checkered = $_POST['wled_checkered'];
-    $wled_clear = $_POST['wled_clear'];
+    $wled_green = (int)$_POST['wled_green'];
+    $wled_yellow = (int)$_POST['wled_yellow'];
+    $wled_red = (int)$_POST['wled_red'];
+    $wled_sc = (int)$_POST['wled_sc'];
+    $wled_checkered = (int)$_POST['wled_checkered'];
+    $wled_clear = (int)$_POST['wled_clear'];
     $wled_host = $_POST['wled_host'];
-    $wled_delay = $_POST['wled_delay'];
+    $wled_delay = (int)$_POST['wled_delay'];
     
     // Check if variables is numeric:
     if (!is_numeric($wled_green) || !is_numeric($wled_yellow) || !is_numeric($wled_red) || !is_numeric($wled_sc) || !is_numeric($wled_checkered) || !is_numeric($wled_clear) || !is_numeric($wled_delay)) {

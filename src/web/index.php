@@ -38,7 +38,7 @@
     $wled_checkered = "";
     $wled_clear = "";
     $wled_host = "";
-    $wled_delay = 0;
+    $wled_delay = 45; # Default
 
     // Get the values from the config file
     if (isset($config['wled_green'])) {
@@ -98,12 +98,12 @@
          <div class="py-5 text-center">
             <h1>F1-WLED Config</h1>
          </div>
-         <form>
+         <form action="save-config.php" method="post">
             <input type="hidden" id="confdelay" name="confdelay" value="<?php echo $wled_delay; ?>">
             <!-- Slider to speficy delay. Between 0 and 80 seconds -->
             <div class="mb-3">
-                <label for="delay" class="form-label">Delay</label>
-                <input type="range" class="form-range" min="0" max="80" id="delay" name="delay" oninput="this.nextElementSibling.value = this.value"><output>24</output> seconds
+                <label for="wled_delay" class="form-label">Delay</label>
+                <input type="range" class="form-range" value="<?php echo $wled_delay; ?>" min="0" max="80" id="delay" name="wled_delay" id="wled_delay" oninput="this.nextElementSibling.value = this.value"><output><?php echo $wled_delay; ?></output> seconds
             </div>
             <!-- Text boxes for environment variables -->
             <div class="mb-3">
