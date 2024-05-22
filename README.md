@@ -24,3 +24,4 @@ sudo docker run -it -v f1wled:/config f1-wled /app/f1wled.py
 ## TO-DO
 - wrapper script should be automatically ran when container starts.
 - Document how to do config.
+- f1wled should run as www-data so it can access the environment variables set by php

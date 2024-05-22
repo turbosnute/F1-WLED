@@ -29,5 +29,17 @@
     fwrite($file, $config_file_content);
     fclose($file);
 
+    // set the config to environment variables:
+    putenv("WLED_GREEN=$wled_green");
+    putenv("WLED_YELLOW=$wled_yellow");
+    putenv("WLED_RED=$wled_red");
+    putenv("WLED_SC=$wled_sc");
+    putenv("WLED_CHECKERED=$wled_checkered");
+    putenv("WLED_CLEAR=$wled_clear");
+    putenv("WLED_HOST=$wled_host");
+    putenv("WLED_DELAY=$wled_delay");
+    
+    $_ENV['WLED_GREEN'] = $wled_green;
+    
     header('Location: index.php');
 ?>
