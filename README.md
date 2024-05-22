@@ -13,19 +13,14 @@
 sudo docker build -t f1-wled .
 ```
 
-## Environment Variables
-- WLED_HOST (String)
-- WLED_YELLOW (integer)
-- WLED_RED (integer)
-- WLED_GREEN (integer)
-- WLED_SC (integer)
-- WLED_CHEQUERED (integer)
-- WLED_TRACKCLEAR (integer)
-
 ## Run
 ```
-sudo docker run -it -e WLED_GREEN=4 -e WLED_TRACKCLEAR=7 -e WLED_RED=3 -e WLED_YELLOW=2 -e WLED_SC=5 -e WLED_CHEQUERED=6 -e WLED_HOST="192.168.1.144" f1-wled /app/f1wled.py
+sudo docker run -it -v f1wled:/config f1-wled /app/f1wled.py
 ```
+
+## Configure
+...
 
 ## TO-DO
 - wrapper script should be automatically ran when container starts.
+- Document how to do config.

@@ -1,8 +1,20 @@
 <?php
 
     /* Check if config is available (in config file). */
-    $config_path = "/config/client.json";
+    $config_path = "/config/config.json";
     
+    /*
+    $config_file_content = "{
+        \"wled_green\": 4,
+        \"wled_yellow\": 2,
+        \"wled_red\": 3,
+        \"wled_sc\": 5,
+        \"wled_checkered\": 7,
+        \"wled_clear\": 6,
+        \"wled_host\": \"192.168.1.144\",
+        \"wled_delay\": 45
+    }";
+    */
     if (!file_exists($config_path)) {
         file_put_contents($config_path, '');
     }
@@ -57,6 +69,9 @@
         $wled_host = $config['wled_host'];
     }
 
+    if (isset($config['wled_delay'])) {
+        $wled_delay = $config['wled_delay'];
+    }
 
 ?>
 <!doctype html>
@@ -84,6 +99,7 @@
             <h1>F1-WLED Config</h1>
          </div>
          <form>
+            <input type="hidden" id="confdelay" name="confdelay" value="<?php echo $wled_delay; ?>">
             <!-- Slider to speficy delay. Between 0 and 80 seconds -->
             <div class="mb-3">
                 <label for="delay" class="form-label">Delay</label>
