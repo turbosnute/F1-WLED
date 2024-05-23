@@ -24,7 +24,7 @@ try:
     WLED_TRACKCLEAR = data['WLED_TRACKCLEAR']
     WLED_HOST = data['wled_host']
     WLED_DELAY = data['wled_delay']
-
+    
 except FileNotFoundError:
     print("Error: The file /config/config.json was not found.")
 except json.JSONDecodeError:

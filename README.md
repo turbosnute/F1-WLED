@@ -15,7 +15,8 @@ sudo docker build -t f1-wled .
 
 ## Run
 ```
-sudo docker run -it -v f1wled:/config f1-wled /app/f1wled.py
+sudo docker run -it -v f1wled:/config -p 8800:80 f1-wled /app/f1wled.py
+
 ```
 
 ## Configure

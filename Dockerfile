@@ -23,7 +23,7 @@ chmod 700 /app/
 WORKDIR /app/
 
 # Copy Code
-COPY /src/* /app/
+COPY /src/app/* /app/
 
 # Deploy Code
 RUN bash /app/deploy.sh && rm /app/deploy.sh
@@ -31,4 +31,7 @@ RUN bash /app/deploy.sh && rm /app/deploy.sh
 # Permissions
 RUN chmod 755 /app/app.sh /app/f1wled.py /app/cmd.sh
 
-USER www-data
+COPY supervisord.conf /etc/supervisor/conf.d/
+#COPY ./web /var/www/html
+
+CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]  

@@ -136,6 +136,7 @@ class SignalRClientMod:
 
         #Fix and load json
         msg = self.fix_json(msg)
+        print(Fore.YELLOW + msg + " <-|-> " + Fore.RESET)
         json_obj = json.loads(msg)
 
         # Initialize variables

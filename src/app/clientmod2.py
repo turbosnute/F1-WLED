@@ -146,8 +146,10 @@ class SignalRClientMod2:
 
         url = "http://" + self.WLED_HOST + "/win&PL=" + str(preset)
         print(Fore.GREEN, url, Fore.RESET)
-        response = requests.get(url, timeout=1)
+        #response = requests.get(url, timeout=1)
         #print(response.status_code)
+        command = f"nohup /app/cmd.sh {url} > /dev/null 2>&1 &"
+        subprocess.Popen(command, shell=True)
 
     def handle_message(self, msg):
         #Fix and load json
@@ -194,7 +196,6 @@ class SignalRClientMod2:
                         
                         if action != '':
                             self.to_wled(action)
-
 
 
     async def _on_do_nothing(self, msg):

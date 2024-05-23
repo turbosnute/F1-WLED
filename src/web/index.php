@@ -61,8 +61,8 @@
         $wled_checkered = $config['wled_checkered'];
     }
 
-    if (isset($config['wled_clear'])) {
-        $wled_clear = $config['wled_clear'];
+    if (isset($config['wled_trackclear'])) {
+        $wled_clear = $config['wled_trackclear'];
     }
 
     if (isset($config['wled_host'])) {
@@ -135,7 +135,7 @@
                 <input type="text" class="form-control" id="wled_trackclear" name="wled_trackclear" value="<?php echo $wled_clear; ?>" required>
             </div>
 
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Save Config</button>
          </form>
         </main>
     </div>
