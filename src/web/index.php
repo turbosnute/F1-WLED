@@ -131,8 +131,8 @@
                 <input type="text" class="form-control" id="wled_checkered" name="wled_checkered" value="<?php echo $wled_checkered; ?>" required>
             </div>
             <div class="mb-3">
-                <label for="wled_clear" class="form-label">WLED Clear Flag Preset</label>
-                <input type="text" class="form-control" id="wled_clear" name="wled_clear" value="<?php echo $wled_clear; ?>" required>
+                <label for="wled_trackclear" class="form-label">WLED Clear Flag Preset</label>
+                <input type="text" class="form-control" id="wled_trackclear" name="wled_trackclear" value="<?php echo $wled_clear; ?>" required>
             </div>
 
             <button type="submit" class="btn btn-primary">Submit</button>
