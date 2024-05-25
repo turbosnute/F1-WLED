@@ -10,7 +10,7 @@ from typing import (
 
 import requests
 from colorama import Fore, Back, Style
-
+import subprocess
 import fastf1
 from fastf1.signalr_aio import Connection
 
@@ -77,7 +77,7 @@ class SignalRClientMod2:
     """
     _connection_url = 'https://livetiming.formula1.com/signalr'
 
-    def __init__(self, filename: str, WLED_GREEN: int, WLED_TRACKCLEAR: int, WLED_YELLOW: int, WLED_RED: int, WLED_CHEQUERED: int, WLED_SC: int, WLED_HOST: str = '', filemode: str = 'w', debug: bool = False,
+    def __init__(self, filename: str, WLED_GREEN: int, WLED_TRACKCLEAR: int, WLED_YELLOW: int, WLED_RED: int, WLED_CHEQUERED: int, WLED_SC: int, WLED_HOST: str = '', WLED_DELAY: int = 0, filemode: str = 'w', debug: bool = False,
                  timeout: int = 60, logger: Optional = None):
 
         self.headers = {'User-agent': 'BestHTTP',
@@ -100,6 +100,7 @@ class SignalRClientMod2:
         self.WLED_CHEQUERED = WLED_CHEQUERED
         self.WLED_SC = WLED_SC
         self.WLED_HOST = WLED_HOST
+        self.WLED_DELAY = WLED_DELAY
 
         self.debug = debug
         self.filename = filename
@@ -146,12 +147,15 @@ class SignalRClientMod2:
 
         url = "http://" + self.WLED_HOST + "/win&PL=" + str(preset)
         print(Fore.GREEN, url, Fore.RESET)
-        response = requests.get(url, timeout=1)
+        #response = requests.get(url, timeout=1)
         #print(response.status_code)
+        command = "nohup /app/cmd.sh '" + url + "' " + str(self.WLED_DELAY) + " > /dev/null 2>&1 &"
+        null = subprocess.Popen(command, shell=True)
 
     def handle_message(self, msg):
         #Fix and load json
         msg = self.fix_json(msg)
+        print(Fore.CYAN, msg, Fore.RESET)
         msg = json.loads(msg)
 
         # If M exist in msg and is not empty, set the activities to M. If not, set activities to empty dict.
@@ -182,7 +186,7 @@ class SignalRClientMod2:
                                     print(Fore.CYAN + "Clear Flag" + Fore.RESET + " " + message['Message'])
                                     action = 'TRACKCLEAR'
                                 else:
-                                    print(Back.CYAN + Fore.Black + message['Message'] + Fore.RESET + Back.RESET)
+                                    print(Back.CYAN + Fore.BLACK + message['Message'] + Fore.RESET + Back.RESET)
                             elif message['Flag'] == 'CHEQUERED':
                                 print(Fore.MAGENTA + "Chequered Flag" + Fore.RESET + " " + message['Message'])
                                 action = 'CHEQUERED'
@@ -194,7 +198,6 @@ class SignalRClientMod2:
                         
                         if action != '':
                             self.to_wled(action)
-
 
 
     async def _on_do_nothing(self, msg):
