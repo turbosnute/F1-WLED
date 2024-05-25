@@ -1,4 +1,5 @@
 #! /bin/bash
 url=$1
-echo $url
+dealay=$2
+sleep $dealay
 null=$(curl -s $url)

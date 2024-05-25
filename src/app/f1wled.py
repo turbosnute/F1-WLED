@@ -21,7 +21,7 @@ try:
     WLED_RED = data['wled_red']
     WLED_SC = data['wled_sc']
     WLED_CHEQUERED = data['wled_checkered']
-    WLED_TRACKCLEAR = data['WLED_TRACKCLEAR']
+    WLED_TRACKCLEAR = data['wled_trackclear']
     WLED_HOST = data['wled_host']
     WLED_DELAY = data['wled_delay']
     
@@ -49,7 +49,7 @@ WLED_SC=str(os.getenv('WLED_SC', 5)) # Preset ID for Safety Car
 log = logging.getLogger()
 log.setLevel(logging.DEBUG)
 
-client = SignalRClientMod2(filename="output.txt", WLED_GREEN=WLED_GREEN, WLED_TRACKCLEAR=WLED_TRACKCLEAR, WLED_YELLOW=WLED_YELLOW, WLED_RED=WLED_RED, WLED_CHEQUERED=WLED_CHEQUERED, WLED_SC=WLED_SC, WLED_HOST=WLED_HOST, debug=True)
+client = SignalRClientMod2(filename="output.txt", WLED_GREEN=WLED_GREEN, WLED_TRACKCLEAR=WLED_TRACKCLEAR, WLED_YELLOW=WLED_YELLOW, WLED_RED=WLED_RED, WLED_CHEQUERED=WLED_CHEQUERED, WLED_SC=WLED_SC, WLED_HOST=WLED_HOST, WLED_DELAY=WLED_DELAY, debug=True)
 #client = SignalRClientMod(filename="output.txt", debug=False)
 
 client.start()

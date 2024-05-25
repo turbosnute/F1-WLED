@@ -81,7 +81,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>F1-WLED</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  </head>
+    <style>
+        .flash_message {
+
+        animation: slide-up 1.25s forwards;
+        animation-delay: 1s;
+        -webkit-animation-delay: 1s;
+        
+        }
+
+        @-webkit-keyframes slide-up {
+            from {transition: translateY(0);opacity: 1}
+            to {transition: translateY(-150px);opacity: 0;top:0px;}
+        }
+    </style>
+</head>
   <body class="bg-body-tertiary">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
@@ -98,6 +112,11 @@
          <div class="py-5 text-center">
             <h1>F1-WLED Config</h1>
          </div>
+         <?php if (isset($_GET['saved'])) { ?>
+            <div class="flash_message alert alert-success" role="alert">
+                Configuration saved.
+            </div>
+         <?php } ?>
          <form action="save-config.php" method="post">
             <input type="hidden" id="confdelay" name="confdelay" value="<?php echo $wled_delay; ?>">
             <!-- Slider to speficy delay. Between 0 and 80 seconds -->

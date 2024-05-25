@@ -30,5 +30,5 @@
     fclose($file);
 
     
-    header('Location: index.php');
+    header('Location: index.php?saved=succesful');
 ?>
