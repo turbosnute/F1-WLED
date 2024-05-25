@@ -112,11 +112,15 @@
          <div class="py-5 text-center">
             <h1>F1-WLED Config</h1>
          </div>
-         <?php if (isset($_GET['saved'])) { ?>
+            <?php if (isset($_GET['saved'])) { ?>
             <div class="flash_message alert alert-success" role="alert">
                 Configuration saved.
             </div>
-         <?php } ?>
+            <?php } else { ?>
+            <div class="alert alert-light" role="alert">
+                Welcome to the F1-WLED configuration page. Here you can set the WLED presets for the different flags and the delay. 
+            </div>
+            <?php } ?>
          <form action="save-config.php" method="post">
             <input type="hidden" id="confdelay" name="confdelay" value="<?php echo $wled_delay; ?>">
             <!-- Slider to speficy delay. Between 0 and 80 seconds -->
@@ -150,7 +154,7 @@
                 <input type="text" class="form-control" id="wled_checkered" name="wled_checkered" value="<?php echo $wled_checkered; ?>" required>
             </div>
             <div class="mb-3">
-                <label for="wled_trackclear" class="form-label">WLED Clear Flag Preset</label>
+                <label for="wled_trackclear" class="form-label">WLED Track Clear Flag Preset</label>
                 <input type="text" class="form-control" id="wled_trackclear" name="wled_trackclear" value="<?php echo $wled_clear; ?>" required>
             </div>
 

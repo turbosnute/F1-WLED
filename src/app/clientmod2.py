@@ -149,7 +149,7 @@ class SignalRClientMod2:
         print(Fore.GREEN, url, Fore.RESET)
         #response = requests.get(url, timeout=1)
         #print(response.status_code)
-        command = f"nohup /app/cmd.sh {url} {self.WLED_DELAY} /dev/null 2>&1 &"
+        command = "nohup /app/cmd.sh '" + url + "' " + str(self.WLED_DELAY) + " > /dev/null 2>&1 &"
         null = subprocess.Popen(command, shell=True)
 
     def handle_message(self, msg):
@@ -186,7 +186,7 @@ class SignalRClientMod2:
                                     print(Fore.CYAN + "Clear Flag" + Fore.RESET + " " + message['Message'])
                                     action = 'TRACKCLEAR'
                                 else:
-                                    print(Back.CYAN + Fore.Black + message['Message'] + Fore.RESET + Back.RESET)
+                                    print(Back.CYAN + Fore.BLACK + message['Message'] + Fore.RESET + Back.RESET)
                             elif message['Flag'] == 'CHEQUERED':
                                 print(Fore.MAGENTA + "Chequered Flag" + Fore.RESET + " " + message['Message'])
                                 action = 'CHEQUERED'
