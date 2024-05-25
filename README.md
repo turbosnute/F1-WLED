@@ -15,14 +15,17 @@ sudo docker build -t f1-wled .
 
 ## Run
 ```
-sudo docker run -it -v f1wled:/config -p 8800:80 f1-wled /app/f1wled.py
-
+sudo docker run -it -v "$PWD/src/web":/var/www/html/ -v f1wled:/config/  -p 8800:80 f1-wled bash
 ```
+
+- Then run "apache2-foreground"
+- navigate to "http:<dockerhost>:8800" with a browser to set the config
+- ctrl+c to kill apache in side the container
+- run "./f1wled" from bash inside the container
 
 ## Configure
 ...
 
 ## TO-DO
-- wrapper script should be automatically ran when container starts.
-- Document how to do config.
-- f1wled should run as www-data so it can access the environment variables set by php
+- Apache should always run in background.
+- How should the script start? And should it automatically be reloaded when new config is saved?
