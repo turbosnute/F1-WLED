@@ -29,18 +29,6 @@ except KeyError as e:
     print(f"Error: The key {e} was not found in the JSON data.")
 
 
-
-"""
-# Set up environment variables
-WLED_HOST=str(os.getenv('WLED_HOST', '')) # IP Address of WLED
-WLED_GREEN=str(os.getenv('WLED_GREEN', 1)) # Preset ID for Green
-WLED_TRACKCLEAR=str(os.getenv('WLED_TRACKCLEAR', 7)) # Preset ID for Track Clear
-WLED_YELLOW=str(os.getenv('WLED_YELLOW', 2)) # Preset ID for Yellow
-WLED_RED=str(os.getenv('WLED_RED', 3)) # Preset ID for Red
-WLED_CHEQUERED=str(os.getenv('WLED_CHEQUERED', 4)) # Preset ID for Chequered
-WLED_SC=str(os.getenv('WLED_SC', 5)) # Preset ID for Safety Car
-"""
-
 # Set up logging
 log = logging.getLogger()
 log.setLevel(logging.DEBUG)
@@ -48,4 +36,14 @@ log.setLevel(logging.DEBUG)
 client = SignalRClientMod2(filename="output.txt", WLED_GREEN=WLED_GREEN, WLED_TRACKCLEAR=WLED_TRACKCLEAR, WLED_YELLOW=WLED_YELLOW, WLED_RED=WLED_RED, WLED_CHEQUERED=WLED_CHEQUERED, WLED_SC=WLED_SC, WLED_HOST=WLED_HOST, WLED_DELAY=WLED_DELAY, debug=False)
 #client = SignalRClientMod(filename="output.txt", debug=False)
 
-client.start()
+msgtype1 = "{'C': 'd-574D6C21-B,0|sJE,0|sJF,3|d,2A7|BK,30', 'M': [{'H': 'Streaming', 'M': 'feed', 'A': ['Heartbeat', {'Utc': '2024-05-18T14:59:16.0296373Z', '_kf': True}, '2024-05-18T14:59:14.01Z']}]}"
+
+msgtype2 = '["RaceControlMessages", {"Messages": {"26": {"Utc": "2024-05-26T13:04:08", "Lap": 1, "Category": "Flag", "Flag": "CLEAR", "Scope": "Sector", "Sector": 11, "Message": "CLEAR IN TRACK SECTOR 11"}}}, "2024-05-26T13:04:07.961Z"]'
+
+msgtype3 = "{'C': 'd-574D6C21-B,0|sJE,0|sJF,3|d,2AA|BK,31', 'M': [{'H': 'Streaming', 'M': 'feed', 'A': ['RaceControlMessages', {'Messages': {'24': {'Utc': '2024-05-18T15:00:00', 'Category': 'Flag', 'Flag': 'CHEQUERED', 'Scope': 'Track', 'Message': 'CHEQUERED FLAG'}}}, '2024-05-18T15:00:00.199Z']}]}"
+
+client.handle_message(msgtype1)
+
+client.handle_message(msgtype2)
+
+client.handle_message(msgtype3)

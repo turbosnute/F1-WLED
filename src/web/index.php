@@ -162,7 +162,7 @@
 
             <section>
                 
-                <p><strong>F1-WLED Status: </strong><span id="status">Checking...</span></p>
+                <p><strong>F1-WLED Status: </strong><span id="status">We are checking...</span></p>
             </section>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
             <script>

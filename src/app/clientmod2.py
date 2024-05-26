@@ -157,19 +157,21 @@ class SignalRClientMod2:
         msg = self.fix_json(msg)
         print(Fore.CYAN, msg, Fore.RESET)
         msg = json.loads(msg)
-        activities = msg['M'] if 'M' in msg and len(msg['M']) > 0 else {}
-        # If M exist in msg and is not empty, set the activities to M. If not, set activities to empty dict.
-        for activity in activities:
-            action = ''
-            messages = {}
+        
+        activities = list()
 
-            if isinstance(activity, dict):
-                # If H exist in activity, set hub to H. If not, set hub to empty string.
-                hub = activity['H'] if 'H' in activity else ''
-                if hub.lower() == 'streaming' and activity['A'][0] == 'RaceControlMessages':
-                    messages = activity['A'][1]['Messages']
-            elif isinstance(activity, list) and activity[0] == 'RaceControlMessages':
+        if 'M' in msg and len(msg['M']) > 0:
+            for m in msg['M']:
+                if 'A' in m:
+                    activities.append(m['A'])
+        else:
+            activities.append(msg)
+
+        for activity in activities:
+            if activity[0] == 'RaceControlMessages':
                 messages = activity[1]['Messages']
+            else:
+                messages = {}
 
             for m in messages:
                 message = messages[m]
@@ -203,7 +205,6 @@ class SignalRClientMod2:
                 
                 if action != '':
                     self.to_wled(action)
-
 
     async def _on_do_nothing(self, msg):
         # just do nothing with the message; intended for debug mode where some
