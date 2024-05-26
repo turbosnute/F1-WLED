@@ -29,3 +29,4 @@ sudo docker run -it -v "$PWD/src/web":/var/www/html/ -v f1wled:/config/  -p 8800
 ## TO-DO
 - Apache should always run in background.
 - How should the script start? And should it automatically be reloaded when new config is saved?
+- Script status on website?
