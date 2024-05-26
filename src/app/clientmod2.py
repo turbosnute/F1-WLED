@@ -159,45 +159,50 @@ class SignalRClientMod2:
         msg = json.loads(msg)
 
         # If M exist in msg and is not empty, set the activities to M. If not, set activities to empty dict.
-        activities = msg['M'] if 'M' in msg and len(msg['M']) > 0 else {}
-
         for activity in activities:
-            # If H exist in activity, set hub to H. If not, set hub to empty string.
-            hub = activity['H'] if 'H' in activity else ''
-            if hub.lower() == 'streaming':
-                if activity['A'][0] == 'RaceControlMessages':
-                    for m in activity['A'][1]['Messages']:
-                        message = activity['A'][1]['Messages'][m]
-                        # Message should be something like: {'Utc': '2024-05-18T15:01:42', 'Category': 'Other', 'Message': 'FIA STEWARDS: Q1 INCIDENT INVOLVING CARS 24 (ZHO), 1 (VER), 11 (PER), 55 (SAI), 10 (GAS), 16 (LEC), 2 (SAR), 3 (RIC) NO FURTHER ACTION - FAILING TO FOLLOW RACE DIRECTORS INSTRUCTIONS - MAXIMUM DELTA TIME'}
-                        action = ''
+            action = ''
+            messages = {}
 
-                        if message['Category'] == 'Flag':
-                            if message['Flag'] == 'GREEN':
-                                print(Fore.GREEN + "Green Flag" + Fore.RESET + " " + message['Message'])
-                                action = 'GREEN'
-                            elif message['Flag'] == 'YELLOW' or message['Flag'] == 'DOUBLE YELLOW':
-                                print(Fore.YELLOW + "Yellow Flag" + Fore.RESET + " " + message['Message'])
-                                action = 'YELLOW'
-                            elif message['Flag'] == 'RED':
-                                print(Fore.RED + "Red Flag" + Fore.RESET)
-                                action = 'RED'
-                            elif message['Flag'] == 'CLEAR':
-                                if message['Message'] == 'TRACK CLEAR':
-                                    print(Fore.CYAN + "Clear Flag" + Fore.RESET + " " + message['Message'])
-                                    action = 'TRACKCLEAR'
-                                else:
-                                    print(Back.CYAN + Fore.BLACK + message['Message'] + Fore.RESET + Back.RESET)
-                            elif message['Flag'] == 'CHEQUERED':
-                                print(Fore.MAGENTA + "Chequered Flag" + Fore.RESET + " " + message['Message'])
-                                action = 'CHEQUERED'
-                            else:
-                                print(Fore.MAGENTA + message['Message'] + Fore.RESET)
-                        elif message['Category'] == 'SafetyCar':
-                            print(Back.YELLOW + "Safety Car" + Back.RESET + " " + message['Message'])
-                            action = 'SC'
-                        
-                        if action != '':
-                            self.to_wled(action)
+            if isinstance(activity, dict):
+                # If H exist in activity, set hub to H. If not, set hub to empty string.
+                hub = activity['H'] if 'H' in activity else ''
+                if hub.lower() == 'streaming' and activity['A'][0] == 'RaceControlMessages':
+                    messages = activity['A'][1]['Messages']
+            elif isinstance(activity, list) and activity[0] == 'RaceControlMessages':
+                messages = activity[1]['Messages']
+
+            for m in messages:
+                message = messages[m]
+                # Message should be something like: {'Utc': '2024-05-18T15:01:42', 'Category': 'Other', 'Message': 'FIA STEWARDS: Q1 INCIDENT INVOLVING CARS 24 (ZHO), 1 (VER), 11 (PER), 55 (SAI), 10 (GAS), 16 (LEC), 2 (SAR), 3 (RIC) NO FURTHER ACTION - FAILING TO FOLLOW RACE DIRECTORS INSTRUCTIONS - MAXIMUM DELTA TIME'}
+                action = ''
+
+                if message['Category'] == 'Flag':
+                    if message['Flag'] == 'GREEN':
+                        print(Fore.GREEN + "Green Flag" + Fore.RESET + " " + message['Message'])
+                        action = 'GREEN'
+                    elif message['Flag'] == 'YELLOW' or message['Flag'] == 'DOUBLE YELLOW':
+                        print(Fore.YELLOW + "Yellow Flag" + Fore.RESET + " " + message['Message'])
+                        action = 'YELLOW'
+                    elif message['Flag'] == 'RED':
+                        print(Fore.RED + "Red Flag" + Fore.RESET)
+                        action = 'RED'
+                    elif message['Flag'] == 'CLEAR':
+                        if message['Message'] == 'TRACK CLEAR':
+                            print(Fore.CYAN + "Clear Flag" + Fore.RESET + " " + message['Message'])
+                            action = 'TRACKCLEAR'
+                        else:
+                            print(Back.CYAN + Fore.BLACK + message['Message'] + Fore.RESET + Back.RESET)
+                    elif message['Flag'] == 'CHEQUERED':
+                        print(Fore.MAGENTA + "Chequered Flag" + Fore.RESET + " " + message['Message'])
+                        action = 'CHEQUERED'
+                    else:
+                        print(Fore.MAGENTA + message['Message'] + Fore.RESET)
+                elif message['Category'] == 'SafetyCar':
+                    print(Back.YELLOW + "Safety Car" + Back.RESET + " " + message['Message'])
+                    action = 'SC'
+                
+                if action != '':
+                    self.to_wled(action)
 
 
     async def _on_do_nothing(self, msg):
