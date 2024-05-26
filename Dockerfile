@@ -1,6 +1,6 @@
 FROM php:8.3-apache-bullseye
 
-RUN apt-get update && apt-get install --no-install-recommends -y python3 python3-dev python3-venv python3-pip python3-wheel build-essential supervisor nano && \
+RUN apt-get update && apt-get install --no-install-recommends -y python3 python3-dev python3-venv python3-pip python3-wheel build-essential supervisor nano procps && \
    apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Create and activate virtual environment
