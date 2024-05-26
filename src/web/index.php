@@ -159,6 +159,21 @@
             </div>
 
             <button type="submit" class="btn btn-primary">Save Config</button>
+
+            <section>
+                
+                <p><strong>F1-WLED Status: </strong><span id="status">Checking...</span></p>
+            </section>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script>
+            $(document).ready(function(){
+                setInterval(function(){
+                    $.get("check_process.php", function(data, status){
+                        $("#status").html(data);
+                    });
+                }, 2000); // check every 2 seconds
+            });
+            </script>
          </form>
         </main>
     </div>

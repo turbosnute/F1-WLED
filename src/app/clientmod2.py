@@ -157,7 +157,7 @@ class SignalRClientMod2:
         msg = self.fix_json(msg)
         print(Fore.CYAN, msg, Fore.RESET)
         msg = json.loads(msg)
-
+        activities = msg['M'] if 'M' in msg and len(msg['M']) > 0 else {}
         # If M exist in msg and is not empty, set the activities to M. If not, set activities to empty dict.
         for activity in activities:
             action = ''
