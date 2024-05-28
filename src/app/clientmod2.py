@@ -153,8 +153,11 @@ class SignalRClientMod2:
         null = subprocess.Popen(command, shell=True)
 
     def handle_message(self, msg):
-        self._output_file.write(msg + '\n')
-        self._output_file.flush()
+        try:
+            self._output_file.write(msg + '\n')
+            self._output_file.flush()
+        except Exception as e:
+            print(f"Error writing to file: {e}")
 
         #Fix and load json
         msg = self.fix_json(msg)
@@ -169,9 +172,9 @@ class SignalRClientMod2:
                     activities.append(m['A'])
         else:
             activities.append(msg)
-
+        
         for activity in activities:
-            if activity[0] == 'RaceControlMessages':
+            if 'RaceControlMessages' in activity:
                 messages = activity[1]['Messages']
             else:
                 messages = {}
