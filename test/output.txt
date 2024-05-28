@@ -65,3 +65,1980 @@
 {}
 {'C': 'd-574D6C21-B,0|sJE,0|sJF,3|d,2B7|BK,33', 'M': [{'H': 'Streaming', 'M': 'feed', 'A': ['Heartbeat', {'Utc': '2024-05-18T15:03:16.1702894Z', '_kf': True}, '2024-05-18T15:03:07.24Z']}]}
 {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2024-05-25 10:29:43,014 - DEBUG: % received keepalive pong
+2024-05-25 10:29:43,333 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 10:29:49,651 - DEBUG: < TEXT '{"C":"d-31A9F2CE-B,0|Df,0|Dg,3|e,34|BY,0","M":[...5-25T10:29:47.536Z"]}]}' [172 bytes]
+2024-05-25 10:29:53,346 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 10:30:02,229 - DEBUG: < TEXT '{"C":"d-31A9F2CE-B,0|Df,0|Dg,3|e,34|BY,1","M":[...5-25T10:30:00.184Z"]}]}' [277 bytes]
+2024-05-25 10:30:02,230 - ERROR: Exception while writing message to file
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.9/site-packages/fastf1/livetiming/clientmod2.py", line 225, in _on_debug
+    await loop.run_in_executor(
+  File "/usr/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/opt/venv/lib/python3.9/site-packages/fastf1/livetiming/clientmod2.py", line 169, in handle_message
+    message = activity['A'][1]['Messages'][m]
+TypeError: list indices must be integers or slices, not dict
+2024-05-25 10:30:03,015 - DEBUG: % sending keepalive ping
+2024-05-25 10:30:03,015 - DEBUG: > PING 56 10 ea 06 [binary, 4 bytes]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2024-05-25 10:41:58,332 - DEBUG: % received keepalive pong
+2024-05-25 10:42:02,597 - DEBUG: < TEXT '{"C":"d-FC208C19-B,0|BZ8,0|BZ9,3|f,64|w,2","M":...5-25T10:42:00.562Z"]}]}' [283 bytes]
+ {"C": "d-FC208C19-B,0|BZ8,0|BZ9,3|f,64|w,2", "M": [{"H": "Streaming", "M": "feed", "A": ["RaceControlMessages", {"Messages": {"1": {"Utc": "2024-05-25T10:42:00", "Category": "Flag", "Flag": "YELLOW", "Scope": "Sector", "Sector": 17, "Message": "YELLOW IN TRACK SECTOR 17"}}}, "2024-05-25T10:42:00.562Z"]}]}
+Yellow Flag YELLOW IN TRACK SECTOR 17
+ http://192.168.1.144/win&PL=2
+/bin/sh: 1: 45: not found
+nohup: appending output to 'nohup.out'
+2024-05-25 10:42:04,306 - DEBUG: < TEXT '{}' [2 bytes]
+ {}
+2024-05-25 10:42:05,139 - DEBUG: < TEXT '{"C":"d-FC208C19-B,0|BZ8,0|BZ9,3|f,65|w,2","M":...5-25T10:42:03.661Z"]}]}' [173 bytes]
+ {"C": "d-FC208C19-B,0|BZ8,0|BZ9,3|f,65|w,2", "M": [{"H": "Streaming", "M": "feed", "A": ["Heartbeat", {"Utc": "2024-05-25T10:42:05.1088687Z", "_kf": true}, "2024-05-25T10:42:03.661Z"]}]}
+2024-05-25 10:42:08,902 - DEBUG: < TEXT '{"C":"d-FC208C19-B,0|BZ8,0|BZ9,3|f,65|w,3","M":...05-25T10:42:06.86Z"]}]}' [296 bytes]
+ {"C": "d-FC208C19-B,0|BZ8,0|BZ9,3|f,65|w,3", "M": [{"H": "Streaming", "M": "feed", "A": ["RaceControlMessages", {"Messages": {"2": {"Utc": "2024-05-25T10:42:07", "Category": "Flag", "Flag": "DOUBLE YELLOW", "Scope": "Sector", "Sector": 17, "Message": "DOUBLE YELLOW IN TRACK SECTOR 17"}}}, "2024-05-25T10:42:06.86Z"]}]}
+Yellow Flag DOUBLE YELLOW IN TRACK SECTOR 17
+ http://192.168.1.144/win&PL=2
+/bin/sh: 1: 45: not found
+nohup: appending output to 'nohup.out'
+2024-05-25 10:42:14,316 - DEBUG: < TEXT '{}' [2 bytes]
+ {}
+2024-05-25 10:42:16,038 - DEBUG: < TEXT '{"C":"d-FC208C19-B,0|BZ8,0|BZ9,3|f,65|w,4","M":...5-25T10:42:13.882Z"]}]}' [250 bytes]
+ {"C": "d-FC208C19-B,0|BZ8,0|BZ9,3|f,65|w,4", "M": [{"H": "Streaming", "M": "feed", "A": ["RaceControlMessages", {"Messages": {"3": {"Utc": "2024-05-25T10:42:14", "Category": "Flag", "Flag": "RED", "Scope": "Track", "Message": "RED FLAG"}}}, "2024-05-25T10:42:13.882Z"]}]}
+Red Flag
+ http://192.168.1.144/win&PL=3
+/bin/sh: 1: 45: not found
+nohup: appending output to 'nohup.out'
+2024-05-25 10:42:16,122 - DEBUG: < TEXT '{"C":"d-FC208C19-B,0|BZ8,0|BZ9,3|f,65|w,5","M":...5-25T10:42:14.046Z"]}]}' [281 bytes]
+ {"C": "d-FC208C19-B,0|BZ8,0|BZ9,3|f,65|w,5", "M": [{"H": "Streaming", "M": "feed", "A": ["RaceControlMessages", {"Messages": {"4": {"Utc": "2024-05-25T10:42:14", "Category": "Flag", "Flag": "CLEAR", "Scope": "Sector", "Sector": 17, "Message": "CLEAR IN TRACK SECTOR 17"}}}, "2024-05-25T10:42:14.046Z"]}]}
+2024-05-25 10:42:16,124 - ERROR: Exception while writing message to file
+Traceback (most recent call last):
+  File "/opt/venv/lib/python3.9/site-packages/fastf1/livetiming/clientmod2.py", line 226, in _on_debug
+    await loop.run_in_executor(
+  File "/usr/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/opt/venv/lib/python3.9/site-packages/fastf1/livetiming/clientmod2.py", line 189, in handle_message
+    print(Back.CYAN + Fore.Black + message['Message'] + Fore.RESET + Back.RESET)
+AttributeError: 'AnsiFore' object has no attribute 'Black'
+2024-05-25 10:42:18,333 - DEBUG: % sending keepalive ping
+
+
+
+
+
+
+
+
+
+
+
+
+
+2024-05-25 11:36:54,612 - DEBUG: % sending keepalive ping
+2024-05-25 11:36:54,612 - DEBUG: > PING e0 97 30 99 [binary, 4 bytes]
+2024-05-25 11:36:54,653 - DEBUG: < PONG e0 97 30 99 [binary, 4 bytes]
+2024-05-25 11:36:54,654 - DEBUG: % received keepalive pong
+2024-05-25 11:36:55,414 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 11:37:03,631 - DEBUG: < TEXT '{"C":"d-E8C5DFDD-C,0|XS8,0|XS9,3|f,140|s,22","M...05-25T11:37:01.59Z"]}]}' [299 bytes]
+ ["RaceControlMessages", {"Messages": {"33": {"Utc": "2024-05-25T11:37:01", "Category": "Flag", "Flag": "DOUBLE YELLOW", "Scope": "Sector", "Sector": 10, "Message": "DOUBLE YELLOW IN TRACK SECTOR 10"}}}, "2024-05-25T11:37:01.59Z"]
+2024-05-25 11:37:05,428 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 11:37:06,201 - DEBUG: < TEXT '{"C":"d-E8C5DFDD-C,0|XS8,0|XS9,3|f,140|s,23","M...5-25T11:37:04.154Z"]}]}' [284 bytes]
+ ["RaceControlMessages", {"Messages": {"34": {"Utc": "2024-05-25T11:37:04", "Category": "Flag", "Flag": "YELLOW", "Scope": "Sector", "Sector": 9, "Message": "YELLOW IN TRACK SECTOR 9"}}}, "2024-05-25T11:37:04.154Z"]
+2024-05-25 11:37:07,684 - DEBUG: < TEXT '{"C":"d-E8C5DFDD-C,0|XS8,0|XS9,3|f,141|s,23","M...5-25T11:37:04.154Z"]}]}' [175 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T11:37:07.6560274Z", "_kf": true}, "2024-05-25T11:37:04.154Z"]
+2024-05-25 11:37:14,655 - DEBUG: % sending keepalive ping
+2024-05-25 11:37:14,655 - DEBUG: > PING 5a 07 62 f5 [binary, 4 bytes]
+2024-05-25 11:37:14,695 - DEBUG: < PONG 5a 07 62 f5 [binary, 4 bytes]
+2024-05-25 11:37:14,695 - DEBUG: % received keepalive pong
+2024-05-25 11:37:15,419 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 11:37:22,700 - DEBUG: < TEXT '{"C":"d-E8C5DFDD-C,0|XS8,0|XS9,3|f,142|s,23","M...5-25T11:37:04.154Z"]}]}' [175 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T11:37:22.6716772Z", "_kf": true}, "2024-05-25T11:37:04.154Z"]
+2024-05-25 11:37:25,427 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 11:37:34,695 - DEBUG: % sending keepalive ping
+2024-05-25 11:37:34,696 - DEBUG: > PING 6c cf 7c 8d [binary, 4 bytes]
+2024-05-25 11:37:34,736 - DEBUG: < PONG 6c cf 7c 8d [binary, 4 bytes]
+2024-05-25 11:37:34,737 - DEBUG: % received keepalive pong
+2024-05-25 11:37:35,460 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 11:37:37,700 - DEBUG: < TEXT '{"C":"d-E8C5DFDD-C,0|XS8,0|XS9,3|f,143|s,23","M...5-25T11:37:04.154Z"]}]}' [174 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T11:37:37.671661Z", "_kf": true}, "2024-05-25T11:37:04.154Z"]
+2024-05-25 11:37:38,939 - DEBUG: < TEXT '{"C":"d-E8C5DFDD-C,0|XS8,0|XS9,3|f,143|s,24","M...5-25T11:37:36.898Z"]}]}' [282 bytes]
+ ["RaceControlMessages", {"Messages": {"35": {"Utc": "2024-05-25T11:37:37", "Category": "Flag", "Flag": "CLEAR", "Scope": "Sector", "Sector": 9, "Message": "CLEAR IN TRACK SECTOR 9"}}}, "2024-05-25T11:37:36.898Z"]
+2024-05-25 11:37:44,439 - DEBUG: < TEXT '{"C":"d-E8C5DFDD-C,0|XS8,0|XS9,3|f,143|s,25","M...5-25T11:37:42.401Z"]}]}' [258 bytes]
+ ["RaceControlMessages", {"Messages": {"36": {"Utc": "2024-05-25T11:37:42", "Category": "Other", "Message": "TRACK SURFACE SLIPPERY IN TRACK SECTOR 17"}}}, "2024-05-25T11:37:42.401Z"]
+2024-05-25 11:37:45,464 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 11:37:52,720 - DEBUG: < TEXT '{"C":"d-E8C5DFDD-C,0|XS8,0|XS9,3|f,144|s,25","M...5-25T11:37:42.401Z"]}]}' [174 bytes]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2024-05-25 13:51:44,461 - DEBUG: < TEXT '{"R":{"Heartbeat":{"Utc":"2024-05-25T13:51:37.8...","_kf":true}},"I":"0"}' [77 bytes]
+2024-05-25 13:51:46,786 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 13:51:52,886 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,19D|Bg,25","...T13:51:50.7281027Z"]}]}' [180 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T13:51:52.8569714Z", "_kf": true}, "2024-05-25T13:51:50.7281027Z"]
+2024-05-25 13:51:56,807 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 13:52:04,412 - DEBUG: % sending keepalive ping
+2024-05-25 13:52:04,412 - DEBUG: > PING 7b 7c 9e 8d [binary, 4 bytes]
+2024-05-25 13:52:04,454 - DEBUG: < PONG 7b 7c 9e 8d [binary, 4 bytes]
+2024-05-25 13:52:04,454 - DEBUG: % received keepalive pong
+2024-05-25 13:52:06,831 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 13:52:07,902 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,19E|Bg,25","...T13:52:05.6494685Z"]}]}' [180 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T13:52:07.8726259Z", "_kf": true}, "2024-05-25T13:52:05.6494685Z"]
+2024-05-25 13:52:16,856 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 13:52:22,907 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,19F|Bg,25","...T13:52:20.7702213Z"]}]}' [180 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T13:52:22.8726772Z", "_kf": true}, "2024-05-25T13:52:20.7702213Z"]
+2024-05-25 13:52:24,455 - DEBUG: % sending keepalive ping
+2024-05-25 13:52:24,455 - DEBUG: > PING 52 af e2 66 [binary, 4 bytes]
+
+
+
+
+["Heartbeat", {"Utc": "2024-05-25T14:02:23.250344Z", "_kf": true}, "2024-05-25T14:02:21.089Z"]
+2024-05-25 14:02:25,755 - DEBUG: % sending keepalive ping
+2024-05-25 14:02:25,755 - DEBUG: > PING 8a 94 90 7b [binary, 4 bytes]
+2024-05-25 14:02:25,797 - DEBUG: < PONG 8a 94 90 7b [binary, 4 bytes]
+2024-05-25 14:02:25,797 - DEBUG: % received keepalive pong
+2024-05-25 14:02:27,948 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:02:37,980 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:02:38,332 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1C8|Bg,26","...5-25T14:02:36.158Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:02:38.2659151Z", "_kf": true}, "2024-05-25T14:02:36.158Z"]
+2024-05-25 14:02:45,798 - DEBUG: % sending keepalive ping
+2024-05-25 14:02:45,798 - DEBUG: > PING 63 85 aa 6c [binary, 4 bytes]
+2024-05-25 14:02:45,840 - DEBUG: < PONG 63 85 aa 6c [binary, 4 bytes]
+2024-05-25 14:02:45,840 - DEBUG: % received keepalive pong
+2024-05-25 14:02:48,005 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:02:53,311 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1C9|Bg,26","...5-25T14:02:51.246Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:02:53.2815104Z", "_kf": true}, "2024-05-25T14:02:51.246Z"]
+2024-05-25 14:02:58,016 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:03:05,843 - DEBUG: % sending keepalive ping
+2024-05-25 14:03:05,843 - DEBUG: > PING 4a f6 ed 09 [binary, 4 bytes]
+2024-05-25 14:03:05,885 - DEBUG: < PONG 4a f6 ed 09 [binary, 4 bytes]
+2024-05-25 14:03:05,885 - DEBUG: % received keepalive pong
+2024-05-25 14:03:07,262 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1C9|Bg,27","...5-25T14:03:05.162Z"]}]}' [292 bytes]
+ ["RaceControlMessages", {"Messages": {"1": {"Utc": "2024-05-25T14:03:05", "Category": "Other", "Message": "CAR 44 (HAM) TIME 1:19.550 DELETED - TRACK LIMITS AT TURN 10 LAP 3 16:02:21"}}}, "2024-05-25T14:03:05.162Z"]
+2024-05-25 14:03:08,040 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:03:08,333 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1CA|Bg,27","...5-25T14:03:06.254Z"]}]}' [175 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:03:08.281471Z", "_kf": true}, "2024-05-25T14:03:06.254Z"]
+2024-05-25 14:03:18,042 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:03:22,092 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1CA|Bg,28","...5-25T14:03:19.964Z"]}]}' [292 bytes]
+ ["RaceControlMessages", {"Messages": {"2": {"Utc": "2024-05-25T14:03:20", "Category": "Other", "Message": "CAR 11 (PER) TIME 1:48.019 DELETED - TRACK LIMITS AT TURN 10 LAP 2 16:02:37"}}}, "2024-05-25T14:03:19.964Z"]
+2024-05-25 14:03:23,323 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1CB|Bg,28","...T14:03:21.2120529Z"]}]}' [180 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:03:23.2970896Z", "_kf": true}, "2024-05-25T14:03:21.2120529Z"]
+2024-05-25 14:03:25,886 - DEBUG: % sending keepalive ping
+2024-05-25 14:03:25,887 - DEBUG: > PING 1a 58 f8 81 [binary, 4 bytes]
+2024-05-25 14:03:25,927 - DEBUG: < PONG 1a 58 f8 81 [binary, 4 bytes]
+2024-05-25 14:03:25,928 - DEBUG: % received keepalive pong
+2024-05-25 14:03:28,067 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:03:38,073 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:03:38,367 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1CC|Bg,28","...5-25T14:03:36.247Z"]}]}' [175 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:03:38.328243Z", "_kf": true}, "2024-05-25T14:03:36.247Z"]
+2024-05-25 14:03:45,929 - DEBUG: % sending keepalive ping
+2024-05-25 14:03:45,929 - DEBUG: > PING 28 a2 ee 60 [binary, 4 bytes]
+2024-05-25 14:03:45,971 - DEBUG: < PONG 28 a2 ee 60 [binary, 4 bytes]
+2024-05-25 14:03:45,971 - DEBUG: % received keepalive pong
+2024-05-25 14:03:48,111 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:03:53,454 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1CD|Bg,28","...5-25T14:03:51.212Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:03:53.3438458Z", "_kf": true}, "2024-05-25T14:03:51.212Z"]
+2024-05-25 14:03:58,123 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:04:05,973 - DEBUG: % sending keepalive ping
+2024-05-25 14:04:05,973 - DEBUG: > PING f0 aa 7c 7d [binary, 4 bytes]
+2024-05-25 14:04:06,014 - DEBUG: < PONG f0 aa 7c 7d [binary, 4 bytes]
+2024-05-25 14:04:06,014 - DEBUG: % received keepalive pong
+2024-05-25 14:04:08,152 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:04:08,398 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1CE|Bg,28","...T14:04:06.2284217Z"]}]}' [180 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:04:08.3595471Z", "_kf": true}, "2024-05-25T14:04:06.2284217Z"]
+2024-05-25 14:04:18,160 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:04:23,402 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1CF|Bg,28","...T14:04:21.2121336Z"]}]}' [180 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:04:23.3751444Z", "_kf": true}, "2024-05-25T14:04:21.2121336Z"]
+2024-05-25 14:04:26,016 - DEBUG: % sending keepalive ping
+2024-05-25 14:04:26,016 - DEBUG: > PING cc 9c bb 33 [binary, 4 bytes]
+2024-05-25 14:04:26,058 - DEBUG: < PONG cc 9c bb 33 [binary, 4 bytes]
+2024-05-25 14:04:26,058 - DEBUG: % received keepalive pong
+2024-05-25 14:04:28,175 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:04:38,189 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:04:38,549 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1D0|Bg,28","...5-25T14:04:36.265Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:04:38.4063663Z", "_kf": true}, "2024-05-25T14:04:36.265Z"]
+2024-05-25 14:04:46,059 - DEBUG: % sending keepalive ping
+2024-05-25 14:04:46,060 - DEBUG: > PING 07 64 48 8b [binary, 4 bytes]
+2024-05-25 14:04:46,151 - DEBUG: < PONG 07 64 48 8b [binary, 4 bytes]
+2024-05-25 14:04:46,152 - DEBUG: % received keepalive pong
+2024-05-25 14:04:48,212 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:04:53,433 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1D1|Bg,28","...5-25T14:04:51.296Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:04:53.4063474Z", "_kf": true}, "2024-05-25T14:04:51.296Z"]
+2024-05-25 14:04:58,224 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:05:06,153 - DEBUG: % sending keepalive ping
+2024-05-25 14:05:06,154 - DEBUG: > PING 60 46 ea 90 [binary, 4 bytes]
+2024-05-25 14:05:06,196 - DEBUG: < PONG 60 46 ea 90 [binary, 4 bytes]
+2024-05-25 14:05:06,196 - DEBUG: % received keepalive pong
+2024-05-25 14:05:08,237 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:05:08,448 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1D2|Bg,28","...5-25T14:05:06.347Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:05:08.4218851Z", "_kf": true}, "2024-05-25T14:05:06.347Z"]
+2024-05-25 14:05:18,272 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:05:19,408 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1D2|Bg,29","...5-25T14:05:17.302Z"]}]}' [287 bytes]
+ ["RaceControlMessages", {"Messages": {"3": {"Utc": "2024-05-25T14:05:17", "Category": "Other", "Message": "TURN 16 INCIDENT INVOLVING CARS 55 (SAI) AND 23 (ALB) NOTED - IMPEDING"}}}, "2024-05-25T14:05:17.302Z"]
+2024-05-25 14:05:23,448 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1D3|Bg,29","...5-25T14:05:21.312Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:05:23.4218733Z", "_kf": true}, "2024-05-25T14:05:21.312Z"]
+2024-05-25 14:05:26,197 - DEBUG: % sending keepalive ping
+2024-05-25 14:05:26,197 - DEBUG: > PING 57 e3 ba d9 [binary, 4 bytes]
+2024-05-25 14:05:26,238 - DEBUG: < PONG 57 e3 ba d9 [binary, 4 bytes]
+2024-05-25 14:05:26,238 - DEBUG: % received keepalive pong
+2024-05-25 14:05:28,276 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:05:38,295 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:05:38,449 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1D4|Bg,29","...5-25T14:05:36.372Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:05:38.4218481Z", "_kf": true}, "2024-05-25T14:05:36.372Z"]
+2024-05-25 14:05:46,239 - DEBUG: % sending keepalive ping
+2024-05-25 14:05:46,239 - DEBUG: > PING '!jHE' [text, 4 bytes]
+2024-05-25 14:05:46,281 - DEBUG: < PONG '!jHE' [text, 4 bytes]
+2024-05-25 14:05:46,282 - DEBUG: % received keepalive pong
+2024-05-25 14:05:48,301 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:05:53,598 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1D5|Bg,29","...5-25T14:05:51.362Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:05:53.4374715Z", "_kf": true}, "2024-05-25T14:05:51.362Z"]
+2024-05-25 14:05:58,336 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:05:58,868 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1D5|Bg,2A","...05-25T14:05:56.72Z"]}]}' [291 bytes]
+ ["RaceControlMessages", {"Messages": {"4": {"Utc": "2024-05-25T14:05:57", "Category": "Other", "Message": "CAR 63 (RUS) TIME 1:37.479 DELETED - TRACK LIMITS AT TURN 10 LAP 5 16:05:16"}}}, "2024-05-25T14:05:56.72Z"]
+2024-05-25 14:06:06,282 - DEBUG: % sending keepalive ping
+2024-05-25 14:06:06,283 - DEBUG: > PING 2b 4e be e4 [binary, 4 bytes]
+2024-05-25 14:06:06,334 - DEBUG: < PONG 2b 4e be e4 [binary, 4 bytes]
+2024-05-25 14:06:06,335 - DEBUG: % received keepalive pong
+2024-05-25 14:06:08,333 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:06:08,468 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1D6|Bg,2A","...5-25T14:06:06.375Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:06:08.4374189Z", "_kf": true}, "2024-05-25T14:06:06.375Z"]
+2024-05-25 14:06:18,349 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:06:23,480 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1D7|Bg,2A","...5-25T14:06:21.363Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:06:23.4530272Z", "_kf": true}, "2024-05-25T14:06:21.363Z"]
+2024-05-25 14:06:26,335 - DEBUG: % sending keepalive ping
+2024-05-25 14:06:26,335 - DEBUG: > PING 55 e2 4c 42 [binary, 4 bytes]
+2024-05-25 14:06:26,377 - DEBUG: < PONG 55 e2 4c 42 [binary, 4 bytes]
+2024-05-25 14:06:26,377 - DEBUG: % received keepalive pong
+2024-05-25 14:06:28,376 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:06:38,384 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:06:38,495 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1D8|Bg,2A","...5-25T14:06:36.404Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:06:38.4687015Z", "_kf": true}, "2024-05-25T14:06:36.404Z"]
+2024-05-25 14:06:42,716 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1D8|Bg,2B","...5-25T14:06:40.664Z"]}]}' [291 bytes]
+ ["RaceControlMessages", {"Messages": {"5": {"Utc": "2024-05-25T14:06:41", "Category": "Other", "Message": "CAR 3 (RIC) TIME 1:37.553 DELETED - TRACK LIMITS AT TURN 10 LAP 5 16:05:46"}}}, "2024-05-25T14:06:40.664Z"]
+2024-05-25 14:06:44,453 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1D8|Bg,2C","...05-25T14:06:42.23Z"]}]}' [290 bytes]
+ ["RaceControlMessages", {"Messages": {"6": {"Utc": "2024-05-25T14:06:42", "Category": "Other", "Message": "CAR 24 (ZHO) TIME 1:46.598 DELETED - TRACK LIMITS AT TURN 1 LAP 4 16:04:57"}}}, "2024-05-25T14:06:42.23Z"]
+2024-05-25 14:06:46,378 - DEBUG: % sending keepalive ping
+2024-05-25 14:06:46,378 - DEBUG: > PING be 25 69 7a [binary, 4 bytes]
+2024-05-25 14:06:46,420 - DEBUG: < PONG be 25 69 7a [binary, 4 bytes]
+2024-05-25 14:06:46,421 - DEBUG: % received keepalive pong
+2024-05-25 14:06:48,576 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:06:53,511 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1D9|Bg,2C","...5-25T14:06:51.452Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:06:53.4842598Z", "_kf": true}, "2024-05-25T14:06:51.452Z"]
+2024-05-25 14:06:58,767 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:07:06,421 - DEBUG: % sending keepalive ping
+2024-05-25 14:07:06,422 - DEBUG: > PING cd 6c 8f 8f [binary, 4 bytes]
+2024-05-25 14:07:06,464 - DEBUG: < PONG cd 6c 8f 8f [binary, 4 bytes]
+2024-05-25 14:07:06,464 - DEBUG: % received keepalive pong
+2024-05-25 14:07:08,585 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:07:08,621 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1DA|Bg,2C","...5-25T14:07:06.511Z"]}]}' [175 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:07:08.499838Z", "_kf": true}, "2024-05-25T14:07:06.511Z"]
+2024-05-25 14:07:18,593 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:07:23,542 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1DB|Bg,2C","...5-25T14:07:21.569Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:07:23.5154358Z", "_kf": true}, "2024-05-25T14:07:21.569Z"]
+2024-05-25 14:07:26,465 - DEBUG: % sending keepalive ping
+2024-05-25 14:07:26,466 - DEBUG: > PING '[=\x02\x15' [text, 4 bytes]
+2024-05-25 14:07:26,507 - DEBUG: < PONG '[=\x02\x15' [text, 4 bytes]
+2024-05-25 14:07:26,507 - DEBUG: % received keepalive pong
+2024-05-25 14:07:28,617 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:07:32,473 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1DB|Bg,2D","...5-25T14:07:30.416Z"]}]}' [334 bytes]
+ ["RaceControlMessages", {"Messages": {"7": {"Utc": "2024-05-25T14:07:30", "Category": "Other", "Message": "FIA STEWARDS: TURN 16 INCIDENT INVOLVING CARS 55 (SAI) AND 23 (ALB) WILL BE INVESTIGATED AFTER THE SESSION - IMPEDING"}}}, "2024-05-25T14:07:30.416Z"]
+2024-05-25 14:07:38,547 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1DC|Bg,2D","...5-25T14:07:36.619Z"]}]}' [175 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:07:38.515394Z", "_kf": true}, "2024-05-25T14:07:36.619Z"]
+2024-05-25 14:07:38,624 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:07:46,508 - DEBUG: % sending keepalive ping
+2024-05-25 14:07:46,508 - DEBUG: > PING 14 ca de 23 [binary, 4 bytes]
+2024-05-25 14:07:46,549 - DEBUG: < PONG 14 ca de 23 [binary, 4 bytes]
+2024-05-25 14:07:46,549 - DEBUG: % received keepalive pong
+2024-05-25 14:07:48,645 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:07:53,620 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1DD|Bg,2D","...5-25T14:07:51.661Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:07:53.5309929Z", "_kf": true}, "2024-05-25T14:07:51.661Z"]
+2024-05-25 14:07:58,649 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:08:06,550 - DEBUG: % sending keepalive ping
+2024-05-25 14:08:06,551 - DEBUG: > PING 39 46 ac b2 [binary, 4 bytes]
+2024-05-25 14:08:06,592 - DEBUG: < PONG 39 46 ac b2 [binary, 4 bytes]
+2024-05-25 14:08:06,592 - DEBUG: % received keepalive pong
+2024-05-25 14:08:08,560 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1DE|Bg,2D","...5-25T14:08:06.708Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:08:08.5315539Z", "_kf": true}, "2024-05-25T14:08:06.708Z"]
+2024-05-25 14:08:08,669 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:08:18,700 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:08:23,574 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1DF|Bg,2D","...5-25T14:08:21.742Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:08:23.5471826Z", "_kf": true}, "2024-05-25T14:08:21.742Z"]
+2024-05-25 14:08:26,593 - DEBUG: % sending keepalive ping
+2024-05-25 14:08:26,594 - DEBUG: > PING 95 ea 20 43 [binary, 4 bytes]
+2024-05-25 14:08:26,635 - DEBUG: < PONG 95 ea 20 43 [binary, 4 bytes]
+2024-05-25 14:08:26,635 - DEBUG: % received keepalive pong
+2024-05-25 14:08:28,720 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:08:29,839 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1DF|Bg,2E","...5-25T14:08:27.784Z"]}]}' [290 bytes]
+ ["RaceControlMessages", {"Messages": {"8": {"Utc": "2024-05-25T14:08:28", "Category": "Other", "Message": "CAR 4 (NOR) TIME 1:39.713 DELETED - TRACK LIMITS AT TURN 1 LAP 6 16:06:23"}}}, "2024-05-25T14:08:27.784Z"]
+2024-05-25 14:08:38,578 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1E0|Bg,2E","...5-25T14:08:36.764Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:08:38.5482873Z", "_kf": true}, "2024-05-25T14:08:36.764Z"]
+2024-05-25 14:08:38,732 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:08:46,636 - DEBUG: % sending keepalive ping
+2024-05-25 14:08:46,636 - DEBUG: > PING e9 4c 74 aa [binary, 4 bytes]
+2024-05-25 14:08:46,679 - DEBUG: < PONG e9 4c 74 aa [binary, 4 bytes]
+2024-05-25 14:08:46,679 - DEBUG: % received keepalive pong
+2024-05-25 14:08:48,732 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:08:53,605 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1E1|Bg,2E","...5-25T14:08:51.823Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:08:53.5621969Z", "_kf": true}, "2024-05-25T14:08:51.823Z"]
+2024-05-25 14:08:58,760 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:09:04,259 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1E1|Bg,2F","...5-25T14:09:02.204Z"]}]}' [291 bytes]
+ ["RaceControlMessages", {"Messages": {"9": {"Utc": "2024-05-25T14:09:02", "Category": "Other", "Message": "CAR 63 (RUS) TIME 1:52.435 DELETED - TRACK LIMITS AT TURN 1 LAP 7 16:07:07"}}}, "2024-05-25T14:09:02.204Z"]
+2024-05-25 14:09:06,680 - DEBUG: % sending keepalive ping
+2024-05-25 14:09:06,681 - DEBUG: > PING a9 a5 8a 25 [binary, 4 bytes]
+2024-05-25 14:09:06,722 - DEBUG: < PONG a9 a5 8a 25 [binary, 4 bytes]
+2024-05-25 14:09:06,723 - DEBUG: % received keepalive pong
+2024-05-25 14:09:08,652 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1E2|Bg,2F","...05-25T14:09:06.86Z"]}]}' [175 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:09:08.5777704Z", "_kf": true}, "2024-05-25T14:09:06.86Z"]
+2024-05-25 14:09:08,799 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:09:18,805 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:09:24,048 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1E3|Bg,2F","...5-25T14:09:21.902Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:09:23.5933835Z", "_kf": true}, "2024-05-25T14:09:21.902Z"]
+2024-05-25 14:09:26,725 - DEBUG: % sending keepalive ping
+2024-05-25 14:09:26,725 - DEBUG: > PING bc a2 c0 e6 [binary, 4 bytes]
+2024-05-25 14:09:26,766 - DEBUG: < PONG bc a2 c0 e6 [binary, 4 bytes]
+2024-05-25 14:09:26,766 - DEBUG: % received keepalive pong
+2024-05-25 14:09:28,859 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:09:38,657 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1E4|Bg,2F","...5-25T14:09:36.938Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:09:38.6089971Z", "_kf": true}, "2024-05-25T14:09:36.938Z"]
+2024-05-25 14:09:38,866 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:09:46,767 - DEBUG: % sending keepalive ping
+2024-05-25 14:09:46,767 - DEBUG: > PING ce ce ac 6b [binary, 4 bytes]
+2024-05-25 14:09:46,811 - DEBUG: < PONG ce ce ac 6b [binary, 4 bytes]
+2024-05-25 14:09:46,812 - DEBUG: % received keepalive pong
+2024-05-25 14:09:48,905 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:09:53,664 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1E5|Bg,2F","...5-25T14:09:51.969Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:09:53.6090022Z", "_kf": true}, "2024-05-25T14:09:51.969Z"]
+2024-05-25 14:09:58,891 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:10:04,239 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1E5|Bg,30","...5-25T14:10:02.204Z"]}]}' [296 bytes]
+ ["RaceControlMessages", {"Messages": {"10": {"Utc": "2024-05-25T14:10:02", "Category": "Other", "Message": "TURN 3 INCIDENT INVOLVING CARS 24 (ZHO), 77 (BOT) AND 3 (RIC) NOTED - IMPEDING"}}}, "2024-05-25T14:10:02.204Z"]
+2024-05-25 14:10:06,813 - DEBUG: % sending keepalive ping
+2024-05-25 14:10:06,813 - DEBUG: > PING cc cc b0 d1 [binary, 4 bytes]
+2024-05-25 14:10:06,854 - DEBUG: < PONG cc cc b0 d1 [binary, 4 bytes]
+2024-05-25 14:10:06,854 - DEBUG: % received keepalive pong
+2024-05-25 14:10:08,819 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1E6|Bg,30","...5-25T14:10:07.026Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:10:08.6402596Z", "_kf": true}, "2024-05-25T14:10:07.026Z"]
+2024-05-25 14:10:08,900 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:10:18,987 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:10:23,689 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1E7|Bg,30","...5-25T14:10:22.074Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:10:23.6558344Z", "_kf": true}, "2024-05-25T14:10:22.074Z"]
+2024-05-25 14:10:26,855 - DEBUG: % sending keepalive ping
+2024-05-25 14:10:26,856 - DEBUG: > PING 36 b3 2a 81 [binary, 4 bytes]
+2024-05-25 14:10:26,898 - DEBUG: < PONG 36 b3 2a 81 [binary, 4 bytes]
+2024-05-25 14:10:26,898 - DEBUG: % received keepalive pong
+2024-05-25 14:10:28,981 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:10:38,699 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1E8|Bg,30","...5-25T14:10:37.099Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:10:38.6714849Z", "_kf": true}, "2024-05-25T14:10:37.099Z"]
+2024-05-25 14:10:39,002 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:10:46,899 - DEBUG: % sending keepalive ping
+2024-05-25 14:10:46,899 - DEBUG: > PING 6e c5 35 7e [binary, 4 bytes]
+2024-05-25 14:10:46,940 - DEBUG: < PONG 6e c5 35 7e [binary, 4 bytes]
+2024-05-25 14:10:46,940 - DEBUG: % received keepalive pong
+2024-05-25 14:10:49,006 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:10:52,612 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1E8|Bg,31","...5-25T14:10:50.477Z"]}]}' [293 bytes]
+ ["RaceControlMessages", {"Messages": {"11": {"Utc": "2024-05-25T14:10:50", "Category": "Other", "Message": "CAR 55 (SAI) TIME 1:44.831 DELETED - TRACK LIMITS AT TURN 10 LAP 6 16:10:08"}}}, "2024-05-25T14:10:50.477Z"]
+2024-05-25 14:10:53,698 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1E9|Bg,31","...5-25T14:10:52.144Z"]}]}' [175 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:10:53.671494Z", "_kf": true}, "2024-05-25T14:10:52.144Z"]
+2024-05-25 14:10:59,027 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:11:06,941 - DEBUG: % sending keepalive ping
+2024-05-25 14:11:06,941 - DEBUG: > PING 97 48 c4 20 [binary, 4 bytes]
+2024-05-25 14:11:06,983 - DEBUG: < PONG 97 48 c4 20 [binary, 4 bytes]
+2024-05-25 14:11:06,983 - DEBUG: % received keepalive pong
+2024-05-25 14:11:08,699 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1EA|Bg,31","...5-25T14:11:07.212Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:11:08.6714582Z", "_kf": true}, "2024-05-25T14:11:07.212Z"]
+2024-05-25 14:11:09,200 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:11:13,201 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1EA|Bg,32","...5-25T14:11:11.152Z"]}]}' [292 bytes]
+ ["RaceControlMessages", {"Messages": {"12": {"Utc": "2024-05-25T14:11:11", "Category": "Other", "Message": "CAR 4 (NOR) TIME 1:42.833 DELETED - TRACK LIMITS AT TURN 10 LAP 8 16:10:10"}}}, "2024-05-25T14:11:11.152Z"]
+2024-05-25 14:11:19,236 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:11:23,715 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1EB|Bg,32","...5-25T14:11:22.275Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:11:23.6870032Z", "_kf": true}, "2024-05-25T14:11:22.275Z"]
+2024-05-25 14:11:26,985 - DEBUG: % sending keepalive ping
+2024-05-25 14:11:26,985 - DEBUG: > PING ad c4 83 b4 [binary, 4 bytes]
+2024-05-25 14:11:27,026 - DEBUG: < PONG ad c4 83 b4 [binary, 4 bytes]
+2024-05-25 14:11:27,027 - DEBUG: % received keepalive pong
+2024-05-25 14:11:29,257 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:11:38,730 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1EC|Bg,32","...5-25T14:11:37.337Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:11:38.7025938Z", "_kf": true}, "2024-05-25T14:11:37.337Z"]
+2024-05-25 14:11:39,280 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:11:44,587 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1EC|Bg,33","...5-25T14:11:42.531Z"]}]}' [292 bytes]
+ ["RaceControlMessages", {"Messages": {"13": {"Utc": "2024-05-25T14:11:42", "Category": "Other", "Message": "CAR 4 (NOR) TIME 1:42.833 DELETED - TRACK LIMITS AT TURN 16 LAP 8 16:10:35"}}}, "2024-05-25T14:11:42.531Z"]
+2024-05-25 14:11:47,028 - DEBUG: % sending keepalive ping
+2024-05-25 14:11:47,028 - DEBUG: > PING c7 e6 4d 6a [binary, 4 bytes]
+2024-05-25 14:11:47,070 - DEBUG: < PONG c7 e6 4d 6a [binary, 4 bytes]
+2024-05-25 14:11:47,070 - DEBUG: % received keepalive pong
+2024-05-25 14:11:49,288 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:11:53,746 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1ED|Bg,33","...5-25T14:11:52.379Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:11:53.7184082Z", "_kf": true}, "2024-05-25T14:11:52.379Z"]
+2024-05-25 14:11:59,305 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:12:07,071 - DEBUG: % sending keepalive ping
+2024-05-25 14:12:07,072 - DEBUG: > PING a6 b3 18 50 [binary, 4 bytes]
+2024-05-25 14:12:07,113 - DEBUG: < PONG a6 b3 18 50 [binary, 4 bytes]
+2024-05-25 14:12:07,113 - DEBUG: % received keepalive pong
+2024-05-25 14:12:08,762 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1EE|Bg,33","...5-25T14:12:07.438Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:12:08.7338165Z", "_kf": true}, "2024-05-25T14:12:07.438Z"]
+2024-05-25 14:12:09,326 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:12:19,352 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:12:22,512 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1EE|Bg,34","...5-25T14:12:20.463Z"]}]}' [286 bytes]
+ ["RaceControlMessages", {"Messages": {"14": {"Utc": "2024-05-25T14:12:20", "Category": "Other", "Message": "TURN 8 INCIDENT INVOLVING CARS 55 (SAI) AND 1 (VER) NOTED - IMPEDING"}}}, "2024-05-25T14:12:20.463Z"]
+2024-05-25 14:12:23,785 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1EF|Bg,34","...5-25T14:12:22.476Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:12:23.7494439Z", "_kf": true}, "2024-05-25T14:12:22.476Z"]
+2024-05-25 14:12:27,116 - DEBUG: % sending keepalive ping
+2024-05-25 14:12:27,116 - DEBUG: > PING '\x11rA|' [text, 4 bytes]
+2024-05-25 14:12:27,157 - DEBUG: < PONG '\x11rA|' [text, 4 bytes]
+2024-05-25 14:12:27,158 - DEBUG: % received keepalive pong
+2024-05-25 14:12:29,440 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:12:31,902 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1EF|Bg,35","...5-25T14:12:29.766Z"]}]}' [289 bytes]
+ ["RaceControlMessages", {"Messages": {"15": {"Utc": "2024-05-25T14:12:30", "Category": "Other", "Message": "CAR 11 (PER) LAP DELETED - TRACK LIMITS AT TURN 10 LAP 8 16:11:26 (PIT)"}}}, "2024-05-25T14:12:29.766Z"]
+2024-05-25 14:12:38,825 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1F0|Bg,35","...5-25T14:12:37.507Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:12:38.7493833Z", "_kf": true}, "2024-05-25T14:12:37.507Z"]
+2024-05-25 14:12:39,460 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:12:46,811 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1F0|Bg,36","...5-25T14:12:44.692Z"]}]}' [338 bytes]
+ ["RaceControlMessages", {"Messages": {"16": {"Utc": "2024-05-25T14:12:45", "Category": "Other", "Message": "FIA STEWARDS: TURN 3 INCIDENT INVOLVING CARS 24 (ZHO), 77 (BOT) AND 3 (RIC) REVIEWED NO FURTHER INVESTIGATION - IMPEDING"}}}, "2024-05-25T14:12:44.692Z"]
+2024-05-25 14:12:47,158 - DEBUG: % sending keepalive ping
+2024-05-25 14:12:47,159 - DEBUG: > PING 4b a8 31 83 [binary, 4 bytes]
+2024-05-25 14:12:47,200 - DEBUG: < PONG 4b a8 31 83 [binary, 4 bytes]
+2024-05-25 14:12:47,200 - DEBUG: % received keepalive pong
+2024-05-25 14:12:49,462 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:12:53,836 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1F1|Bg,36","...05-25T14:12:52.54Z"]}]}' [175 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:12:53.7649506Z", "_kf": true}, "2024-05-25T14:12:52.54Z"]
+2024-05-25 14:12:59,480 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:13:07,201 - DEBUG: % sending keepalive ping
+2024-05-25 14:13:07,201 - DEBUG: > PING 31 f3 5b 16 [binary, 4 bytes]
+2024-05-25 14:13:07,243 - DEBUG: < PONG 31 f3 5b 16 [binary, 4 bytes]
+2024-05-25 14:13:07,243 - DEBUG: % received keepalive pong
+2024-05-25 14:13:08,819 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1F2|Bg,36","...5-25T14:13:07.574Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:13:08.7805749Z", "_kf": true}, "2024-05-25T14:13:07.574Z"]
+2024-05-25 14:13:09,489 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:13:19,540 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:13:23,894 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1F3|Bg,36","...5-25T14:13:22.623Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:13:23.7961688Z", "_kf": true}, "2024-05-25T14:13:22.623Z"]
+2024-05-25 14:13:27,246 - DEBUG: % sending keepalive ping
+2024-05-25 14:13:27,246 - DEBUG: > PING de 0f 5a ac [binary, 4 bytes]
+2024-05-25 14:13:27,287 - DEBUG: < PONG de 0f 5a ac [binary, 4 bytes]
+2024-05-25 14:13:27,287 - DEBUG: % received keepalive pong
+2024-05-25 14:13:29,581 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:13:31,013 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1F3|Bg,37","...5-25T14:13:28.704Z"]}]}' [301 bytes]
+ ["RaceControlMessages", {"Messages": {"17": {"Utc": "2024-05-25T14:13:29", "Category": "Flag", "Flag": "DOUBLE YELLOW", "Scope": "Sector", "Sector": 15, "Message": "DOUBLE YELLOW IN TRACK SECTOR 15"}}}, "2024-05-25T14:13:28.704Z"]
+2024-05-25 14:13:32,507 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1F3|Bg,38","...5-25T14:13:30.476Z"]}]}' [285 bytes]
+ ["RaceControlMessages", {"Messages": {"18": {"Utc": "2024-05-25T14:13:30", "Category": "Flag", "Flag": "CLEAR", "Scope": "Sector", "Sector": 15, "Message": "CLEAR IN TRACK SECTOR 15"}}}, "2024-05-25T14:13:30.476Z"]
+2024-05-25 14:13:38,839 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1F4|Bg,38","...5-25T14:13:37.675Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:13:38.8118172Z", "_kf": true}, "2024-05-25T14:13:37.675Z"]
+2024-05-25 14:13:39,081 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1F4|Bg,39","...05-25T14:13:37.05Z"]}]}' [288 bytes]
+ ["RaceControlMessages", {"Messages": {"19": {"Utc": "2024-05-25T14:13:37", "Category": "Other", "Message": "CAR 55 (SAI) LAP DELETED - TRACK LIMITS AT TURN 10 LAP 8 16:12:58 (PIT)"}}}, "2024-05-25T14:13:37.05Z"]
+2024-05-25 14:13:39,627 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:13:47,289 - DEBUG: % sending keepalive ping
+2024-05-25 14:13:47,289 - DEBUG: > PING e8 c4 2c a7 [binary, 4 bytes]
+2024-05-25 14:13:47,330 - DEBUG: < PONG e8 c4 2c a7 [binary, 4 bytes]
+2024-05-25 14:13:47,330 - DEBUG: % received keepalive pong
+2024-05-25 14:13:49,642 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:13:53,854 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1F5|Bg,39","...05-25T14:13:52.74Z"]}]}' [174 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:13:53.827442Z", "_kf": true}, "2024-05-25T14:13:52.74Z"]
+2024-05-25 14:13:59,643 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:14:07,331 - DEBUG: % sending keepalive ping
+2024-05-25 14:14:07,331 - DEBUG: > PING '\x16\x1c2\r' [text, 4 bytes]
+2024-05-25 14:14:07,373 - DEBUG: < PONG '\x16\x1c2\r' [text, 4 bytes]
+2024-05-25 14:14:07,373 - DEBUG: % received keepalive pong
+2024-05-25 14:14:08,871 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1F6|Bg,39","...5-25T14:14:07.795Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:14:08.8431407Z", "_kf": true}, "2024-05-25T14:14:07.795Z"]
+2024-05-25 14:14:09,851 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:14:19,690 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:14:23,934 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1F7|Bg,39","...5-25T14:14:22.841Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:14:23.8586067Z", "_kf": true}, "2024-05-25T14:14:22.841Z"]
+2024-05-25 14:14:27,375 - DEBUG: % sending keepalive ping
+2024-05-25 14:14:27,375 - DEBUG: > PING 37 51 b2 9d [binary, 4 bytes]
+2024-05-25 14:14:27,423 - DEBUG: < PONG 37 51 b2 9d [binary, 4 bytes]
+2024-05-25 14:14:27,423 - DEBUG: % received keepalive pong
+2024-05-25 14:14:29,718 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:14:38,902 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1F8|Bg,39","...5-25T14:14:37.885Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:14:38.8742147Z", "_kf": true}, "2024-05-25T14:14:37.885Z"]
+2024-05-25 14:14:39,733 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:14:47,424 - DEBUG: % sending keepalive ping
+2024-05-25 14:14:47,424 - DEBUG: > PING ae 39 03 e2 [binary, 4 bytes]
+2024-05-25 14:14:47,477 - DEBUG: < PONG ae 39 03 e2 [binary, 4 bytes]
+2024-05-25 14:14:47,477 - DEBUG: % received keepalive pong
+2024-05-25 14:14:49,754 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:14:53,917 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1F9|Bg,39","...5-25T14:14:52.923Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:14:53.8898081Z", "_kf": true}, "2024-05-25T14:14:52.923Z"]
+2024-05-25 14:14:59,767 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:15:07,479 - DEBUG: % sending keepalive ping
+2024-05-25 14:15:07,479 - DEBUG: > PING 41 53 9f 9c [binary, 4 bytes]
+2024-05-25 14:15:07,597 - DEBUG: < PONG 41 53 9f 9c [binary, 4 bytes]
+2024-05-25 14:15:07,597 - DEBUG: % received keepalive pong
+2024-05-25 14:15:09,284 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1FA|Bg,39","...5-25T14:15:07.967Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:15:08.9054096Z", "_kf": true}, "2024-05-25T14:15:07.967Z"]
+2024-05-25 14:15:09,786 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:15:12,992 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1FA|Bg,3A","...5-25T14:15:10.949Z"]}]}' [328 bytes]
+ ["RaceControlMessages", {"Messages": {"20": {"Utc": "2024-05-25T14:15:11", "Category": "Other", "Message": "FIA STEWARDS: TURN 8 INCIDENT INVOLVING CARS 55 (SAI) AND 1 (VER) REVIEWED NO FURTHER INVESTIGATION - IMPEDING"}}}, "2024-05-25T14:15:10.949Z"]
+2024-05-25 14:15:19,940 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:15:24,184 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1FB|Bg,3A","...5-25T14:15:22.993Z"]}]}' [175 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:15:23.920978Z", "_kf": true}, "2024-05-25T14:15:22.993Z"]
+2024-05-25 14:15:26,807 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1FB|Bg,3B","...5-25T14:15:24.775Z"]}]}' [293 bytes]
+ ["RaceControlMessages", {"Messages": {"21": {"Utc": "2024-05-25T14:15:25", "Category": "Other", "Message": "CAR 81 (PIA) TIME 1:42.702 DELETED - TRACK LIMITS AT TURN 10 LAP 9 16:14:13"}}}, "2024-05-25T14:15:24.775Z"]
+2024-05-25 14:15:27,599 - DEBUG: % sending keepalive ping
+2024-05-25 14:15:27,599 - DEBUG: > PING 2b ab 21 e7 [binary, 4 bytes]
+2024-05-25 14:15:27,640 - DEBUG: < PONG 2b ab 21 e7 [binary, 4 bytes]
+2024-05-25 14:15:27,640 - DEBUG: % received keepalive pong
+2024-05-25 14:15:29,948 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:15:39,019 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1FC|Bg,3B","...5-25T14:15:38.037Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:15:38.9382609Z", "_kf": true}, "2024-05-25T14:15:38.037Z"]
+2024-05-25 14:15:39,974 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:15:45,757 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1FC|Bg,3C","...5-25T14:15:43.593Z"]}]}' [289 bytes]
+ ["RaceControlMessages", {"Messages": {"22": {"Utc": "2024-05-25T14:15:44", "Category": "Other", "Message": "CAR 4 (NOR) LAP DELETED - TRACK LIMITS AT TURN 10 LAP 11 16:15:01 (PIT)"}}}, "2024-05-25T14:15:43.593Z"]
+2024-05-25 14:15:46,486 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1FC|Bg,3D","...5-25T14:15:44.428Z"]}]}' [293 bytes]
+ ["RaceControlMessages", {"Messages": {"23": {"Utc": "2024-05-25T14:15:44", "Category": "Other", "Message": "CAR 3 (RIC) TIME 1:46.289 DELETED - TRACK LIMITS AT TURN 10 LAP 10 16:14:52"}}}, "2024-05-25T14:15:44.428Z"]
+2024-05-25 14:15:47,642 - DEBUG: % sending keepalive ping
+2024-05-25 14:15:47,642 - DEBUG: > PING af 35 93 a5 [binary, 4 bytes]
+2024-05-25 14:15:47,683 - DEBUG: < PONG af 35 93 a5 [binary, 4 bytes]
+2024-05-25 14:15:47,683 - DEBUG: % received keepalive pong
+2024-05-25 14:15:48,271 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1FC|Bg,3E","...5-25T14:15:46.208Z"]}]}' [292 bytes]
+ ["RaceControlMessages", {"Messages": {"24": {"Utc": "2024-05-25T14:15:46", "Category": "Other", "Message": "CAR 27 (HUL) TIME 1:41.592 DELETED - TRACK LIMITS AT TURN 1 LAP 9 16:13:54"}}}, "2024-05-25T14:15:46.208Z"]
+2024-05-25 14:15:49,512 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1FC|Bg,3F","...5-25T14:15:47.406Z"]}]}' [293 bytes]
+ ["RaceControlMessages", {"Messages": {"25": {"Utc": "2024-05-25T14:15:47", "Category": "Other", "Message": "CAR 27 (HUL) TIME 1:41.592 DELETED - TRACK LIMITS AT TURN 10 LAP 9 16:14:56"}}}, "2024-05-25T14:15:47.406Z"]
+2024-05-25 14:15:50,001 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:15:53,964 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1FD|Bg,3F","...5-25T14:15:53.093Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:15:53.9382881Z", "_kf": true}, "2024-05-25T14:15:53.093Z"]
+2024-05-25 14:16:00,004 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:16:07,685 - DEBUG: % sending keepalive ping
+2024-05-25 14:16:07,685 - DEBUG: > PING 52 54 05 a4 [binary, 4 bytes]
+2024-05-25 14:16:07,726 - DEBUG: < PONG 52 54 05 a4 [binary, 4 bytes]
+2024-05-25 14:16:07,727 - DEBUG: % received keepalive pong
+2024-05-25 14:16:08,983 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1FE|Bg,3F","...5-25T14:16:08.137Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:16:08.9539016Z", "_kf": true}, "2024-05-25T14:16:08.137Z"]
+2024-05-25 14:16:10,025 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:16:20,035 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:16:24,176 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1FF|Bg,3F","...5-25T14:16:23.161Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:16:23.9537954Z", "_kf": true}, "2024-05-25T14:16:23.161Z"]
+2024-05-25 14:16:27,728 - DEBUG: % sending keepalive ping
+2024-05-25 14:16:27,728 - DEBUG: > PING e6 0a 67 5e [binary, 4 bytes]
+2024-05-25 14:16:27,769 - DEBUG: < PONG e6 0a 67 5e [binary, 4 bytes]
+2024-05-25 14:16:27,769 - DEBUG: % received keepalive pong
+2024-05-25 14:16:30,042 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:16:30,647 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,1FF|Bg,40","...5-25T14:16:28.516Z"]}]}' [294 bytes]
+ ["RaceControlMessages", {"Messages": {"26": {"Utc": "2024-05-25T14:16:28", "Category": "Other", "Message": "CAR 18 (STR) TIME 1:51.655 DELETED - TRACK LIMITS AT TURN 10 LAP 10 16:15:47"}}}, "2024-05-25T14:16:28.516Z"]
+2024-05-25 14:16:38,996 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,200|Bg,40","...5-25T14:16:38.195Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:16:38.9694544Z", "_kf": true}, "2024-05-25T14:16:38.195Z"]
+2024-05-25 14:16:40,070 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:16:47,771 - DEBUG: % sending keepalive ping
+2024-05-25 14:16:47,771 - DEBUG: > PING b2 9b d1 24 [binary, 4 bytes]
+2024-05-25 14:16:47,813 - DEBUG: < PONG b2 9b d1 24 [binary, 4 bytes]
+2024-05-25 14:16:47,813 - DEBUG: % received keepalive pong
+2024-05-25 14:16:50,096 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:16:53,995 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,201|Bg,40","...5-25T14:16:53.241Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:16:53.9694265Z", "_kf": true}, "2024-05-25T14:16:53.241Z"]
+2024-05-25 14:17:00,241 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:17:07,815 - DEBUG: % sending keepalive ping
+2024-05-25 14:17:07,815 - DEBUG: > PING 25 9d fc b8 [binary, 4 bytes]
+2024-05-25 14:17:07,858 - DEBUG: < PONG 25 9d fc b8 [binary, 4 bytes]
+2024-05-25 14:17:07,858 - DEBUG: % received keepalive pong
+2024-05-25 14:17:09,010 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,202|Bg,40","...5-25T14:17:08.296Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:17:08.9850343Z", "_kf": true}, "2024-05-25T14:17:08.296Z"]
+2024-05-25 14:17:10,362 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:17:20,492 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:17:24,011 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,203|Bg,40","...5-25T14:17:23.364Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:17:23.9850004Z", "_kf": true}, "2024-05-25T14:17:23.364Z"]
+2024-05-25 14:17:27,860 - DEBUG: % sending keepalive ping
+2024-05-25 14:17:27,860 - DEBUG: > PING c6 ee 93 f3 [binary, 4 bytes]
+2024-05-25 14:17:27,907 - DEBUG: < PONG c6 ee 93 f3 [binary, 4 bytes]
+2024-05-25 14:17:27,907 - DEBUG: % received keepalive pong
+2024-05-25 14:17:30,655 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:17:39,026 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,204|Bg,40","...5-25T14:17:38.413Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:17:39.0006106Z", "_kf": true}, "2024-05-25T14:17:38.413Z"]
+2024-05-25 14:17:40,663 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:17:47,909 - DEBUG: % sending keepalive ping
+2024-05-25 14:17:47,910 - DEBUG: > PING 1d ac f9 66 [binary, 4 bytes]
+2024-05-25 14:17:47,952 - DEBUG: < PONG 1d ac f9 66 [binary, 4 bytes]
+2024-05-25 14:17:47,952 - DEBUG: % received keepalive pong
+2024-05-25 14:17:50,691 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:17:54,098 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,205|Bg,40","...5-25T14:17:53.448Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:17:54.0161856Z", "_kf": true}, "2024-05-25T14:17:53.448Z"]
+2024-05-25 14:17:57,422 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,205|Bg,41","...5-25T14:17:55.374Z"]}]}' [294 bytes]
+ ["RaceControlMessages", {"Messages": {"27": {"Utc": "2024-05-25T14:17:55", "Category": "Other", "Message": "CAR 11 (PER) TIME 1:43.987 DELETED - TRACK LIMITS AT TURN 10 LAP 11 16:17:06"}}}, "2024-05-25T14:17:55.374Z"]
+2024-05-25 14:18:00,698 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:18:02,414 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,205|Bg,42","...05-25T14:18:00.27Z"]}]}' [265 bytes]
+ ["RaceControlMessages", {"Messages": {"28": {"Utc": "2024-05-25T14:18:00", "Category": "Flag", "Flag": "CHEQUERED", "Scope": "Track", "Message": "CHEQUERED FLAG"}}}, "2024-05-25T14:18:00.27Z"]
+2024-05-25 14:18:07,809 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,205|Bg,43","...5-25T14:18:05.757Z"]}]}' [258 bytes]
+ ["RaceControlMessages", {"Messages": {"29": {"Utc": "2024-05-25T14:18:06", "Category": "Other", "Message": "FIRST CAR TO TAKE THE FLAG - CAR 1 (VER)"}}}, "2024-05-25T14:18:05.757Z"]
+2024-05-25 14:18:07,954 - DEBUG: % sending keepalive ping
+2024-05-25 14:18:07,954 - DEBUG: > PING f3 29 74 c9 [binary, 4 bytes]
+2024-05-25 14:18:07,995 - DEBUG: < PONG f3 29 74 c9 [binary, 4 bytes]
+2024-05-25 14:18:07,995 - DEBUG: % received keepalive pong
+2024-05-25 14:18:09,164 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,206|Bg,43","...5-25T14:18:08.479Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:18:09.0317652Z", "_kf": true}, "2024-05-25T14:18:08.479Z"]
+2024-05-25 14:18:10,736 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:18:11,092 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,206|Bg,44","...5-25T14:18:09.046Z"]}]}' [290 bytes]
+ ["RaceControlMessages", {"Messages": {"30": {"Utc": "2024-05-25T14:18:09", "Category": "Other", "Message": "CAR 27 (HUL) LAP DELETED - TRACK LIMITS AT TURN 10 LAP 11 16:17:40 (PIT)"}}}, "2024-05-25T14:18:09.046Z"]
+2024-05-25 14:18:20,749 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:18:24,073 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,207|Bg,44","...5-25T14:18:23.499Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:18:24.0477305Z", "_kf": true}, "2024-05-25T14:18:23.499Z"]
+2024-05-25 14:18:27,996 - DEBUG: % sending keepalive ping
+2024-05-25 14:18:27,997 - DEBUG: > PING 9e b8 f7 63 [binary, 4 bytes]
+2024-05-25 14:18:28,038 - DEBUG: < PONG 9e b8 f7 63 [binary, 4 bytes]
+2024-05-25 14:18:28,038 - DEBUG: % received keepalive pong
+2024-05-25 14:18:30,772 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:18:39,186 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,208|Bg,44","...5-25T14:18:38.529Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:18:39.0786458Z", "_kf": true}, "2024-05-25T14:18:38.529Z"]
+2024-05-25 14:18:40,786 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:18:48,039 - DEBUG: % sending keepalive ping
+2024-05-25 14:18:48,040 - DEBUG: > PING 89 a9 d6 dc [binary, 4 bytes]
+2024-05-25 14:18:48,081 - DEBUG: < PONG 89 a9 d6 dc [binary, 4 bytes]
+2024-05-25 14:18:48,081 - DEBUG: % received keepalive pong
+2024-05-25 14:18:50,939 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:18:54,106 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,209|Bg,44","...5-25T14:18:53.585Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:18:54.0786525Z", "_kf": true}, "2024-05-25T14:18:53.585Z"]
+2024-05-25 14:19:00,948 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:19:08,083 - DEBUG: % sending keepalive ping
+2024-05-25 14:19:08,083 - DEBUG: > PING 9d a8 ed e1 [binary, 4 bytes]
+2024-05-25 14:19:08,124 - DEBUG: < PONG 9d a8 ed e1 [binary, 4 bytes]
+2024-05-25 14:19:08,124 - DEBUG: % received keepalive pong
+2024-05-25 14:19:09,120 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,20A|Bg,44","...5-25T14:19:08.628Z"]}]}' [175 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:19:09.094247Z", "_kf": true}, "2024-05-25T14:19:08.628Z"]
+2024-05-25 14:19:10,965 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:19:20,982 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:19:24,135 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,20B|Bg,44","...5-25T14:19:23.666Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:19:24.1098385Z", "_kf": true}, "2024-05-25T14:19:23.666Z"]
+2024-05-25 14:19:28,126 - DEBUG: % sending keepalive ping
+2024-05-25 14:19:28,127 - DEBUG: > PING df 27 07 01 [binary, 4 bytes]
+2024-05-25 14:19:28,168 - DEBUG: < PONG df 27 07 01 [binary, 4 bytes]
+2024-05-25 14:19:28,169 - DEBUG: % received keepalive pong
+2024-05-25 14:19:31,004 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:19:39,258 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,20C|Bg,44","...5-25T14:19:38.701Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:19:39.1254847Z", "_kf": true}, "2024-05-25T14:19:38.701Z"]
+2024-05-25 14:19:41,091 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:19:48,171 - DEBUG: % sending keepalive ping
+2024-05-25 14:19:48,171 - DEBUG: > PING 4c 85 0e 61 [binary, 4 bytes]
+2024-05-25 14:19:48,212 - DEBUG: < PONG 4c 85 0e 61 [binary, 4 bytes]
+2024-05-25 14:19:48,213 - DEBUG: % received keepalive pong
+2024-05-25 14:19:51,289 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:19:54,167 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,20D|Bg,44","...5-25T14:19:53.747Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:19:54.1410711Z", "_kf": true}, "2024-05-25T14:19:53.747Z"]
+2024-05-25 14:20:01,304 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:20:08,214 - DEBUG: % sending keepalive ping
+2024-05-25 14:20:08,214 - DEBUG: > PING b6 0c 8b 15 [binary, 4 bytes]
+2024-05-25 14:20:08,256 - DEBUG: < PONG b6 0c 8b 15 [binary, 4 bytes]
+2024-05-25 14:20:08,257 - DEBUG: % received keepalive pong
+2024-05-25 14:20:09,191 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,20E|Bg,44","...5-25T14:20:08.815Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:20:09.1566533Z", "_kf": true}, "2024-05-25T14:20:08.815Z"]
+2024-05-25 14:20:11,432 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:20:13,209 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,20E|Bg,45","...5-25T14:20:11.158Z"]}]}' [301 bytes]
+ ["RaceControlMessages", {"Messages": {"31": {"Utc": "2024-05-25T14:20:11", "Category": "Flag", "Flag": "DOUBLE YELLOW", "Scope": "Sector", "Sector": 10, "Message": "DOUBLE YELLOW IN TRACK SECTOR 10"}}}, "2024-05-25T14:20:11.158Z"]
+2024-05-25 14:20:15,181 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,20E|Bg,46","...5-25T14:20:13.128Z"]}]}' [299 bytes]
+ ["RaceControlMessages", {"Messages": {"32": {"Utc": "2024-05-25T14:20:13", "Category": "Flag", "Flag": "DOUBLE YELLOW", "Scope": "Sector", "Sector": 7, "Message": "DOUBLE YELLOW IN TRACK SECTOR 7"}}}, "2024-05-25T14:20:13.128Z"]
+2024-05-25 14:20:15,691 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,20E|Bg,47","...5-25T14:20:13.641Z"]}]}' [299 bytes]
+ ["RaceControlMessages", {"Messages": {"33": {"Utc": "2024-05-25T14:20:14", "Category": "Flag", "Flag": "DOUBLE YELLOW", "Scope": "Sector", "Sector": 9, "Message": "DOUBLE YELLOW IN TRACK SECTOR 9"}}}, "2024-05-25T14:20:13.641Z"]
+2024-05-25 14:20:17,759 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,20E|Bg,48","...5-25T14:20:15.724Z"]}]}' [299 bytes]
+ ["RaceControlMessages", {"Messages": {"34": {"Utc": "2024-05-25T14:20:16", "Category": "Flag", "Flag": "DOUBLE YELLOW", "Scope": "Sector", "Sector": 3, "Message": "DOUBLE YELLOW IN TRACK SECTOR 3"}}}, "2024-05-25T14:20:15.724Z"]
+2024-05-25 14:20:19,265 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,20E|Bg,49","...5-25T14:20:17.207Z"]}]}' [285 bytes]
+ ["RaceControlMessages", {"Messages": {"35": {"Utc": "2024-05-25T14:20:17", "Category": "Flag", "Flag": "CLEAR", "Scope": "Sector", "Sector": 10, "Message": "CLEAR IN TRACK SECTOR 10"}}}, "2024-05-25T14:20:17.207Z"]
+2024-05-25 14:20:21,451 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:20:23,445 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,20E|Bg,4A","...5-25T14:20:21.399Z"]}]}' [301 bytes]
+ ["RaceControlMessages", {"Messages": {"36": {"Utc": "2024-05-25T14:20:21", "Category": "Flag", "Flag": "DOUBLE YELLOW", "Scope": "Sector", "Sector": 10, "Message": "DOUBLE YELLOW IN TRACK SECTOR 10"}}}, "2024-05-25T14:20:21.399Z"]
+2024-05-25 14:20:24,182 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,20F|Bg,4A","...5-25T14:20:23.873Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:20:24.1565964Z", "_kf": true}, "2024-05-25T14:20:23.873Z"]
+2024-05-25 14:20:28,259 - DEBUG: % sending keepalive ping
+2024-05-25 14:20:28,259 - DEBUG: > PING ',~Mc' [text, 4 bytes]
+2024-05-25 14:20:28,300 - DEBUG: < PONG ',~Mc' [text, 4 bytes]
+2024-05-25 14:20:28,300 - DEBUG: % received keepalive pong
+2024-05-25 14:20:30,446 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,20F|Bg,4B","...5-25T14:20:28.398Z"]}]}' [301 bytes]
+ ["RaceControlMessages", {"Messages": {"37": {"Utc": "2024-05-25T14:20:28", "Category": "Flag", "Flag": "DOUBLE YELLOW", "Scope": "Sector", "Sector": 14, "Message": "DOUBLE YELLOW IN TRACK SECTOR 14"}}}, "2024-05-25T14:20:28.398Z"]
+2024-05-25 14:20:31,466 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:20:33,419 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,20F|Bg,4C","...5-25T14:20:31.377Z"]}]}' [299 bytes]
+ ["RaceControlMessages", {"Messages": {"38": {"Utc": "2024-05-25T14:20:31", "Category": "Flag", "Flag": "DOUBLE YELLOW", "Scope": "Sector", "Sector": 6, "Message": "DOUBLE YELLOW IN TRACK SECTOR 6"}}}, "2024-05-25T14:20:31.377Z"]
+2024-05-25 14:20:37,414 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,20F|Bg,4D","...5-25T14:20:35.384Z"]}]}' [301 bytes]
+ ["RaceControlMessages", {"Messages": {"39": {"Utc": "2024-05-25T14:20:35", "Category": "Flag", "Flag": "DOUBLE YELLOW", "Scope": "Sector", "Sector": 16, "Message": "DOUBLE YELLOW IN TRACK SECTOR 16"}}}, "2024-05-25T14:20:35.384Z"]
+2024-05-25 14:20:39,182 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,210|Bg,4D","...5-25T14:20:38.938Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:20:39.1565901Z", "_kf": true}, "2024-05-25T14:20:38.938Z"]
+2024-05-25 14:20:41,632 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:20:48,301 - DEBUG: % sending keepalive ping
+2024-05-25 14:20:48,302 - DEBUG: > PING 83 6a dd 15 [binary, 4 bytes]
+2024-05-25 14:20:48,343 - DEBUG: < PONG 83 6a dd 15 [binary, 4 bytes]
+2024-05-25 14:20:48,343 - DEBUG: % received keepalive pong
+2024-05-25 14:20:51,673 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:20:54,229 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,211|Bg,4D","...5-25T14:20:53.992Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:20:54.1722002Z", "_kf": true}, "2024-05-25T14:20:53.992Z"]
+2024-05-25 14:21:01,675 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:21:04,384 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,211|Bg,4E","...5-25T14:21:02.352Z"]}]}' [301 bytes]
+ ["RaceControlMessages", {"Messages": {"40": {"Utc": "2024-05-25T14:21:02", "Category": "Flag", "Flag": "DOUBLE YELLOW", "Scope": "Sector", "Sector": 15, "Message": "DOUBLE YELLOW IN TRACK SECTOR 15"}}}, "2024-05-25T14:21:02.352Z"]
+2024-05-25 14:21:08,343 - DEBUG: % sending keepalive ping
+2024-05-25 14:21:08,344 - DEBUG: > PING 08 18 94 d3 [binary, 4 bytes]
+2024-05-25 14:21:08,385 - DEBUG: < PONG 08 18 94 d3 [binary, 4 bytes]
+2024-05-25 14:21:08,385 - DEBUG: % received keepalive pong
+2024-05-25 14:21:09,213 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,212|Bg,4E","...5-25T14:21:09.055Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:21:09.1877676Z", "_kf": true}, "2024-05-25T14:21:09.055Z"]
+2024-05-25 14:21:11,676 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:21:21,697 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:21:24,214 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,213|Bg,4E","...5-25T14:21:24.097Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:21:24.1877216Z", "_kf": true}, "2024-05-25T14:21:24.097Z"]
+2024-05-25 14:21:28,386 - DEBUG: % sending keepalive ping
+2024-05-25 14:21:28,387 - DEBUG: > PING 85 1a b0 2d [binary, 4 bytes]
+2024-05-25 14:21:28,429 - DEBUG: < PONG 85 1a b0 2d [binary, 4 bytes]
+2024-05-25 14:21:28,429 - DEBUG: % received keepalive pong
+2024-05-25 14:21:31,669 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,213|Bg,4F","...5-25T14:21:29.635Z"]}]}' [283 bytes]
+ ["RaceControlMessages", {"Messages": {"41": {"Utc": "2024-05-25T14:21:30", "Category": "Flag", "Flag": "CLEAR", "Scope": "Sector", "Sector": 3, "Message": "CLEAR IN TRACK SECTOR 3"}}}, "2024-05-25T14:21:29.635Z"]
+2024-05-25 14:21:31,717 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:21:37,116 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,213|Bg,50","...5-25T14:21:35.075Z"]}]}' [381 bytes]
+ ["RaceControlMessages", {"Messages": {"42": {"Utc": "2024-05-25T14:21:35", "Category": "Other", "Message": "FIA STEWARDS: Q1 INCIDENT INVOLVING CARS 2 (SAR), 18 (STR), 44 (HAM), 22 (TSU), 31 (OCO) NOTED - FAILING TO FOLLOW RACE DIRECTORS INSTRUCTIONS - MAXIMUM DELTA TIME"}}}, "2024-05-25T14:21:35.075Z"]
+2024-05-25 14:21:39,229 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,214|Bg,50","...5-25T14:21:39.131Z"]}]}' [175 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:21:39.203375Z", "_kf": true}, "2024-05-25T14:21:39.131Z"]
+2024-05-25 14:21:41,725 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:21:44,840 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,214|Bg,51","...5-25T14:21:42.787Z"]}]}' [301 bytes]
+ ["RaceControlMessages", {"Messages": {"43": {"Utc": "2024-05-25T14:21:43", "Category": "Flag", "Flag": "DOUBLE YELLOW", "Scope": "Sector", "Sector": 17, "Message": "DOUBLE YELLOW IN TRACK SECTOR 17"}}}, "2024-05-25T14:21:42.787Z"]
+2024-05-25 14:21:48,431 - DEBUG: % sending keepalive ping
+2024-05-25 14:21:48,431 - DEBUG: > PING aa 59 f2 ae [binary, 4 bytes]
+2024-05-25 14:21:48,473 - DEBUG: < PONG aa 59 f2 ae [binary, 4 bytes]
+2024-05-25 14:21:48,473 - DEBUG: % received keepalive pong
+2024-05-25 14:21:51,745 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:21:54,256 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,215|Bg,51","...5-25T14:21:54.171Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:21:54.2189443Z", "_kf": true}, "2024-05-25T14:21:54.171Z"]
+2024-05-25 14:22:01,558 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,215|Bg,52","...05-25T14:21:59.51Z"]}]}' [282 bytes]
+ ["RaceControlMessages", {"Messages": {"44": {"Utc": "2024-05-25T14:21:59", "Category": "Flag", "Flag": "CLEAR", "Scope": "Sector", "Sector": 9, "Message": "CLEAR IN TRACK SECTOR 9"}}}, "2024-05-25T14:21:59.51Z"]
+2024-05-25 14:22:01,765 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:22:04,131 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,215|Bg,53","...5-25T14:22:02.076Z"]}]}' [287 bytes]
+ ["RaceControlMessages", {"Messages": {"45": {"Utc": "2024-05-25T14:22:02", "Category": "Flag", "Flag": "YELLOW", "Scope": "Sector", "Sector": 18, "Message": "YELLOW IN TRACK SECTOR 18"}}}, "2024-05-25T14:22:02.076Z"]
+2024-05-25 14:22:05,179 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,215|Bg,54","...5-25T14:22:03.126Z"]}]}' [240 bytes]
+ ["RaceControlMessages", {"Messages": {"46": {"Utc": "2024-05-25T14:22:03", "Category": "Other", "Message": "DRS DISABLED IN ZONE 1"}}}, "2024-05-25T14:22:03.126Z"]
+2024-05-25 14:22:08,474 - DEBUG: % sending keepalive ping
+2024-05-25 14:22:08,474 - DEBUG: > PING 20 08 7e bb [binary, 4 bytes]
+2024-05-25 14:22:08,516 - DEBUG: < PONG 20 08 7e bb [binary, 4 bytes]
+2024-05-25 14:22:08,516 - DEBUG: % received keepalive pong
+2024-05-25 14:22:09,226 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,215|Bg,55","...5-25T14:22:07.177Z"]}]}' [285 bytes]
+ ["RaceControlMessages", {"Messages": {"47": {"Utc": "2024-05-25T14:22:07", "Category": "Flag", "Flag": "CLEAR", "Scope": "Sector", "Sector": 10, "Message": "CLEAR IN TRACK SECTOR 10"}}}, "2024-05-25T14:22:07.177Z"]
+2024-05-25 14:22:09,261 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,216|Bg,55","...5-25T14:22:07.189Z"]}]}' [175 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:22:09.234511Z", "_kf": true}, "2024-05-25T14:22:07.189Z"]
+2024-05-25 14:22:11,828 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:22:22,048 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:22:24,264 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,217|Bg,55","...5-25T14:22:22.005Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:22:24.2357334Z", "_kf": true}, "2024-05-25T14:22:22.005Z"]
+2024-05-25 14:22:28,517 - DEBUG: % sending keepalive ping
+2024-05-25 14:22:28,518 - DEBUG: > PING 10 64 f8 04 [binary, 4 bytes]
+2024-05-25 14:22:28,566 - DEBUG: < PONG 10 64 f8 04 [binary, 4 bytes]
+2024-05-25 14:22:28,566 - DEBUG: % received keepalive pong
+2024-05-25 14:22:31,849 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:22:32,552 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,217|Bg,56","...5-25T14:22:30.518Z"]}]}' [283 bytes]
+ ["RaceControlMessages", {"Messages": {"48": {"Utc": "2024-05-25T14:22:30", "Category": "Flag", "Flag": "CLEAR", "Scope": "Sector", "Sector": 7, "Message": "CLEAR IN TRACK SECTOR 7"}}}, "2024-05-25T14:22:30.518Z"]
+2024-05-25 14:22:36,532 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,217|Bg,57","...5-25T14:22:34.475Z"]}]}' [285 bytes]
+ ["RaceControlMessages", {"Messages": {"49": {"Utc": "2024-05-25T14:22:34", "Category": "Flag", "Flag": "CLEAR", "Scope": "Sector", "Sector": 18, "Message": "CLEAR IN TRACK SECTOR 18"}}}, "2024-05-25T14:22:34.475Z"]
+2024-05-25 14:22:36,562 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,217|Bg,58","...5-25T14:22:34.526Z"]}]}' [239 bytes]
+ ["RaceControlMessages", {"Messages": {"50": {"Utc": "2024-05-25T14:22:34", "Category": "Other", "Message": "DRS ENABLED IN ZONE 1"}}}, "2024-05-25T14:22:34.526Z"]
+2024-05-25 14:22:38,023 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,217|Bg,59","...5-25T14:22:35.986Z"]}]}' [285 bytes]
+ ["RaceControlMessages", {"Messages": {"51": {"Utc": "2024-05-25T14:22:36", "Category": "Flag", "Flag": "CLEAR", "Scope": "Sector", "Sector": 17, "Message": "CLEAR IN TRACK SECTOR 17"}}}, "2024-05-25T14:22:35.986Z"]
+2024-05-25 14:22:39,276 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,218|Bg,59","...5-25T14:22:37.007Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:22:39.2500977Z", "_kf": true}, "2024-05-25T14:22:37.007Z"]
+2024-05-25 14:22:41,838 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:22:47,726 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,218|Bg,5A","...5-25T14:22:45.685Z"]}]}' [285 bytes]
+ ["RaceControlMessages", {"Messages": {"52": {"Utc": "2024-05-25T14:22:46", "Category": "Flag", "Flag": "CLEAR", "Scope": "Sector", "Sector": 15, "Message": "CLEAR IN TRACK SECTOR 15"}}}, "2024-05-25T14:22:45.685Z"]
+2024-05-25 14:22:47,761 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,218|Bg,5B","...05-25T14:22:45.72Z"]}]}' [286 bytes]
+ ["RaceControlMessages", {"Messages": {"53": {"Utc": "2024-05-25T14:22:46", "Category": "Flag", "Flag": "YELLOW", "Scope": "Sector", "Sector": 16, "Message": "YELLOW IN TRACK SECTOR 16"}}}, "2024-05-25T14:22:45.72Z"]
+2024-05-25 14:22:48,567 - DEBUG: % sending keepalive ping
+2024-05-25 14:22:48,567 - DEBUG: > PING c9 08 4b d4 [binary, 4 bytes]
+2024-05-25 14:22:48,611 - DEBUG: < PONG c9 08 4b d4 [binary, 4 bytes]
+2024-05-25 14:22:48,612 - DEBUG: % received keepalive pong
+2024-05-25 14:22:51,863 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:22:54,293 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,219|Bg,5B","...5-25T14:22:52.001Z"]}]}' [175 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:22:54.265683Z", "_kf": true}, "2024-05-25T14:22:52.001Z"]
+2024-05-25 14:22:57,621 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,219|Bg,5C","...5-25T14:22:55.295Z"]}]}' [283 bytes]
+ ["RaceControlMessages", {"Messages": {"54": {"Utc": "2024-05-25T14:22:55", "Category": "Flag", "Flag": "CLEAR", "Scope": "Sector", "Sector": 6, "Message": "CLEAR IN TRACK SECTOR 6"}}}, "2024-05-25T14:22:55.295Z"]
+2024-05-25 14:22:57,888 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,219|Bg,5D","...5-25T14:22:55.851Z"]}]}' [285 bytes]
+ ["RaceControlMessages", {"Messages": {"55": {"Utc": "2024-05-25T14:22:56", "Category": "Flag", "Flag": "CLEAR", "Scope": "Sector", "Sector": 16, "Message": "CLEAR IN TRACK SECTOR 16"}}}, "2024-05-25T14:22:55.851Z"]
+2024-05-25 14:23:02,205 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:23:08,613 - DEBUG: % sending keepalive ping
+2024-05-25 14:23:08,613 - DEBUG: > PING b7 26 6e c5 [binary, 4 bytes]
+2024-05-25 14:23:08,656 - DEBUG: < PONG b7 26 6e c5 [binary, 4 bytes]
+2024-05-25 14:23:08,656 - DEBUG: % received keepalive pong
+2024-05-25 14:23:09,307 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,21A|Bg,5D","...5-25T14:23:07.009Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:23:09.2813415Z", "_kf": true}, "2024-05-25T14:23:07.009Z"]
+2024-05-25 14:23:11,884 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:23:21,891 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:23:24,308 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,21B|Bg,5D","...T14:23:22.0165404Z"]}]}' [180 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:23:24.2816708Z", "_kf": true}, "2024-05-25T14:23:22.0165404Z"]
+2024-05-25 14:23:28,657 - DEBUG: % sending keepalive ping
+2024-05-25 14:23:28,657 - DEBUG: > PING 98 d2 91 2f [binary, 4 bytes]
+2024-05-25 14:23:28,698 - DEBUG: < PONG 98 d2 91 2f [binary, 4 bytes]
+2024-05-25 14:23:28,698 - DEBUG: % received keepalive pong
+2024-05-25 14:23:31,908 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:23:39,329 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,21C|Bg,5D","...05-25T14:23:37.15Z"]}]}' [175 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:23:39.2971658Z", "_kf": true}, "2024-05-25T14:23:37.15Z"]
+2024-05-25 14:23:41,952 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:23:48,699 - DEBUG: % sending keepalive ping
+2024-05-25 14:23:48,700 - DEBUG: > PING ef 96 0f 17 [binary, 4 bytes]
+2024-05-25 14:23:48,741 - DEBUG: < PONG ef 96 0f 17 [binary, 4 bytes]
+2024-05-25 14:23:48,741 - DEBUG: % received keepalive pong
+2024-05-25 14:23:51,944 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:23:54,323 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,21D|Bg,5D","...T14:23:52.0683336Z"]}]}' [180 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:23:54.2968629Z", "_kf": true}, "2024-05-25T14:23:52.0683336Z"]
+2024-05-25 14:24:01,953 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:24:08,742 - DEBUG: % sending keepalive ping
+2024-05-25 14:24:08,743 - DEBUG: > PING 9f 2e 68 e6 [binary, 4 bytes]
+2024-05-25 14:24:08,784 - DEBUG: < PONG 9f 2e 68 e6 [binary, 4 bytes]
+2024-05-25 14:24:08,784 - DEBUG: % received keepalive pong
+2024-05-25 14:24:09,323 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,21E|Bg,5D","...5-25T14:24:07.006Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:24:09.2968802Z", "_kf": true}, "2024-05-25T14:24:07.006Z"]
+2024-05-25 14:24:11,974 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:24:18,295 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,21E|Bg,5E","...05-25T14:24:16.25Z"]}]}' [284 bytes]
+ ["RaceControlMessages", {"Messages": {"56": {"Utc": "2024-05-25T14:24:16", "Category": "Flag", "Flag": "CLEAR", "Scope": "Sector", "Sector": 14, "Message": "CLEAR IN TRACK SECTOR 14"}}}, "2024-05-25T14:24:16.25Z"]
+2024-05-25 14:24:21,998 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:24:24,339 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,21F|Bg,5E","...T14:24:22.1087718Z"]}]}' [180 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:24:24.3124399Z", "_kf": true}, "2024-05-25T14:24:22.1087718Z"]
+2024-05-25 14:24:28,533 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,21F|Bg,5F","...5-25T14:24:26.484Z"]}]}' [414 bytes]
+ ["RaceControlMessages", {"Messages": {"57": {"Utc": "2024-05-25T14:24:26", "Category": "Other", "Message": "FIA STEWARDS: Q1 INCIDENT INVOLVING CARS 2 (SAR), 18 (STR), 44 (HAM), 22 (TSU), 31 (OCO) WILL BE INVESTIGATED AFTER THE SESSION - FAILING TO FOLLOW RACE DIRECTORS INSTRUCTIONS - MAXIMUM DELTA TIME"}}}, "2024-05-25T14:24:26.484Z"]
+2024-05-25 14:24:28,786 - DEBUG: % sending keepalive ping
+2024-05-25 14:24:28,786 - DEBUG: > PING ac ce 19 ca [binary, 4 bytes]
+2024-05-25 14:24:28,828 - DEBUG: < PONG ac ce 19 ca [binary, 4 bytes]
+2024-05-25 14:24:28,829 - DEBUG: % received keepalive pong
+2024-05-25 14:24:32,243 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:24:39,354 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,220|Bg,5F","...T14:24:37.1284915Z"]}]}' [180 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:24:39.3280332Z", "_kf": true}, "2024-05-25T14:24:37.1284915Z"]
+2024-05-25 14:24:42,030 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:24:48,830 - DEBUG: % sending keepalive ping
+2024-05-25 14:24:48,830 - DEBUG: > PING d9 aa 20 fe [binary, 4 bytes]
+2024-05-25 14:24:48,871 - DEBUG: < PONG d9 aa 20 fe [binary, 4 bytes]
+2024-05-25 14:24:48,871 - DEBUG: % received keepalive pong
+2024-05-25 14:24:52,079 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:24:54,370 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,221|Bg,5F","...T14:24:52.0961483Z"]}]}' [180 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:24:54.3435794Z", "_kf": true}, "2024-05-25T14:24:52.0961483Z"]
+2024-05-25 14:25:02,066 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:25:02,331 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,221|Bg,60","...5-25T14:25:00.266Z"]}]}' [275 bytes]
+ ["RaceControlMessages", {"Messages": {"58": {"Utc": "2024-05-25T14:25:00", "Category": "Flag", "Flag": "GREEN", "Scope": "Track", "Message": "GREEN LIGHT - PIT EXIT OPEN"}}}, "2024-05-25T14:25:00.266Z"]
+2024-05-25 14:25:08,872 - DEBUG: % sending keepalive ping
+2024-05-25 14:25:08,872 - DEBUG: > PING ee 42 b5 80 [binary, 4 bytes]
+2024-05-25 14:25:08,913 - DEBUG: < PONG ee 42 b5 80 [binary, 4 bytes]
+2024-05-25 14:25:08,913 - DEBUG: % received keepalive pong
+2024-05-25 14:25:09,371 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,222|Bg,60","...5-25T14:25:07.238Z"]}]}' [174 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:25:09.34355Z", "_kf": true}, "2024-05-25T14:25:07.238Z"]
+2024-05-25 14:25:12,076 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:25:22,105 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:25:24,371 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,223|Bg,60","...T14:25:22.2886341Z"]}]}' [180 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:25:24.3435294Z", "_kf": true}, "2024-05-25T14:25:22.2886341Z"]
+2024-05-25 14:25:28,915 - DEBUG: % sending keepalive ping
+2024-05-25 14:25:28,915 - DEBUG: > PING f2 00 a1 a1 [binary, 4 bytes]
+2024-05-25 14:25:28,957 - DEBUG: < PONG f2 00 a1 a1 [binary, 4 bytes]
+2024-05-25 14:25:28,957 - DEBUG: % received keepalive pong
+2024-05-25 14:25:32,108 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:25:39,385 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,224|Bg,60","...T14:25:37.2964273Z"]}]}' [180 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:25:39.3591031Z", "_kf": true}, "2024-05-25T14:25:37.2964273Z"]
+2024-05-25 14:25:42,128 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:25:48,958 - DEBUG: % sending keepalive ping
+2024-05-25 14:25:48,958 - DEBUG: > PING a1 ac 6e 8a [binary, 4 bytes]
+2024-05-25 14:25:49,003 - DEBUG: < PONG a1 ac 6e 8a [binary, 4 bytes]
+2024-05-25 14:25:49,003 - DEBUG: % received keepalive pong
+2024-05-25 14:25:52,160 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:25:54,402 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,225|Bg,60","...T14:25:52.2162088Z"]}]}' [180 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:25:54.3747322Z", "_kf": true}, "2024-05-25T14:25:52.2162088Z"]
+2024-05-25 14:26:02,199 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:26:09,004 - DEBUG: % sending keepalive ping
+2024-05-25 14:26:09,004 - DEBUG: > PING 79 6b ec 70 [binary, 4 bytes]
+2024-05-25 14:26:09,045 - DEBUG: < PONG 79 6b ec 70 [binary, 4 bytes]
+2024-05-25 14:26:09,045 - DEBUG: % received keepalive pong
+2024-05-25 14:26:09,430 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,226|Bg,60","...5-25T14:26:07.247Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:26:09.3904596Z", "_kf": true}, "2024-05-25T14:26:07.247Z"]
+2024-05-25 14:26:12,382 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:26:22,407 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:26:24,417 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,227|Bg,60","...T14:26:22.0967671Z"]}]}' [180 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:26:24.3903272Z", "_kf": true}, "2024-05-25T14:26:22.0967671Z"]
+2024-05-25 14:26:29,047 - DEBUG: % sending keepalive ping
+2024-05-25 14:26:29,047 - DEBUG: > PING f6 38 cc 67 [binary, 4 bytes]
+2024-05-25 14:26:29,088 - DEBUG: < PONG f6 38 cc 67 [binary, 4 bytes]
+2024-05-25 14:26:29,089 - DEBUG: % received keepalive pong
+2024-05-25 14:26:32,453 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:26:39,454 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,228|Bg,60","...5-25T14:26:37.302Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:26:39.4059114Z", "_kf": true}, "2024-05-25T14:26:37.302Z"]
+2024-05-25 14:26:42,474 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:26:49,089 - DEBUG: % sending keepalive ping
+2024-05-25 14:26:49,089 - DEBUG: > PING a3 d8 0a a2 [binary, 4 bytes]
+2024-05-25 14:26:49,131 - DEBUG: < PONG a3 d8 0a a2 [binary, 4 bytes]
+2024-05-25 14:26:49,131 - DEBUG: % received keepalive pong
+2024-05-25 14:26:52,503 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:26:54,438 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,229|Bg,60","...5-25T14:26:52.354Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:26:54.4058575Z", "_kf": true}, "2024-05-25T14:26:52.354Z"]
+2024-05-25 14:27:02,563 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:27:09,132 - DEBUG: % sending keepalive ping
+2024-05-25 14:27:09,133 - DEBUG: > PING 3d 9c 40 35 [binary, 4 bytes]
+2024-05-25 14:27:09,174 - DEBUG: < PONG 3d 9c 40 35 [binary, 4 bytes]
+2024-05-25 14:27:09,174 - DEBUG: % received keepalive pong
+2024-05-25 14:27:09,448 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,22A|Bg,60","...5-25T14:27:07.374Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:27:09.4214656Z", "_kf": true}, "2024-05-25T14:27:07.374Z"]
+2024-05-25 14:27:12,739 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:27:22,767 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:27:24,465 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,22B|Bg,60","...T14:27:22.2084235Z"]}]}' [180 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:27:24.4370558Z", "_kf": true}, "2024-05-25T14:27:22.2084235Z"]
+2024-05-25 14:27:29,176 - DEBUG: % sending keepalive ping
+2024-05-25 14:27:29,176 - DEBUG: > PING 7e d4 13 76 [binary, 4 bytes]
+2024-05-25 14:27:29,217 - DEBUG: < PONG 7e d4 13 76 [binary, 4 bytes]
+2024-05-25 14:27:29,218 - DEBUG: % received keepalive pong
+2024-05-25 14:27:32,812 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:27:39,621 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,22C|Bg,60","...T14:27:37.1766043Z"]}]}' [180 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:27:39.4370973Z", "_kf": true}, "2024-05-25T14:27:37.1766043Z"]
+2024-05-25 14:27:42,787 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:27:49,219 - DEBUG: % sending keepalive ping
+2024-05-25 14:27:49,219 - DEBUG: > PING 2f ce e6 b8 [binary, 4 bytes]
+2024-05-25 14:27:49,260 - DEBUG: < PONG 2f ce e6 b8 [binary, 4 bytes]
+2024-05-25 14:27:49,260 - DEBUG: % received keepalive pong
+2024-05-25 14:27:52,845 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:27:54,464 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,22D|Bg,60","...T14:27:52.3688434Z"]}]}' [180 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:27:54.4370057Z", "_kf": true}, "2024-05-25T14:27:52.3688434Z"]
+2024-05-25 14:28:02,852 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:28:09,262 - DEBUG: % sending keepalive ping
+2024-05-25 14:28:09,262 - DEBUG: > PING 78 8b a9 51 [binary, 4 bytes]
+2024-05-25 14:28:09,303 - DEBUG: < PONG 78 8b a9 51 [binary, 4 bytes]
+2024-05-25 14:28:09,304 - DEBUG: % received keepalive pong
+2024-05-25 14:28:09,464 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,22E|Bg,60","...T14:28:07.2571317Z"]}]}' [180 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:28:09.4369723Z", "_kf": true}, "2024-05-25T14:28:07.2571317Z"]
+2024-05-25 14:28:12,865 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:28:22,873 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:28:24,463 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,22F|Bg,60","...5-25T14:28:22.382Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:28:24.4369425Z", "_kf": true}, "2024-05-25T14:28:22.382Z"]
+2024-05-25 14:28:29,305 - DEBUG: % sending keepalive ping
+2024-05-25 14:28:29,305 - DEBUG: > PING 0b f4 15 00 [binary, 4 bytes]
+2024-05-25 14:28:29,346 - DEBUG: < PONG 0b f4 15 00 [binary, 4 bytes]
+2024-05-25 14:28:29,347 - DEBUG: % received keepalive pong
+2024-05-25 14:28:32,899 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:28:39,476 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,230|Bg,60","...T14:28:37.3776541Z"]}]}' [180 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:28:39.4368964Z", "_kf": true}, "2024-05-25T14:28:37.3776541Z"]
+2024-05-25 14:28:42,911 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:28:49,348 - DEBUG: % sending keepalive ping
+2024-05-25 14:28:49,349 - DEBUG: > PING 72 40 47 b6 [binary, 4 bytes]
+2024-05-25 14:28:49,390 - DEBUG: < PONG 72 40 47 b6 [binary, 4 bytes]
+2024-05-25 14:28:49,390 - DEBUG: % received keepalive pong
+2024-05-25 14:28:52,941 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:28:54,464 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,231|Bg,60","...T14:28:52.3487361Z"]}]}' [180 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:28:54.4368945Z", "_kf": true}, "2024-05-25T14:28:52.3487361Z"]
+2024-05-25 14:29:02,956 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:29:09,391 - DEBUG: % sending keepalive ping
+2024-05-25 14:29:09,391 - DEBUG: > PING 96 81 f3 85 [binary, 4 bytes]
+2024-05-25 14:29:09,432 - DEBUG: < PONG 96 81 f3 85 [binary, 4 bytes]
+2024-05-25 14:29:09,433 - DEBUG: % received keepalive pong
+2024-05-25 14:29:09,479 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,232|Bg,60","...T14:29:07.3771935Z"]}]}' [180 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:29:09.4525723Z", "_kf": true}, "2024-05-25T14:29:07.3771935Z"]
+2024-05-25 14:29:12,984 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:29:22,984 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:29:24,479 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,233|Bg,60","...T14:29:22.2681926Z"]}]}' [179 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:29:24.452477Z", "_kf": true}, "2024-05-25T14:29:22.2681926Z"]
+2024-05-25 14:29:29,434 - DEBUG: % sending keepalive ping
+2024-05-25 14:29:29,435 - DEBUG: > PING 56 84 4d 89 [binary, 4 bytes]
+2024-05-25 14:29:29,476 - DEBUG: < PONG 56 84 4d 89 [binary, 4 bytes]
+2024-05-25 14:29:29,476 - DEBUG: % received keepalive pong
+2024-05-25 14:29:33,007 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:29:36,001 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,233|Bg,61","...5-25T14:29:33.955Z"]}]}' [287 bytes]
+ ["RaceControlMessages", {"Messages": {"59": {"Utc": "2024-05-25T14:29:34", "Category": "Other", "Message": "TURN 3 INCIDENT INVOLVING CARS 27 (HUL) AND 31 (OCO) NOTED - IMPEDING"}}}, "2024-05-25T14:29:33.955Z"]
+2024-05-25 14:29:39,504 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,234|Bg,61","...T14:29:37.3888959Z"]}]}' [180 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:29:39.4681348Z", "_kf": true}, "2024-05-25T14:29:37.3888959Z"]
+2024-05-25 14:29:43,025 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:29:43,850 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,234|Bg,62","...5-25T14:29:41.802Z"]}]}' [294 bytes]
+ ["RaceControlMessages", {"Messages": {"60": {"Utc": "2024-05-25T14:29:42", "Category": "Other", "Message": "CAR 27 (HUL) TIME 1:35.683 DELETED - TRACK LIMITS AT TURN 10 LAP 14 16:28:36"}}}, "2024-05-25T14:29:41.802Z"]
+2024-05-25 14:29:44,766 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,234|Bg,63","...5-25T14:29:42.721Z"]}]}' [292 bytes]
+ ["RaceControlMessages", {"Messages": {"61": {"Utc": "2024-05-25T14:29:43", "Category": "Other", "Message": "CAR 3 (RIC) TIME 1:34.799 DELETED - TRACK LIMITS AT TURN 1 LAP 16 16:27:56"}}}, "2024-05-25T14:29:42.721Z"]
+2024-05-25 14:29:45,639 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,234|Bg,64","...5-25T14:29:43.587Z"]}]}' [293 bytes]
+ ["RaceControlMessages", {"Messages": {"62": {"Utc": "2024-05-25T14:29:44", "Category": "Other", "Message": "CAR 3 (RIC) TIME 1:34.799 DELETED - TRACK LIMITS AT TURN 10 LAP 16 16:28:51"}}}, "2024-05-25T14:29:43.587Z"]
+2024-05-25 14:29:49,477 - DEBUG: % sending keepalive ping
+2024-05-25 14:29:49,477 - DEBUG: > PING 32 f8 9b 95 [binary, 4 bytes]
+2024-05-25 14:29:49,520 - DEBUG: < PONG 32 f8 9b 95 [binary, 4 bytes]
+2024-05-25 14:29:49,520 - DEBUG: % received keepalive pong
+2024-05-25 14:29:53,037 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:29:54,523 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,235|Bg,64","...T14:29:52.2175271Z"]}]}' [180 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:29:54.4836899Z", "_kf": true}, "2024-05-25T14:29:52.2175271Z"]
+2024-05-25 14:30:03,075 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:30:09,522 - DEBUG: % sending keepalive ping
+2024-05-25 14:30:09,522 - DEBUG: > PING '\x10;G\x03' [text, 4 bytes]
+2024-05-25 14:30:09,526 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,236|Bg,64","...T14:30:07.3772732Z"]}]}' [180 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:30:09.4992735Z", "_kf": true}, "2024-05-25T14:30:07.3772732Z"]
+2024-05-25 14:30:09,563 - DEBUG: < PONG '\x10;G\x03' [text, 4 bytes]
+2024-05-25 14:30:09,563 - DEBUG: % received keepalive pong
+2024-05-25 14:30:13,073 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:30:23,093 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:30:24,526 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,237|Bg,64","...5-25T14:30:22.312Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:30:24.4992192Z", "_kf": true}, "2024-05-25T14:30:22.312Z"]
+2024-05-25 14:30:25,793 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,237|Bg,65","...5-25T14:30:23.738Z"]}]}' [294 bytes]
+ ["RaceControlMessages", {"Messages": {"63": {"Utc": "2024-05-25T14:30:24", "Category": "Other", "Message": "CAR 63 (RUS) TIME 1:43.668 DELETED - TRACK LIMITS AT TURN 10 LAP 14 16:27:43"}}}, "2024-05-25T14:30:23.738Z"]
+2024-05-25 14:30:29,565 - DEBUG: % sending keepalive ping
+2024-05-25 14:30:29,565 - DEBUG: > PING 6b 96 fd 19 [binary, 4 bytes]
+2024-05-25 14:30:29,607 - DEBUG: < PONG 6b 96 fd 19 [binary, 4 bytes]
+2024-05-25 14:30:29,607 - DEBUG: % received keepalive pong
+2024-05-25 14:30:33,134 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:30:39,640 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,238|Bg,65","...5-25T14:30:37.382Z"]}]}' [174 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:30:39.51488Z", "_kf": true}, "2024-05-25T14:30:37.382Z"]
+2024-05-25 14:30:43,146 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:30:43,839 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,238|Bg,66","...5-25T14:30:41.801Z"]}]}' [334 bytes]
+ ["RaceControlMessages", {"Messages": {"64": {"Utc": "2024-05-25T14:30:42", "Category": "Other", "Message": "FIA STEWARDS: TURN 3 INCIDENT INVOLVING CARS 27 (HUL) AND 31 (OCO) WILL BE INVESTIGATED AFTER THE SESSION - IMPEDING"}}}, "2024-05-25T14:30:41.801Z"]
+2024-05-25 14:30:49,608 - DEBUG: % sending keepalive ping
+2024-05-25 14:30:49,609 - DEBUG: > PING 04 cf 3a 73 [binary, 4 bytes]
+2024-05-25 14:30:49,649 - DEBUG: < PONG 04 cf 3a 73 [binary, 4 bytes]
+2024-05-25 14:30:49,649 - DEBUG: % received keepalive pong
+2024-05-25 14:30:53,186 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:30:54,557 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,239|Bg,66","...T14:30:52.4175764Z"]}]}' [180 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:30:54.5304248Z", "_kf": true}, "2024-05-25T14:30:52.4175764Z"]
+2024-05-25 14:31:03,190 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:31:09,602 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,23A|Bg,66","...5-25T14:31:07.531Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:31:09.5460129Z", "_kf": true}, "2024-05-25T14:31:07.531Z"]
+2024-05-25 14:31:09,650 - DEBUG: % sending keepalive ping
+2024-05-25 14:31:09,650 - DEBUG: > PING a3 49 64 b9 [binary, 4 bytes]
+2024-05-25 14:31:09,691 - DEBUG: < PONG a3 49 64 b9 [binary, 4 bytes]
+2024-05-25 14:31:09,691 - DEBUG: % received keepalive pong
+2024-05-25 14:31:13,219 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:31:20,655 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,23A|Bg,67","...5-25T14:31:18.611Z"]}]}' [293 bytes]
+ ["RaceControlMessages", {"Messages": {"65": {"Utc": "2024-05-25T14:31:19", "Category": "Other", "Message": "CAR 3 (RIC) TIME 1:48.013 DELETED - TRACK LIMITS AT TURN 10 LAP 17 16:30:36"}}}, "2024-05-25T14:31:18.611Z"]
+2024-05-25 14:31:23,260 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:31:24,589 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,23B|Bg,67","...5T14:31:22.218146Z"]}]}' [179 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:31:24.5616253Z", "_kf": true}, "2024-05-25T14:31:22.218146Z"]
+2024-05-25 14:31:29,693 - DEBUG: % sending keepalive ping
+2024-05-25 14:31:29,694 - DEBUG: > PING 01 cd e3 20 [binary, 4 bytes]
+2024-05-25 14:31:29,735 - DEBUG: < PONG 01 cd e3 20 [binary, 4 bytes]
+2024-05-25 14:31:29,735 - DEBUG: % received keepalive pong
+2024-05-25 14:31:33,262 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:31:39,604 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,23C|Bg,67","...5T14:31:37.508656Z"]}]}' [178 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:31:39.577203Z", "_kf": true}, "2024-05-25T14:31:37.508656Z"]
+2024-05-25 14:31:43,282 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:31:49,736 - DEBUG: % sending keepalive ping
+2024-05-25 14:31:49,737 - DEBUG: > PING da 1f c1 2b [binary, 4 bytes]
+2024-05-25 14:31:49,778 - DEBUG: < PONG da 1f c1 2b [binary, 4 bytes]
+2024-05-25 14:31:49,779 - DEBUG: % received keepalive pong
+2024-05-25 14:31:53,288 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:31:54,620 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,23D|Bg,67","...5-25T14:31:52.414Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:31:54.5928502Z", "_kf": true}, "2024-05-25T14:31:52.414Z"]
+2024-05-25 14:32:03,307 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:32:09,780 - DEBUG: % sending keepalive ping
+2024-05-25 14:32:09,780 - DEBUG: > PING b6 9b af 9e [binary, 4 bytes]
+2024-05-25 14:32:09,826 - DEBUG: < PONG b6 9b af 9e [binary, 4 bytes]
+2024-05-25 14:32:09,826 - DEBUG: % received keepalive pong
+2024-05-25 14:32:09,833 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,23E|Bg,67","...5-25T14:32:07.561Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:32:09.5945979Z", "_kf": true}, "2024-05-25T14:32:07.561Z"]
+2024-05-25 14:32:13,320 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:32:23,337 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:32:24,659 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,23F|Bg,67","...T14:32:22.4181953Z"]}]}' [180 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:32:24.6083931Z", "_kf": true}, "2024-05-25T14:32:22.4181953Z"]
+2024-05-25 14:32:29,827 - DEBUG: % sending keepalive ping
+2024-05-25 14:32:29,828 - DEBUG: > PING 64 9b 10 33 [binary, 4 bytes]
+2024-05-25 14:32:29,868 - DEBUG: < PONG 64 9b 10 33 [binary, 4 bytes]
+2024-05-25 14:32:29,868 - DEBUG: % received keepalive pong
+2024-05-25 14:32:33,355 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:32:39,651 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,240|Bg,67","...T14:32:37.5779421Z"]}]}' [180 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:32:39.6248619Z", "_kf": true}, "2024-05-25T14:32:37.5779421Z"]
+2024-05-25 14:32:43,378 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:32:49,870 - DEBUG: % sending keepalive ping
+2024-05-25 14:32:49,871 - DEBUG: > PING d6 b8 8a fb [binary, 4 bytes]
+2024-05-25 14:32:49,912 - DEBUG: < PONG d6 b8 8a fb [binary, 4 bytes]
+2024-05-25 14:32:49,913 - DEBUG: % received keepalive pong
+2024-05-25 14:32:53,435 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:32:54,667 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,241|Bg,67","...T14:32:52.5682712Z"]}]}' [180 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:32:54.6404639Z", "_kf": true}, "2024-05-25T14:32:52.5682712Z"]
+2024-05-25 14:33:03,415 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:33:09,729 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,242|Bg,67","...5-25T14:33:07.636Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:33:09.6560473Z", "_kf": true}, "2024-05-25T14:33:07.636Z"]
+2024-05-25 14:33:09,913 - DEBUG: % sending keepalive ping
+2024-05-25 14:33:09,913 - DEBUG: > PING 0e 77 b6 3d [binary, 4 bytes]
+2024-05-25 14:33:09,955 - DEBUG: < PONG 0e 77 b6 3d [binary, 4 bytes]
+2024-05-25 14:33:09,955 - DEBUG: % received keepalive pong
+2024-05-25 14:33:13,437 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:33:16,620 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,242|Bg,68","...5-25T14:33:14.569Z"]}]}' [289 bytes]
+ ["RaceControlMessages", {"Messages": {"66": {"Utc": "2024-05-25T14:33:15", "Category": "Other", "Message": "CAR 27 (HUL) LAP DELETED - TRACK LIMITS AT TURN 1 LAP 17 16:32:01 (PIT)"}}}, "2024-05-25T14:33:14.569Z"]
+2024-05-25 14:33:23,616 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:33:24,724 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,243|Bg,68","...T14:33:22.6182455Z"]}]}' [180 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:33:24.6720935Z", "_kf": true}, "2024-05-25T14:33:22.6182455Z"]
+2024-05-25 14:33:29,956 - DEBUG: % sending keepalive ping
+2024-05-25 14:33:29,956 - DEBUG: > PING '\x063`J' [text, 4 bytes]
+2024-05-25 14:33:30,232 - DEBUG: < PONG '\x063`J' [text, 4 bytes]
+2024-05-25 14:33:30,233 - DEBUG: % received keepalive pong
+2024-05-25 14:33:33,625 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:33:39,714 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,244|Bg,68","...5-25T14:33:37.609Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:33:39.6876475Z", "_kf": true}, "2024-05-25T14:33:37.609Z"]
+2024-05-25 14:33:43,660 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:33:46,704 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,244|Bg,69","...5-25T14:33:44.643Z"]}]}' [288 bytes]
+ ["RaceControlMessages", {"Messages": {"67": {"Utc": "2024-05-25T14:33:45", "Category": "Other", "Message": "CAR 3 (RIC) LAP DELETED - TRACK LIMITS AT TURN 1 LAP 19 16:32:30 (PIT)"}}}, "2024-05-25T14:33:44.643Z"]
+2024-05-25 14:33:50,234 - DEBUG: % sending keepalive ping
+2024-05-25 14:33:50,234 - DEBUG: > PING 'M)vw' [text, 4 bytes]
+2024-05-25 14:33:50,440 - DEBUG: < PONG 'M)vw' [text, 4 bytes]
+2024-05-25 14:33:50,440 - DEBUG: % received keepalive pong
+2024-05-25 14:33:53,646 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:33:54,763 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,245|Bg,69","...5-25T14:33:52.669Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:33:54.6876547Z", "_kf": true}, "2024-05-25T14:33:52.669Z"]
+2024-05-25 14:34:03,666 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:34:09,714 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,246|Bg,69","...T14:34:07.4889075Z"]}]}' [179 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:34:09.687618Z", "_kf": true}, "2024-05-25T14:34:07.4889075Z"]
+2024-05-25 14:34:10,440 - DEBUG: % sending keepalive ping
+2024-05-25 14:34:10,440 - DEBUG: > PING 6a 00 83 09 [binary, 4 bytes]
+2024-05-25 14:34:10,483 - DEBUG: < PONG 6a 00 83 09 [binary, 4 bytes]
+2024-05-25 14:34:10,483 - DEBUG: % received keepalive pong
+2024-05-25 14:34:13,673 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:34:23,708 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:34:24,729 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,247|Bg,69","...5-25T14:34:22.632Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:34:24.7031943Z", "_kf": true}, "2024-05-25T14:34:22.632Z"]
+2024-05-25 14:34:30,484 - DEBUG: % sending keepalive ping
+2024-05-25 14:34:30,484 - DEBUG: > PING fc 66 9b 5e [binary, 4 bytes]
+2024-05-25 14:34:30,525 - DEBUG: < PONG fc 66 9b 5e [binary, 4 bytes]
+2024-05-25 14:34:30,526 - DEBUG: % received keepalive pong
+2024-05-25 14:34:33,721 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:34:39,745 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,248|Bg,69","...T14:34:37.4883569Z"]}]}' [180 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:34:39.7187939Z", "_kf": true}, "2024-05-25T14:34:37.4883569Z"]
+2024-05-25 14:34:43,734 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:34:50,527 - DEBUG: % sending keepalive ping
+2024-05-25 14:34:50,527 - DEBUG: > PING b7 f3 70 b7 [binary, 4 bytes]
+2024-05-25 14:34:50,574 - DEBUG: < PONG b7 f3 70 b7 [binary, 4 bytes]
+2024-05-25 14:34:50,574 - DEBUG: % received keepalive pong
+2024-05-25 14:34:53,774 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:34:54,874 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,249|Bg,69","...5-25T14:34:52.631Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:34:54.7343749Z", "_kf": true}, "2024-05-25T14:34:52.631Z"]
+2024-05-25 14:35:03,759 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:35:09,783 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,24A|Bg,69","...T14:35:07.4986517Z"]}]}' [179 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:35:09.749979Z", "_kf": true}, "2024-05-25T14:35:07.4986517Z"]
+2024-05-25 14:35:10,575 - DEBUG: % sending keepalive ping
+2024-05-25 14:35:10,575 - DEBUG: > PING b4 00 68 b1 [binary, 4 bytes]
+2024-05-25 14:35:10,617 - DEBUG: < PONG b4 00 68 b1 [binary, 4 bytes]
+2024-05-25 14:35:10,617 - DEBUG: % received keepalive pong
+2024-05-25 14:35:13,791 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:35:23,804 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:35:24,792 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,24B|Bg,69","...T14:35:22.6885004Z"]}]}' [180 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:35:24.7655519Z", "_kf": true}, "2024-05-25T14:35:22.6885004Z"]
+2024-05-25 14:35:30,618 - DEBUG: % sending keepalive ping
+2024-05-25 14:35:30,618 - DEBUG: > PING 69 4f bd ab [binary, 4 bytes]
+2024-05-25 14:35:30,659 - DEBUG: < PONG 69 4f bd ab [binary, 4 bytes]
+2024-05-25 14:35:30,660 - DEBUG: % received keepalive pong
+2024-05-25 14:35:33,816 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:35:39,807 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,24C|Bg,69","...5-25T14:35:37.736Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:35:39.7811421Z", "_kf": true}, "2024-05-25T14:35:37.736Z"]
+2024-05-25 14:35:43,831 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:35:50,661 - DEBUG: % sending keepalive ping
+2024-05-25 14:35:50,661 - DEBUG: > PING be 7e c6 9a [binary, 4 bytes]
+2024-05-25 14:35:50,711 - DEBUG: < PONG be 7e c6 9a [binary, 4 bytes]
+2024-05-25 14:35:50,711 - DEBUG: % received keepalive pong
+2024-05-25 14:35:53,843 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:35:54,808 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,24D|Bg,69","...T14:35:52.7389258Z"]}]}' [180 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:35:54.7811304Z", "_kf": true}, "2024-05-25T14:35:52.7389258Z"]
+2024-05-25 14:36:03,884 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:36:09,823 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,24E|Bg,69","...T14:36:07.7286683Z"]}]}' [180 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:36:09.7967095Z", "_kf": true}, "2024-05-25T14:36:07.7286683Z"]
+2024-05-25 14:36:10,711 - DEBUG: % sending keepalive ping
+2024-05-25 14:36:10,711 - DEBUG: > PING '\x13ৼ' [text, 4 bytes]
+2024-05-25 14:36:10,752 - DEBUG: < PONG '\x13ৼ' [text, 4 bytes]
+2024-05-25 14:36:10,752 - DEBUG: % received keepalive pong
+2024-05-25 14:36:13,892 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:36:23,896 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:36:24,823 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,24F|Bg,69","...T14:36:22.5684183Z"]}]}' [180 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:36:24.7967041Z", "_kf": true}, "2024-05-25T14:36:22.5684183Z"]
+2024-05-25 14:36:30,753 - DEBUG: % sending keepalive ping
+2024-05-25 14:36:30,753 - DEBUG: > PING d3 45 08 6e [binary, 4 bytes]
+2024-05-25 14:36:30,795 - DEBUG: < PONG d3 45 08 6e [binary, 4 bytes]
+2024-05-25 14:36:30,795 - DEBUG: % received keepalive pong
+2024-05-25 14:36:33,925 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:36:39,825 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,250|Bg,69","...T14:36:37.6992412Z"]}]}' [180 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:36:39.7967021Z", "_kf": true}, "2024-05-25T14:36:37.6992412Z"]
+2024-05-25 14:36:43,582 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,250|Bg,6A","...5-25T14:36:41.431Z"]}]}' [293 bytes]
+ ["RaceControlMessages", {"Messages": {"68": {"Utc": "2024-05-25T14:36:41", "Category": "Other", "Message": "CAR 55 (SAI) TIME 1:43.878 DELETED - TRACK LIMITS AT TURN 1 LAP 18 16:34:57"}}}, "2024-05-25T14:36:41.431Z"]
+2024-05-25 14:36:43,934 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:36:50,796 - DEBUG: % sending keepalive ping
+2024-05-25 14:36:50,797 - DEBUG: > PING 6b 24 24 a0 [binary, 4 bytes]
+2024-05-25 14:36:50,838 - DEBUG: < PONG 6b 24 24 a0 [binary, 4 bytes]
+2024-05-25 14:36:50,838 - DEBUG: % received keepalive pong
+2024-05-25 14:36:53,954 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:36:54,831 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,251|Bg,6A","...T14:36:52.7488402Z"]}]}' [180 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:36:54.7966151Z", "_kf": true}, "2024-05-25T14:36:52.7488402Z"]
+2024-05-25 14:37:03,978 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:37:09,839 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,252|Bg,6A","...5-25T14:37:07.673Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:37:09.8121984Z", "_kf": true}, "2024-05-25T14:37:07.673Z"]
+2024-05-25 14:37:10,839 - DEBUG: % sending keepalive ping
+2024-05-25 14:37:10,840 - DEBUG: > PING a0 e2 70 e9 [binary, 4 bytes]
+2024-05-25 14:37:10,882 - DEBUG: < PONG a0 e2 70 e9 [binary, 4 bytes]
+2024-05-25 14:37:10,882 - DEBUG: % received keepalive pong
+2024-05-25 14:37:14,022 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:37:24,074 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:37:24,872 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,253|Bg,6A","...5-25T14:37:22.769Z"]}]}' [175 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:37:24.827835Z", "_kf": true}, "2024-05-25T14:37:22.769Z"]
+2024-05-25 14:37:30,883 - DEBUG: % sending keepalive ping
+2024-05-25 14:37:30,884 - DEBUG: > PING ef 7d 86 2d [binary, 4 bytes]
+2024-05-25 14:37:30,924 - DEBUG: < PONG ef 7d 86 2d [binary, 4 bytes]
+2024-05-25 14:37:30,925 - DEBUG: % received keepalive pong
+2024-05-25 14:37:34,101 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:37:39,879 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,254|Bg,6A","...5-25T14:37:37.759Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:37:39.8433834Z", "_kf": true}, "2024-05-25T14:37:37.759Z"]
+2024-05-25 14:37:44,095 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:37:50,925 - DEBUG: % sending keepalive ping
+2024-05-25 14:37:50,926 - DEBUG: > PING ed 92 b9 e8 [binary, 4 bytes]
+2024-05-25 14:37:50,967 - DEBUG: < PONG ed 92 b9 e8 [binary, 4 bytes]
+2024-05-25 14:37:50,967 - DEBUG: % received keepalive pong
+2024-05-25 14:37:54,101 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:37:54,878 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,255|Bg,6A","...T14:37:52.6191023Z"]}]}' [180 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:37:54.8434261Z", "_kf": true}, "2024-05-25T14:37:52.6191023Z"]
+2024-05-25 14:38:04,239 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:38:09,886 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,256|Bg,6A","...T14:38:07.8188409Z"]}]}' [180 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:38:09.8589936Z", "_kf": true}, "2024-05-25T14:38:07.8188409Z"]
+2024-05-25 14:38:10,968 - DEBUG: % sending keepalive ping
+2024-05-25 14:38:10,968 - DEBUG: > PING 0f 75 a9 2f [binary, 4 bytes]
+2024-05-25 14:38:11,164 - DEBUG: < PONG 0f 75 a9 2f [binary, 4 bytes]
+2024-05-25 14:38:11,164 - DEBUG: % received keepalive pong
+2024-05-25 14:38:14,235 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:38:24,254 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:38:24,902 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,257|Bg,6A","...5-25T14:38:22.809Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:38:24.8745393Z", "_kf": true}, "2024-05-25T14:38:22.809Z"]
+2024-05-25 14:38:31,165 - DEBUG: % sending keepalive ping
+2024-05-25 14:38:31,166 - DEBUG: > PING ce 49 cd 98 [binary, 4 bytes]
+2024-05-25 14:38:31,206 - DEBUG: < PONG ce 49 cd 98 [binary, 4 bytes]
+2024-05-25 14:38:31,207 - DEBUG: % received keepalive pong
+2024-05-25 14:38:34,265 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:38:39,901 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,258|Bg,6A","...5-25T14:38:37.792Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:38:39.8745278Z", "_kf": true}, "2024-05-25T14:38:37.792Z"]
+2024-05-25 14:38:44,291 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:38:51,209 - DEBUG: % sending keepalive ping
+2024-05-25 14:38:51,209 - DEBUG: > PING 5e 8f a6 37 [binary, 4 bytes]
+2024-05-25 14:38:51,249 - DEBUG: < PONG 5e 8f a6 37 [binary, 4 bytes]
+2024-05-25 14:38:51,250 - DEBUG: % received keepalive pong
+2024-05-25 14:38:54,298 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:38:54,916 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,259|Bg,6A","...5-25T14:38:52.816Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:38:54.8900933Z", "_kf": true}, "2024-05-25T14:38:52.816Z"]
+2024-05-25 14:39:04,324 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:39:09,983 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,25A|Bg,6A","...T14:39:07.7389274Z"]}]}' [180 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:39:09.9057207Z", "_kf": true}, "2024-05-25T14:39:07.7389274Z"]
+2024-05-25 14:39:11,251 - DEBUG: % sending keepalive ping
+2024-05-25 14:39:11,251 - DEBUG: > PING 47 46 ab 31 [binary, 4 bytes]
+2024-05-25 14:39:11,292 - DEBUG: < PONG 47 46 ab 31 [binary, 4 bytes]
+2024-05-25 14:39:11,293 - DEBUG: % received keepalive pong
+2024-05-25 14:39:14,340 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:39:24,350 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:39:24,948 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,25B|Bg,6A","...5-25T14:39:22.828Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:39:24.9213064Z", "_kf": true}, "2024-05-25T14:39:22.828Z"]
+2024-05-25 14:39:31,294 - DEBUG: % sending keepalive ping
+2024-05-25 14:39:31,294 - DEBUG: > PING f0 41 0d a7 [binary, 4 bytes]
+2024-05-25 14:39:31,336 - DEBUG: < PONG f0 41 0d a7 [binary, 4 bytes]
+2024-05-25 14:39:31,336 - DEBUG: % received keepalive pong
+2024-05-25 14:39:34,424 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:39:39,949 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,25C|Bg,6A","...T14:39:37.6594765Z"]}]}' [180 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:39:39.9212754Z", "_kf": true}, "2024-05-25T14:39:37.6594765Z"]
+2024-05-25 14:39:44,431 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:39:51,338 - DEBUG: % sending keepalive ping
+2024-05-25 14:39:51,339 - DEBUG: > PING 98 0c 9e 00 [binary, 4 bytes]
+2024-05-25 14:39:51,380 - DEBUG: < PONG 98 0c 9e 00 [binary, 4 bytes]
+2024-05-25 14:39:51,381 - DEBUG: % received keepalive pong
+2024-05-25 14:39:54,448 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:39:54,963 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,25D|Bg,6A","...5-25T14:39:52.855Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:39:54.9368921Z", "_kf": true}, "2024-05-25T14:39:52.855Z"]
+2024-05-25 14:40:02,283 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,25D|Bg,6B","...5-25T14:40:00.247Z"]}]}' [266 bytes]
+ ["RaceControlMessages", {"Messages": {"69": {"Utc": "2024-05-25T14:40:00", "Category": "Flag", "Flag": "CHEQUERED", "Scope": "Track", "Message": "CHEQUERED FLAG"}}}, "2024-05-25T14:40:00.247Z"]
+2024-05-25 14:40:04,454 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:40:09,979 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,25E|Bg,6B","...T14:40:07.7789961Z"]}]}' [179 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:40:09.952445Z", "_kf": true}, "2024-05-25T14:40:07.7789961Z"]
+2024-05-25 14:40:11,383 - DEBUG: % sending keepalive ping
+2024-05-25 14:40:11,383 - DEBUG: > PING 96 17 7b b9 [binary, 4 bytes]
+2024-05-25 14:40:11,426 - DEBUG: < PONG 96 17 7b b9 [binary, 4 bytes]
+2024-05-25 14:40:11,426 - DEBUG: % received keepalive pong
+2024-05-25 14:40:14,479 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:40:14,950 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,25E|Bg,6C","...5-25T14:40:12.901Z"]}]}' [258 bytes]
+ ["RaceControlMessages", {"Messages": {"70": {"Utc": "2024-05-25T14:40:13", "Category": "Other", "Message": "FIRST CAR TO TAKE THE FLAG - CAR 3 (RIC)"}}}, "2024-05-25T14:40:12.901Z"]
+2024-05-25 14:40:24,499 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:40:24,996 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,25F|Bg,6C","...5-25T14:40:22.821Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:40:24.9680527Z", "_kf": true}, "2024-05-25T14:40:22.821Z"]
+2024-05-25 14:40:30,711 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,25F|Bg,6D","...5-25T14:40:28.672Z"]}]}' [289 bytes]
+ ["RaceControlMessages", {"Messages": {"71": {"Utc": "2024-05-25T14:40:29", "Category": "Other", "Message": "CAR 27 (HUL) LAP DELETED - TRACK LIMITS AT TURN 1 LAP 21 16:39:03 (PIT)"}}}, "2024-05-25T14:40:28.672Z"]
+2024-05-25 14:40:31,427 - DEBUG: % sending keepalive ping
+2024-05-25 14:40:31,427 - DEBUG: > PING e4 1a 17 c4 [binary, 4 bytes]
+2024-05-25 14:40:31,469 - DEBUG: < PONG e4 1a 17 c4 [binary, 4 bytes]
+2024-05-25 14:40:31,469 - DEBUG: % received keepalive pong
+2024-05-25 14:40:32,439 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,25F|Bg,6E","...5-25T14:40:30.384Z"]}]}' [290 bytes]
+ ["RaceControlMessages", {"Messages": {"72": {"Utc": "2024-05-25T14:40:30", "Category": "Other", "Message": "CAR 27 (HUL) LAP DELETED - TRACK LIMITS AT TURN 10 LAP 21 16:39:53 (PIT)"}}}, "2024-05-25T14:40:30.384Z"]
+2024-05-25 14:40:34,523 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:40:40,017 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,260|Bg,6E","...T14:40:37.8286989Z"]}]}' [180 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:40:39.9836526Z", "_kf": true}, "2024-05-25T14:40:37.8286989Z"]
+2024-05-25 14:40:44,535 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:40:51,470 - DEBUG: % sending keepalive ping
+2024-05-25 14:40:51,471 - DEBUG: > PING d5 b2 bd 78 [binary, 4 bytes]
+2024-05-25 14:40:51,517 - DEBUG: < PONG d5 b2 bd 78 [binary, 4 bytes]
+2024-05-25 14:40:51,517 - DEBUG: % received keepalive pong
+2024-05-25 14:40:54,559 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:40:55,130 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,261|Bg,6E","...5-25T14:40:52.949Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:40:54.9992414Z", "_kf": true}, "2024-05-25T14:40:52.949Z"]
+2024-05-25 14:41:03,729 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,261|Bg,6F","...5-25T14:41:01.681Z"]}]}' [289 bytes]
+ ["RaceControlMessages", {"Messages": {"73": {"Utc": "2024-05-25T14:41:02", "Category": "Other", "Message": "CAR 18 (STR) LAP DELETED - TRACK LIMITS AT TURN 1 LAP 18 16:39:20 (PIT)"}}}, "2024-05-25T14:41:01.681Z"]
+2024-05-25 14:41:04,591 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:41:10,045 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,262|Bg,6F","...5-25T14:41:07.996Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:41:10.0148122Z", "_kf": true}, "2024-05-25T14:41:07.996Z"]
+2024-05-25 14:41:11,519 - DEBUG: % sending keepalive ping
+2024-05-25 14:41:11,519 - DEBUG: > PING 95 3b ae ac [binary, 4 bytes]
+2024-05-25 14:41:11,560 - DEBUG: < PONG 95 3b ae ac [binary, 4 bytes]
+2024-05-25 14:41:11,560 - DEBUG: % received keepalive pong
+2024-05-25 14:41:14,819 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:41:24,618 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:41:25,071 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,263|Bg,6F","...5-25T14:41:22.998Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:41:25.0304647Z", "_kf": true}, "2024-05-25T14:41:22.998Z"]
+2024-05-25 14:41:31,561 - DEBUG: % sending keepalive ping
+2024-05-25 14:41:31,561 - DEBUG: > PING bd 74 c4 cb [binary, 4 bytes]
+2024-05-25 14:41:31,604 - DEBUG: < PONG bd 74 c4 cb [binary, 4 bytes]
+2024-05-25 14:41:31,604 - DEBUG: % received keepalive pong
+2024-05-25 14:41:34,628 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:41:40,057 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,264|Bg,6F","...5-25T14:41:37.998Z"]}]}' [175 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:41:40.030384Z", "_kf": true}, "2024-05-25T14:41:37.998Z"]
+2024-05-25 14:41:44,630 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:41:51,606 - DEBUG: % sending keepalive ping
+2024-05-25 14:41:51,606 - DEBUG: > PING 18 a5 0e 97 [binary, 4 bytes]
+2024-05-25 14:41:51,648 - DEBUG: < PONG 18 a5 0e 97 [binary, 4 bytes]
+2024-05-25 14:41:51,648 - DEBUG: % received keepalive pong
+2024-05-25 14:41:54,900 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:41:55,073 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,265|Bg,6F","...5-25T14:41:53.005Z"]}]}' [175 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:41:55.046072Z", "_kf": true}, "2024-05-25T14:41:53.005Z"]
+2024-05-25 14:41:59,987 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,265|Bg,70","...5-25T14:41:57.941Z"]}]}' [299 bytes]
+ ["RaceControlMessages", {"Messages": {"74": {"Utc": "2024-05-25T14:41:58", "Category": "Flag", "Flag": "DOUBLE YELLOW", "Scope": "Sector", "Sector": 6, "Message": "DOUBLE YELLOW IN TRACK SECTOR 6"}}}, "2024-05-25T14:41:57.941Z"]
+2024-05-25 14:42:01,528 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,265|Bg,71","...5-25T14:41:59.474Z"]}]}' [301 bytes]
+ ["RaceControlMessages", {"Messages": {"75": {"Utc": "2024-05-25T14:41:59", "Category": "Flag", "Flag": "DOUBLE YELLOW", "Scope": "Sector", "Sector": 14, "Message": "DOUBLE YELLOW IN TRACK SECTOR 14"}}}, "2024-05-25T14:41:59.474Z"]
+2024-05-25 14:42:02,955 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,265|Bg,72","...5-25T14:42:00.909Z"]}]}' [299 bytes]
+ ["RaceControlMessages", {"Messages": {"76": {"Utc": "2024-05-25T14:42:01", "Category": "Flag", "Flag": "DOUBLE YELLOW", "Scope": "Sector", "Sector": 3, "Message": "DOUBLE YELLOW IN TRACK SECTOR 3"}}}, "2024-05-25T14:42:00.909Z"]
+2024-05-25 14:42:04,666 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:42:07,621 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,265|Bg,73","...05-25T14:42:05.58Z"]}]}' [300 bytes]
+ ["RaceControlMessages", {"Messages": {"77": {"Utc": "2024-05-25T14:42:06", "Category": "Flag", "Flag": "DOUBLE YELLOW", "Scope": "Sector", "Sector": 13, "Message": "DOUBLE YELLOW IN TRACK SECTOR 13"}}}, "2024-05-25T14:42:05.58Z"]
+2024-05-25 14:42:09,565 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,265|Bg,74","...5-25T14:42:07.529Z"]}]}' [283 bytes]
+ ["RaceControlMessages", {"Messages": {"78": {"Utc": "2024-05-25T14:42:07", "Category": "Flag", "Flag": "CLEAR", "Scope": "Sector", "Sector": 3, "Message": "CLEAR IN TRACK SECTOR 3"}}}, "2024-05-25T14:42:07.529Z"]
+2024-05-25 14:42:10,080 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,266|Bg,74","...5-25T14:42:08.002Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:42:10.0474256Z", "_kf": true}, "2024-05-25T14:42:08.002Z"]
+2024-05-25 14:42:11,650 - DEBUG: % sending keepalive ping
+2024-05-25 14:42:11,650 - DEBUG: > PING 20 99 5a 21 [binary, 4 bytes]
+2024-05-25 14:42:11,692 - DEBUG: < PONG 20 99 5a 21 [binary, 4 bytes]
+2024-05-25 14:42:11,693 - DEBUG: % received keepalive pong
+2024-05-25 14:42:14,699 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:42:21,766 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,266|Bg,75","...5-25T14:42:19.708Z"]}]}' [301 bytes]
+ ["RaceControlMessages", {"Messages": {"79": {"Utc": "2024-05-25T14:42:20", "Category": "Flag", "Flag": "DOUBLE YELLOW", "Scope": "Sector", "Sector": 17, "Message": "DOUBLE YELLOW IN TRACK SECTOR 17"}}}, "2024-05-25T14:42:19.708Z"]
+2024-05-25 14:42:24,715 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:42:25,089 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,267|Bg,75","...24-05-25T14:42:23Z"]}]}' [172 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:42:25.0615756Z", "_kf": true}, "2024-05-25T14:42:23Z"]
+2024-05-25 14:42:30,834 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,267|Bg,76","...5-25T14:42:28.798Z"]}]}' [301 bytes]
+ ["RaceControlMessages", {"Messages": {"80": {"Utc": "2024-05-25T14:42:29", "Category": "Flag", "Flag": "DOUBLE YELLOW", "Scope": "Sector", "Sector": 10, "Message": "DOUBLE YELLOW IN TRACK SECTOR 10"}}}, "2024-05-25T14:42:28.798Z"]
+2024-05-25 14:42:31,694 - DEBUG: % sending keepalive ping
+2024-05-25 14:42:31,695 - DEBUG: > PING c9 9b 9f d3 [binary, 4 bytes]
+2024-05-25 14:42:31,736 - DEBUG: < PONG c9 9b 9f d3 [binary, 4 bytes]
+2024-05-25 14:42:31,736 - DEBUG: % received keepalive pong
+2024-05-25 14:42:34,729 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:42:38,041 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,267|Bg,77","...5-25T14:42:35.989Z"]}]}' [299 bytes]
+ ["RaceControlMessages", {"Messages": {"81": {"Utc": "2024-05-25T14:42:36", "Category": "Flag", "Flag": "DOUBLE YELLOW", "Scope": "Sector", "Sector": 9, "Message": "DOUBLE YELLOW IN TRACK SECTOR 9"}}}, "2024-05-25T14:42:35.989Z"]
+2024-05-25 14:42:40,104 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,268|Bg,77","...5-25T14:42:38.002Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:42:40.0771665Z", "_kf": true}, "2024-05-25T14:42:38.002Z"]
+2024-05-25 14:42:44,637 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,268|Bg,78","...5-25T14:42:42.583Z"]}]}' [287 bytes]
+ ["RaceControlMessages", {"Messages": {"82": {"Utc": "2024-05-25T14:42:43", "Category": "Flag", "Flag": "YELLOW", "Scope": "Sector", "Sector": 18, "Message": "YELLOW IN TRACK SECTOR 18"}}}, "2024-05-25T14:42:42.583Z"]
+2024-05-25 14:42:44,995 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:42:45,739 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,268|Bg,79","...5-25T14:42:43.695Z"]}]}' [240 bytes]
+ ["RaceControlMessages", {"Messages": {"83": {"Utc": "2024-05-25T14:42:44", "Category": "Other", "Message": "DRS DISABLED IN ZONE 1"}}}, "2024-05-25T14:42:43.695Z"]
+2024-05-25 14:42:46,653 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,268|Bg,7A","...5-25T14:42:44.612Z"]}]}' [283 bytes]
+ ["RaceControlMessages", {"Messages": {"84": {"Utc": "2024-05-25T14:42:45", "Category": "Flag", "Flag": "CLEAR", "Scope": "Sector", "Sector": 9, "Message": "CLEAR IN TRACK SECTOR 9"}}}, "2024-05-25T14:42:44.612Z"]
+2024-05-25 14:42:51,738 - DEBUG: % sending keepalive ping
+2024-05-25 14:42:51,738 - DEBUG: > PING '8uNR' [text, 4 bytes]
+2024-05-25 14:42:51,986 - DEBUG: < PONG '8uNR' [text, 4 bytes]
+2024-05-25 14:42:51,987 - DEBUG: % received keepalive pong
+2024-05-25 14:42:54,764 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:42:55,106 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,269|Bg,7A","...24-05-25T14:42:53Z"]}]}' [172 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:42:55.0771713Z", "_kf": true}, "2024-05-25T14:42:53Z"]
+2024-05-25 14:42:58,845 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,269|Bg,7B","...5-25T14:42:56.793Z"]}]}' [301 bytes]
+ ["RaceControlMessages", {"Messages": {"85": {"Utc": "2024-05-25T14:42:57", "Category": "Flag", "Flag": "DOUBLE YELLOW", "Scope": "Sector", "Sector": 18, "Message": "DOUBLE YELLOW IN TRACK SECTOR 18"}}}, "2024-05-25T14:42:56.793Z"]
+2024-05-25 14:43:04,776 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:43:10,128 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,26A|Bg,7B","...5-25T14:43:08.006Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:43:10.0926919Z", "_kf": true}, "2024-05-25T14:43:08.006Z"]
+2024-05-25 14:43:11,922 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,26A|Bg,7C","...5-25T14:43:09.879Z"]}]}' [285 bytes]
+ ["RaceControlMessages", {"Messages": {"86": {"Utc": "2024-05-25T14:43:10", "Category": "Flag", "Flag": "CLEAR", "Scope": "Sector", "Sector": 10, "Message": "CLEAR IN TRACK SECTOR 10"}}}, "2024-05-25T14:43:09.879Z"]
+2024-05-25 14:43:11,988 - DEBUG: % sending keepalive ping
+2024-05-25 14:43:11,988 - DEBUG: > PING '+6\\n' [text, 4 bytes]
+2024-05-25 14:43:12,030 - DEBUG: < PONG '+6\\n' [text, 4 bytes]
+2024-05-25 14:43:12,030 - DEBUG: % received keepalive pong
+2024-05-25 14:43:14,799 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:43:16,495 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,26A|Bg,7D","...5-25T14:43:14.444Z"]}]}' [285 bytes]
+ ["RaceControlMessages", {"Messages": {"87": {"Utc": "2024-05-25T14:43:14", "Category": "Flag", "Flag": "CLEAR", "Scope": "Sector", "Sector": 13, "Message": "CLEAR IN TRACK SECTOR 13"}}}, "2024-05-25T14:43:14.444Z"]
+2024-05-25 14:43:19,939 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,26A|Bg,7E","...5-25T14:43:17.908Z"]}]}' [301 bytes]
+ ["RaceControlMessages", {"Messages": {"88": {"Utc": "2024-05-25T14:43:18", "Category": "Flag", "Flag": "DOUBLE YELLOW", "Scope": "Sector", "Sector": 11, "Message": "DOUBLE YELLOW IN TRACK SECTOR 11"}}}, "2024-05-25T14:43:17.908Z"]
+2024-05-25 14:43:24,820 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:43:25,141 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,26B|Bg,7E","...5-25T14:43:23.089Z"]}]}' [175 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:43:25.108273Z", "_kf": true}, "2024-05-25T14:43:23.089Z"]
+2024-05-25 14:43:29,617 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,26B|Bg,7F","...05-25T14:43:27.58Z"]}]}' [284 bytes]
+ ["RaceControlMessages", {"Messages": {"89": {"Utc": "2024-05-25T14:43:28", "Category": "Flag", "Flag": "CLEAR", "Scope": "Sector", "Sector": 11, "Message": "CLEAR IN TRACK SECTOR 11"}}}, "2024-05-25T14:43:27.58Z"]
+2024-05-25 14:43:32,031 - DEBUG: % sending keepalive ping
+2024-05-25 14:43:32,031 - DEBUG: > PING 9c 9c 69 78 [binary, 4 bytes]
+2024-05-25 14:43:32,072 - DEBUG: < PONG 9c 9c 69 78 [binary, 4 bytes]
+2024-05-25 14:43:32,073 - DEBUG: % received keepalive pong
+2024-05-25 14:43:34,141 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,26B|Bg,80","...5-25T14:43:32.097Z"]}]}' [285 bytes]
+ ["RaceControlMessages", {"Messages": {"90": {"Utc": "2024-05-25T14:43:32", "Category": "Flag", "Flag": "CLEAR", "Scope": "Sector", "Sector": 18, "Message": "CLEAR IN TRACK SECTOR 18"}}}, "2024-05-25T14:43:32.097Z"]
+2024-05-25 14:43:34,184 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,26B|Bg,81","...05-25T14:43:32.13Z"]}]}' [238 bytes]
+ ["RaceControlMessages", {"Messages": {"91": {"Utc": "2024-05-25T14:43:32", "Category": "Other", "Message": "DRS ENABLED IN ZONE 1"}}}, "2024-05-25T14:43:32.13Z"]
+2024-05-25 14:43:34,846 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:43:40,164 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,26C|Bg,81","...5-25T14:43:38.099Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:43:40.1238493Z", "_kf": true}, "2024-05-25T14:43:38.099Z"]
+2024-05-25 14:43:44,849 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:43:52,073 - DEBUG: % sending keepalive ping
+2024-05-25 14:43:52,074 - DEBUG: > PING 04 c6 e3 5a [binary, 4 bytes]
+2024-05-25 14:43:52,115 - DEBUG: < PONG 04 c6 e3 5a [binary, 4 bytes]
+2024-05-25 14:43:52,115 - DEBUG: % received keepalive pong
+2024-05-25 14:43:54,862 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:43:55,167 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,26D|Bg,81","...5-25T14:43:53.093Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:43:55.1394536Z", "_kf": true}, "2024-05-25T14:43:53.093Z"]
+2024-05-25 14:43:59,487 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,26D|Bg,82","...5-25T14:43:57.426Z"]}]}' [283 bytes]
+ ["RaceControlMessages", {"Messages": {"92": {"Utc": "2024-05-25T14:43:57", "Category": "Flag", "Flag": "CLEAR", "Scope": "Sector", "Sector": 6, "Message": "CLEAR IN TRACK SECTOR 6"}}}, "2024-05-25T14:43:57.426Z"]
+2024-05-25 14:44:04,883 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:44:10,182 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,26E|Bg,82","...5-25T14:44:08.105Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:44:10.1550841Z", "_kf": true}, "2024-05-25T14:44:08.105Z"]
+2024-05-25 14:44:12,116 - DEBUG: % sending keepalive ping
+2024-05-25 14:44:12,116 - DEBUG: > PING b1 e9 0c 22 [binary, 4 bytes]
+2024-05-25 14:44:12,157 - DEBUG: < PONG b1 e9 0c 22 [binary, 4 bytes]
+2024-05-25 14:44:12,157 - DEBUG: % received keepalive pong
+2024-05-25 14:44:14,923 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:44:24,932 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:44:25,198 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,26F|Bg,82","...5-25T14:44:23.105Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:44:25.1706252Z", "_kf": true}, "2024-05-25T14:44:23.105Z"]
+2024-05-25 14:44:32,158 - DEBUG: % sending keepalive ping
+2024-05-25 14:44:32,159 - DEBUG: > PING 42 c8 15 04 [binary, 4 bytes]
+2024-05-25 14:44:32,200 - DEBUG: < PONG 42 c8 15 04 [binary, 4 bytes]
+2024-05-25 14:44:32,200 - DEBUG: % received keepalive pong
+2024-05-25 14:44:34,981 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:44:35,449 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,26F|Bg,83","...5-25T14:44:33.395Z"]}]}' [285 bytes]
+ ["RaceControlMessages", {"Messages": {"93": {"Utc": "2024-05-25T14:44:33", "Category": "Flag", "Flag": "CLEAR", "Scope": "Sector", "Sector": 14, "Message": "CLEAR IN TRACK SECTOR 14"}}}, "2024-05-25T14:44:33.395Z"]
+2024-05-25 14:44:40,213 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,270|Bg,83","...5-25T14:44:38.115Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:44:40.1862531Z", "_kf": true}, "2024-05-25T14:44:38.115Z"]
+2024-05-25 14:44:45,005 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:44:52,201 - DEBUG: % sending keepalive ping
+2024-05-25 14:44:52,201 - DEBUG: > PING ad e4 ea 60 [binary, 4 bytes]
+2024-05-25 14:44:52,243 - DEBUG: < PONG ad e4 ea 60 [binary, 4 bytes]
+2024-05-25 14:44:52,243 - DEBUG: % received keepalive pong
+2024-05-25 14:44:55,036 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:44:55,229 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,271|Bg,83","...5-25T14:44:53.148Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:44:55.2018649Z", "_kf": true}, "2024-05-25T14:44:53.148Z"]
+2024-05-25 14:44:59,896 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,271|Bg,84","...5-25T14:44:57.714Z"]}]}' [285 bytes]
+ ["RaceControlMessages", {"Messages": {"94": {"Utc": "2024-05-25T14:44:58", "Category": "Flag", "Flag": "CLEAR", "Scope": "Sector", "Sector": 17, "Message": "CLEAR IN TRACK SECTOR 17"}}}, "2024-05-25T14:44:57.714Z"]
+2024-05-25 14:45:05,037 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:45:10,230 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,272|Bg,84","...5-25T14:45:08.224Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:45:10.2017644Z", "_kf": true}, "2024-05-25T14:45:08.224Z"]
+2024-05-25 14:45:12,245 - DEBUG: % sending keepalive ping
+2024-05-25 14:45:12,246 - DEBUG: > PING 31 52 d3 5c [binary, 4 bytes]
+2024-05-25 14:45:12,288 - DEBUG: < PONG 31 52 d3 5c [binary, 4 bytes]
+2024-05-25 14:45:12,288 - DEBUG: % received keepalive pong
+2024-05-25 14:45:15,057 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:45:25,089 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:45:25,245 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,273|Bg,84","...5-25T14:45:23.265Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:45:25.2174355Z", "_kf": true}, "2024-05-25T14:45:23.265Z"]
+2024-05-25 14:45:32,289 - DEBUG: % sending keepalive ping
+2024-05-25 14:45:32,289 - DEBUG: > PING f3 26 b8 fe [binary, 4 bytes]
+2024-05-25 14:45:32,330 - DEBUG: < PONG f3 26 b8 fe [binary, 4 bytes]
+2024-05-25 14:45:32,330 - DEBUG: % received keepalive pong
+2024-05-25 14:45:35,091 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:45:40,260 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,274|Bg,84","...5-25T14:45:38.294Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:45:40.2330012Z", "_kf": true}, "2024-05-25T14:45:38.294Z"]
+2024-05-25 14:45:45,354 - DEBUG: < TEXT '{}' [2 bytes]
+^[[A^[[B^[[A2024-05-25 14:45:52,331 - DEBUG: % sending keepalive ping
+2024-05-25 14:45:52,331 - DEBUG: > PING 'א\x03\x08' [text, 4 bytes]
+2024-05-25 14:45:52,408 - DEBUG: < PONG 'א\x03\x08' [text, 4 bytes]
+2024-05-25 14:45:52,408 - DEBUG: % received keepalive pong
+^[[B^[[A^[[B^[[A^[[B^[[A^[[B^[[A^[[B^[[A^[[B^[[A^[[B^[[A^[[B^[[A^[[B^[[A^[[B^[[A2024-05-25 14:45:55,153 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-25 14:45:55,260 - DEBUG: < TEXT '{"C":"d-55CB1F36-B,0|diO,0|diP,3|e,275|Bg,84","...5-25T14:45:53.333Z"]}]}' [176 bytes]
+ ["Heartbeat", {"Utc": "2024-05-25T14:45:55.2329617Z", "_kf": true}, "2024-05-25T14:45:53.333Z"]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  ["Heartbeat", {"Utc": "2024-05-26T14:22:44.4997887Z", "_kf": true}, "2024-05-26T14:22:42.442Z"]
+2024-05-26 14:22:53,385 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:22:59,541 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,21B|Ba,2E","M"...T14:22:57.4703303Z"]}]}' [178 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:22:59.5154047Z", "_kf": true}, "2024-05-26T14:22:57.4703303Z"]
+2024-05-26 14:23:01,609 - DEBUG: % sending keepalive ping
+2024-05-26 14:23:01,609 - DEBUG: > PING 8b ba ec f5 [binary, 4 bytes]
+2024-05-26 14:23:01,649 - DEBUG: < PONG 8b ba ec f5 [binary, 4 bytes]
+2024-05-26 14:23:01,650 - DEBUG: % received keepalive pong
+2024-05-26 14:23:03,511 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:23:13,541 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:23:14,556 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,21C|Ba,2E","M"...T14:23:12.4510549Z"]}]}' [178 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:23:14.5310127Z", "_kf": true}, "2024-05-26T14:23:12.4510549Z"]
+2024-05-26 14:23:21,651 - DEBUG: % sending keepalive ping
+2024-05-26 14:23:21,651 - DEBUG: > PING b7 b4 c8 0f [binary, 4 bytes]
+2024-05-26 14:23:21,694 - DEBUG: < PONG b7 b4 c8 0f [binary, 4 bytes]
+2024-05-26 14:23:21,695 - DEBUG: % received keepalive pong
+2024-05-26 14:23:23,565 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:23:29,578 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,21D|Ba,2E","M"...T14:23:27.4521095Z"]}]}' [178 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:23:29.5466345Z", "_kf": true}, "2024-05-26T14:23:27.4521095Z"]
+2024-05-26 14:23:33,540 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:23:41,696 - DEBUG: % sending keepalive ping
+2024-05-26 14:23:41,696 - DEBUG: > PING 4e dc bc ed [binary, 4 bytes]
+2024-05-26 14:23:41,736 - DEBUG: < PONG 4e dc bc ed [binary, 4 bytes]
+2024-05-26 14:23:41,736 - DEBUG: % received keepalive pong
+2024-05-26 14:23:43,560 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:23:44,587 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,21E|Ba,2E","M"...5-26T14:23:42.357Z"]}]}' [174 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:23:44.5622397Z", "_kf": true}, "2024-05-26T14:23:42.357Z"]
+2024-05-26 14:23:53,729 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:23:59,629 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,21F|Ba,2E","M"...5-26T14:23:57.524Z"]}]}' [174 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:23:59.5621898Z", "_kf": true}, "2024-05-26T14:23:57.524Z"]
+2024-05-26 14:24:01,738 - DEBUG: % sending keepalive ping
+2024-05-26 14:24:01,738 - DEBUG: > PING ba f0 f2 43 [binary, 4 bytes]
+2024-05-26 14:24:01,780 - DEBUG: < PONG ba f0 f2 43 [binary, 4 bytes]
+2024-05-26 14:24:01,780 - DEBUG: % received keepalive pong
+2024-05-26 14:24:03,759 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:24:13,783 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:24:14,655 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,220|Ba,2E","M"...5-26T14:24:12.555Z"]}]}' [174 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:24:14.5778318Z", "_kf": true}, "2024-05-26T14:24:12.555Z"]
+2024-05-26 14:24:21,781 - DEBUG: % sending keepalive ping
+2024-05-26 14:24:21,781 - DEBUG: > PING 5c d7 d6 31 [binary, 4 bytes]
+2024-05-26 14:24:21,824 - DEBUG: < PONG 5c d7 d6 31 [binary, 4 bytes]
+2024-05-26 14:24:21,824 - DEBUG: % received keepalive pong
+2024-05-26 14:24:23,772 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:24:29,637 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,221|Ba,2E","M"...5-26T14:24:27.548Z"]}]}' [174 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:24:29.5778113Z", "_kf": true}, "2024-05-26T14:24:27.548Z"]
+2024-05-26 14:24:33,808 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:24:41,827 - DEBUG: % sending keepalive ping
+2024-05-26 14:24:41,827 - DEBUG: > PING f2 b3 3f f6 [binary, 4 bytes]
+2024-05-26 14:24:41,867 - DEBUG: < PONG f2 b3 3f f6 [binary, 4 bytes]
+2024-05-26 14:24:41,867 - DEBUG: % received keepalive pong
+2024-05-26 14:24:43,811 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:24:44,603 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,222|Ba,2E","M"...5-26T14:24:42.538Z"]}]}' [174 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:24:44.5778308Z", "_kf": true}, "2024-05-26T14:24:42.538Z"]
+2024-05-26 14:24:53,872 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:24:59,676 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,223|Ba,2E","M"...5-26T14:24:57.599Z"]}]}' [174 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:24:59.5935731Z", "_kf": true}, "2024-05-26T14:24:57.599Z"]
+2024-05-26 14:25:01,869 - DEBUG: % sending keepalive ping
+2024-05-26 14:25:01,869 - DEBUG: > PING 4d f1 c5 4b [binary, 4 bytes]
+2024-05-26 14:25:01,910 - DEBUG: < PONG 4d f1 c5 4b [binary, 4 bytes]
+2024-05-26 14:25:01,911 - DEBUG: % received keepalive pong
+2024-05-26 14:25:03,910 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:25:13,903 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:25:14,649 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,224|Ba,2E","M"...5-26T14:25:12.665Z"]}]}' [174 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:25:14.6246301Z", "_kf": true}, "2024-05-26T14:25:12.665Z"]
+2024-05-26 14:25:21,912 - DEBUG: % sending keepalive ping
+2024-05-26 14:25:21,912 - DEBUG: > PING 98 6c 29 83 [binary, 4 bytes]
+2024-05-26 14:25:21,953 - DEBUG: < PONG 98 6c 29 83 [binary, 4 bytes]
+2024-05-26 14:25:21,953 - DEBUG: % received keepalive pong
+2024-05-26 14:25:24,103 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:25:29,665 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,225|Ba,2E","M"...5-26T14:25:27.711Z"]}]}' [173 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:25:29.640244Z", "_kf": true}, "2024-05-26T14:25:27.711Z"]
+2024-05-26 14:25:34,081 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:25:41,955 - DEBUG: % sending keepalive ping
+2024-05-26 14:25:41,955 - DEBUG: > PING c8 20 6d b1 [binary, 4 bytes]
+2024-05-26 14:25:41,996 - DEBUG: < PONG c8 20 6d b1 [binary, 4 bytes]
+2024-05-26 14:25:41,997 - DEBUG: % received keepalive pong
+2024-05-26 14:25:44,095 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:25:44,718 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,226|Ba,2E","M"...5-26T14:25:42.753Z"]}]}' [174 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:25:44.6558711Z", "_kf": true}, "2024-05-26T14:25:42.753Z"]
+2024-05-26 14:25:54,139 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:25:59,838 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,227|Ba,2E","M"...5-26T14:25:57.815Z"]}]}' [174 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:25:59.6714724Z", "_kf": true}, "2024-05-26T14:25:57.815Z"]
+2024-05-26 14:26:01,998 - DEBUG: % sending keepalive ping
+2024-05-26 14:26:01,998 - DEBUG: > PING a7 94 0c da [binary, 4 bytes]
+2024-05-26 14:26:02,062 - DEBUG: < PONG a7 94 0c da [binary, 4 bytes]
+2024-05-26 14:26:02,062 - DEBUG: % received keepalive pong
+2024-05-26 14:26:04,147 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:26:14,137 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:26:14,749 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,228|Ba,2E","M"...5-26T14:26:12.864Z"]}]}' [173 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:26:14.703852Z", "_kf": true}, "2024-05-26T14:26:12.864Z"]
+2024-05-26 14:26:22,064 - DEBUG: % sending keepalive ping
+2024-05-26 14:26:22,064 - DEBUG: > PING 2c dc 4f 22 [binary, 4 bytes]
+2024-05-26 14:26:22,104 - DEBUG: < PONG 2c dc 4f 22 [binary, 4 bytes]
+2024-05-26 14:26:22,105 - DEBUG: % received keepalive pong
+2024-05-26 14:26:24,172 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:26:29,743 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,229|Ba,2E","M"...5-26T14:26:27.913Z"]}]}' [174 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:26:29.7194435Z", "_kf": true}, "2024-05-26T14:26:27.913Z"]
+2024-05-26 14:26:34,237 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:26:42,106 - DEBUG: % sending keepalive ping
+2024-05-26 14:26:42,107 - DEBUG: > PING 9b ce b2 ee [binary, 4 bytes]
+2024-05-26 14:26:42,147 - DEBUG: < PONG 9b ce b2 ee [binary, 4 bytes]
+2024-05-26 14:26:42,147 - DEBUG: % received keepalive pong
+2024-05-26 14:26:44,245 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:26:44,849 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,22A|Ba,2E","M"...5-26T14:26:42.946Z"]}]}' [174 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:26:44.7194284Z", "_kf": true}, "2024-05-26T14:26:42.946Z"]
+2024-05-26 14:26:54,278 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:26:59,745 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,22B|Ba,2E","M"...05-26T14:26:57.99Z"]}]}' [173 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:26:59.7194228Z", "_kf": true}, "2024-05-26T14:26:57.99Z"]
+2024-05-26 14:27:02,148 - DEBUG: % sending keepalive ping
+2024-05-26 14:27:02,149 - DEBUG: > PING bc c9 3e 69 [binary, 4 bytes]
+2024-05-26 14:27:02,189 - DEBUG: < PONG bc c9 3e 69 [binary, 4 bytes]
+2024-05-26 14:27:02,190 - DEBUG: % received keepalive pong
+2024-05-26 14:27:04,442 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:27:14,283 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:27:14,759 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,22C|Ba,2E","M"...5-26T14:27:13.033Z"]}]}' [174 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:27:14.7350261Z", "_kf": true}, "2024-05-26T14:27:13.033Z"]
+2024-05-26 14:27:22,191 - DEBUG: % sending keepalive ping
+2024-05-26 14:27:22,192 - DEBUG: > PING c2 5c 04 a2 [binary, 4 bytes]
+2024-05-26 14:27:22,232 - DEBUG: < PONG c2 5c 04 a2 [binary, 4 bytes]
+2024-05-26 14:27:22,232 - DEBUG: % received keepalive pong
+2024-05-26 14:27:24,288 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:27:29,868 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,22D|Ba,2E","M"...5-26T14:27:28.078Z"]}]}' [174 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:27:29.7506169Z", "_kf": true}, "2024-05-26T14:27:28.078Z"]
+2024-05-26 14:27:34,297 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:27:42,233 - DEBUG: % sending keepalive ping
+2024-05-26 14:27:42,234 - DEBUG: > PING 16 b9 f1 38 [binary, 4 bytes]
+2024-05-26 14:27:42,274 - DEBUG: < PONG 16 b9 f1 38 [binary, 4 bytes]
+2024-05-26 14:27:42,274 - DEBUG: % received keepalive pong
+2024-05-26 14:27:44,315 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:27:44,790 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,22E|Ba,2E","M"...5-26T14:27:43.135Z"]}]}' [174 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:27:44.7662403Z", "_kf": true}, "2024-05-26T14:27:43.135Z"]
+2024-05-26 14:27:54,345 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:27:59,791 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,22F|Ba,2E","M"...5-26T14:27:58.162Z"]}]}' [174 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:27:59.7662067Z", "_kf": true}, "2024-05-26T14:27:58.162Z"]
+2024-05-26 14:28:02,276 - DEBUG: % sending keepalive ping
+2024-05-26 14:28:02,276 - DEBUG: > PING d2 2e 22 80 [binary, 4 bytes]
+2024-05-26 14:28:02,318 - DEBUG: < PONG d2 2e 22 80 [binary, 4 bytes]
+2024-05-26 14:28:02,318 - DEBUG: % received keepalive pong
+2024-05-26 14:28:04,369 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:28:14,389 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:28:14,821 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,230|Ba,2E","M"...5-26T14:28:13.192Z"]}]}' [174 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:28:14.7974525Z", "_kf": true}, "2024-05-26T14:28:13.192Z"]
+2024-05-26 14:28:22,320 - DEBUG: % sending keepalive ping
+2024-05-26 14:28:22,320 - DEBUG: > PING 90 a6 3c 3e [binary, 4 bytes]
+2024-05-26 14:28:22,360 - DEBUG: < PONG 90 a6 3c 3e [binary, 4 bytes]
+2024-05-26 14:28:22,361 - DEBUG: % received keepalive pong
+2024-05-26 14:28:24,413 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:28:29,865 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,231|Ba,2E","M"...5-26T14:28:28.226Z"]}]}' [174 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:28:29.8130527Z", "_kf": true}, "2024-05-26T14:28:28.226Z"]
+2024-05-26 14:28:34,451 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:28:42,362 - DEBUG: % sending keepalive ping
+2024-05-26 14:28:42,362 - DEBUG: > PING 43 c9 90 b0 [binary, 4 bytes]
+2024-05-26 14:28:42,403 - DEBUG: < PONG 43 c9 90 b0 [binary, 4 bytes]
+2024-05-26 14:28:42,403 - DEBUG: % received keepalive pong
+2024-05-26 14:28:44,446 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:28:44,864 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,232|Ba,2E","M"...5-26T14:28:43.266Z"]}]}' [174 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:28:44.8390225Z", "_kf": true}, "2024-05-26T14:28:43.266Z"]
+2024-05-26 14:28:54,475 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:28:59,892 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,233|Ba,2E","M"...-05-26T14:28:58.3Z"]}]}' [172 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:28:59.8598725Z", "_kf": true}, "2024-05-26T14:28:58.3Z"]
+2024-05-26 14:29:02,405 - DEBUG: % sending keepalive ping
+2024-05-26 14:29:02,405 - DEBUG: > PING 'p\x03t[' [text, 4 bytes]
+2024-05-26 14:29:02,445 - DEBUG: < PONG 'p\x03t[' [text, 4 bytes]
+2024-05-26 14:29:02,445 - DEBUG: % received keepalive pong
+2024-05-26 14:29:04,487 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:29:14,488 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:29:14,936 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,234|Ba,2E","M"...5-26T14:29:13.353Z"]}]}' [174 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:29:14.8780342Z", "_kf": true}, "2024-05-26T14:29:13.353Z"]
+2024-05-26 14:29:22,447 - DEBUG: % sending keepalive ping
+2024-05-26 14:29:22,448 - DEBUG: > PING 5b f0 62 b0 [binary, 4 bytes]
+2024-05-26 14:29:22,488 - DEBUG: < PONG 5b f0 62 b0 [binary, 4 bytes]
+2024-05-26 14:29:22,489 - DEBUG: % received keepalive pong
+2024-05-26 14:29:24,494 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:29:29,935 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,235|Ba,2E","M"...5-26T14:29:28.401Z"]}]}' [173 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:29:29.906713Z", "_kf": true}, "2024-05-26T14:29:28.401Z"]
+2024-05-26 14:29:34,693 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:29:42,490 - DEBUG: % sending keepalive ping
+2024-05-26 14:29:42,490 - DEBUG: > PING ea 1b 99 e4 [binary, 4 bytes]
+2024-05-26 14:29:42,532 - DEBUG: < PONG ea 1b 99 e4 [binary, 4 bytes]
+2024-05-26 14:29:42,532 - DEBUG: % received keepalive pong
+2024-05-26 14:29:44,542 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:29:44,948 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,236|Ba,2E","M"...5-26T14:29:43.467Z"]}]}' [174 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:29:44.9224545Z", "_kf": true}, "2024-05-26T14:29:43.467Z"]
+2024-05-26 14:29:54,560 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:30:00,154 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,237|Ba,2E","M"...5-26T14:29:58.513Z"]}]}' [174 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:29:59.9223365Z", "_kf": true}, "2024-05-26T14:29:58.513Z"]
+2024-05-26 14:30:02,534 - DEBUG: % sending keepalive ping
+2024-05-26 14:30:02,534 - DEBUG: > PING aa a6 ca b4 [binary, 4 bytes]
+2024-05-26 14:30:02,576 - DEBUG: < PONG aa a6 ca b4 [binary, 4 bytes]
+2024-05-26 14:30:02,576 - DEBUG: % received keepalive pong
+2024-05-26 14:30:04,565 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:30:14,697 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:30:14,987 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,238|Ba,2E","M"...5-26T14:30:13.568Z"]}]}' [174 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:30:14.9378939Z", "_kf": true}, "2024-05-26T14:30:13.568Z"]
+2024-05-26 14:30:22,577 - DEBUG: % sending keepalive ping
+2024-05-26 14:30:22,578 - DEBUG: > PING eb 98 b8 bc [binary, 4 bytes]
+2024-05-26 14:30:22,618 - DEBUG: < PONG eb 98 b8 bc [binary, 4 bytes]
+2024-05-26 14:30:22,619 - DEBUG: % received keepalive pong
+2024-05-26 14:30:24,761 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:30:29,979 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,239|Ba,2E","M"...5-26T14:30:28.614Z"]}]}' [174 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:30:29.9535151Z", "_kf": true}, "2024-05-26T14:30:28.614Z"]
+2024-05-26 14:30:34,776 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:30:42,620 - DEBUG: % sending keepalive ping
+2024-05-26 14:30:42,620 - DEBUG: > PING 49 4a bc 12 [binary, 4 bytes]
+2024-05-26 14:30:42,661 - DEBUG: < PONG 49 4a bc 12 [binary, 4 bytes]
+2024-05-26 14:30:42,661 - DEBUG: % received keepalive pong
+2024-05-26 14:30:44,798 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:30:44,981 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,23A|Ba,2E","M"...5-26T14:30:43.668Z"]}]}' [174 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:30:44.9535383Z", "_kf": true}, "2024-05-26T14:30:43.668Z"]
+2024-05-26 14:30:54,832 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:31:00,109 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,23B|Ba,2E","M"...-05-26T14:30:58.7Z"]}]}' [172 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:30:59.9691024Z", "_kf": true}, "2024-05-26T14:30:58.7Z"]
+2024-05-26 14:31:02,663 - DEBUG: % sending keepalive ping
+2024-05-26 14:31:02,663 - DEBUG: > PING f5 9c 02 af [binary, 4 bytes]
+2024-05-26 14:31:02,709 - DEBUG: < PONG f5 9c 02 af [binary, 4 bytes]
+2024-05-26 14:31:02,709 - DEBUG: % received keepalive pong
+2024-05-26 14:31:04,841 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:31:14,867 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:31:15,078 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,23C|Ba,2E","M"...5-26T14:31:13.762Z"]}]}' [174 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:31:14.9847147Z", "_kf": true}, "2024-05-26T14:31:13.762Z"]
+2024-05-26 14:31:22,712 - DEBUG: % sending keepalive ping
+2024-05-26 14:31:22,712 - DEBUG: > PING 'M*W\x0f' [text, 4 bytes]
+2024-05-26 14:31:22,752 - DEBUG: < PONG 'M*W\x0f' [text, 4 bytes]
+2024-05-26 14:31:22,753 - DEBUG: % received keepalive pong
+2024-05-26 14:31:24,893 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:31:30,173 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,23D|Ba,2E","M"...5-26T14:31:28.814Z"]}]}' [173 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:31:30.000315Z", "_kf": true}, "2024-05-26T14:31:28.814Z"]
+2024-05-26 14:31:34,965 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:31:42,754 - DEBUG: % sending keepalive ping
+2024-05-26 14:31:42,754 - DEBUG: > PING 63 01 0f b6 [binary, 4 bytes]
+2024-05-26 14:31:42,794 - DEBUG: < PONG 63 01 0f b6 [binary, 4 bytes]
+2024-05-26 14:31:42,795 - DEBUG: % received keepalive pong
+2024-05-26 14:31:44,960 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:31:45,044 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,23E|Ba,2E","M"...5-26T14:31:43.854Z"]}]}' [174 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:31:45.0160401Z", "_kf": true}, "2024-05-26T14:31:43.854Z"]
+2024-05-26 14:31:54,966 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:32:00,057 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,23F|Ba,2E","M"...5-26T14:31:58.903Z"]}]}' [174 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:32:00.0315661Z", "_kf": true}, "2024-05-26T14:31:58.903Z"]
+2024-05-26 14:32:02,796 - DEBUG: % sending keepalive ping
+2024-05-26 14:32:02,796 - DEBUG: > PING 94 e5 32 d3 [binary, 4 bytes]
+2024-05-26 14:32:02,836 - DEBUG: < PONG 94 e5 32 d3 [binary, 4 bytes]
+2024-05-26 14:32:02,836 - DEBUG: % received keepalive pong
+2024-05-26 14:32:04,999 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:32:15,012 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:32:15,071 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,240|Ba,2E","M"...5-26T14:32:13.916Z"]}]}' [174 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:32:15.0471699Z", "_kf": true}, "2024-05-26T14:32:13.916Z"]
+2024-05-26 14:32:22,838 - DEBUG: % sending keepalive ping
+2024-05-26 14:32:22,838 - DEBUG: > PING a7 6e d2 24 [binary, 4 bytes]
+2024-05-26 14:32:22,983 - DEBUG: < PONG a7 6e d2 24 [binary, 4 bytes]
+2024-05-26 14:32:22,984 - DEBUG: % received keepalive pong
+2024-05-26 14:32:25,015 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:32:30,108 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,241|Ba,2E","M"...5-26T14:32:28.958Z"]}]}' [174 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:32:30.0627418Z", "_kf": true}, "2024-05-26T14:32:28.958Z"]
+2024-05-26 14:32:35,062 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:32:42,984 - DEBUG: % sending keepalive ping
+2024-05-26 14:32:42,984 - DEBUG: > PING f0 f6 af 34 [binary, 4 bytes]
+2024-05-26 14:32:43,025 - DEBUG: < PONG f0 f6 af 34 [binary, 4 bytes]
+2024-05-26 14:32:43,025 - DEBUG: % received keepalive pong
+2024-05-26 14:32:45,087 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,242|Ba,2E","M"...5-26T14:32:44.012Z"]}]}' [174 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:32:45.0627735Z", "_kf": true}, "2024-05-26T14:32:44.012Z"]
+2024-05-26 14:32:45,122 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:32:55,144 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:33:00,103 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,243|Ba,2E","M"...5-26T14:32:59.043Z"]}]}' [174 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:33:00.0783294Z", "_kf": true}, "2024-05-26T14:32:59.043Z"]
+2024-05-26 14:33:03,026 - DEBUG: % sending keepalive ping
+2024-05-26 14:33:03,026 - DEBUG: > PING c0 7e 22 3e [binary, 4 bytes]
+2024-05-26 14:33:03,067 - DEBUG: < PONG c0 7e 22 3e [binary, 4 bytes]
+2024-05-26 14:33:03,067 - DEBUG: % received keepalive pong
+2024-05-26 14:33:05,180 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:33:15,169 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:33:15,172 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,244|Ba,2E","M"...5-26T14:33:14.085Z"]}]}' [174 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:33:15.0783138Z", "_kf": true}, "2024-05-26T14:33:14.085Z"]
+2024-05-26 14:33:23,068 - DEBUG: % sending keepalive ping
+2024-05-26 14:33:23,068 - DEBUG: > PING 74 7a 12 a4 [binary, 4 bytes]
+2024-05-26 14:33:23,108 - DEBUG: < PONG 74 7a 12 a4 [binary, 4 bytes]
+2024-05-26 14:33:23,108 - DEBUG: % received keepalive pong
+2024-05-26 14:33:25,346 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:33:30,118 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,245|Ba,2E","M"...5-26T14:33:29.109Z"]}]}' [174 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:33:30.0947443Z", "_kf": true}, "2024-05-26T14:33:29.109Z"]
+2024-05-26 14:33:35,263 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:33:43,108 - DEBUG: % sending keepalive ping
+2024-05-26 14:33:43,108 - DEBUG: > PING cf 90 a2 47 [binary, 4 bytes]
+2024-05-26 14:33:43,149 - DEBUG: < PONG cf 90 a2 47 [binary, 4 bytes]
+2024-05-26 14:33:43,149 - DEBUG: % received keepalive pong
+2024-05-26 14:33:45,180 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,246|Ba,2E","M"...5-26T14:33:44.166Z"]}]}' [174 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:33:45.1104266Z", "_kf": true}, "2024-05-26T14:33:44.166Z"]
+2024-05-26 14:33:45,274 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:33:55,486 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:34:00,161 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,247|Ba,2E","M"...5-26T14:33:59.199Z"]}]}' [174 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:34:00.1259526Z", "_kf": true}, "2024-05-26T14:33:59.199Z"]
+2024-05-26 14:34:03,151 - DEBUG: % sending keepalive ping
+2024-05-26 14:34:03,151 - DEBUG: > PING 4c 89 a7 db [binary, 4 bytes]
+2024-05-26 14:34:03,196 - DEBUG: < PONG 4c 89 a7 db [binary, 4 bytes]
+2024-05-26 14:34:03,196 - DEBUG: % received keepalive pong
+2024-05-26 14:34:05,329 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:34:15,252 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,248|Ba,2E","M"...5-26T14:34:14.249Z"]}]}' [174 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:34:15.1415223Z", "_kf": true}, "2024-05-26T14:34:14.249Z"]
+2024-05-26 14:34:15,345 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:34:23,197 - DEBUG: % sending keepalive ping
+2024-05-26 14:34:23,197 - DEBUG: > PING e1 6f 68 b2 [binary, 4 bytes]
+2024-05-26 14:34:23,238 - DEBUG: < PONG e1 6f 68 b2 [binary, 4 bytes]
+2024-05-26 14:34:23,238 - DEBUG: % received keepalive pong
+2024-05-26 14:34:25,397 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:34:30,165 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,249|Ba,2E","M"...05-26T14:34:29.28Z"]}]}' [173 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:34:30.1415185Z", "_kf": true}, "2024-05-26T14:34:29.28Z"]
+2024-05-26 14:34:35,382 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:34:43,239 - DEBUG: % sending keepalive ping
+2024-05-26 14:34:43,239 - DEBUG: > PING a1 0f 33 98 [binary, 4 bytes]
+2024-05-26 14:34:43,305 - DEBUG: < PONG a1 0f 33 98 [binary, 4 bytes]
+2024-05-26 14:34:43,306 - DEBUG: % received keepalive pong
+2024-05-26 14:34:45,181 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,24A|Ba,2E","M"...5-26T14:34:44.311Z"]}]}' [174 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:34:45.1571114Z", "_kf": true}, "2024-05-26T14:34:44.311Z"]
+2024-05-26 14:34:45,405 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:34:55,434 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:35:00,181 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,24B|Ba,2E","M"...5-26T14:34:59.339Z"]}]}' [174 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:35:00.1571668Z", "_kf": true}, "2024-05-26T14:34:59.339Z"]
+2024-05-26 14:35:03,307 - DEBUG: % sending keepalive ping
+2024-05-26 14:35:03,307 - DEBUG: > PING e5 11 8f 93 [binary, 4 bytes]
+2024-05-26 14:35:03,348 - DEBUG: < PONG e5 11 8f 93 [binary, 4 bytes]
+2024-05-26 14:35:03,348 - DEBUG: % received keepalive pong
+2024-05-26 14:35:05,454 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:35:15,215 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,24C|Ba,2E","M"...5-26T14:35:14.393Z"]}]}' [174 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:35:15.1570813Z", "_kf": true}, "2024-05-26T14:35:14.393Z"]
+2024-05-26 14:35:15,504 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:35:23,349 - DEBUG: % sending keepalive ping
+2024-05-26 14:35:23,349 - DEBUG: > PING cb ca ed 12 [binary, 4 bytes]
+2024-05-26 14:35:23,390 - DEBUG: < PONG cb ca ed 12 [binary, 4 bytes]
+2024-05-26 14:35:23,390 - DEBUG: % received keepalive pong
+2024-05-26 14:35:25,656 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:35:30,180 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,24D|Ba,2E","M"...5-26T14:35:29.448Z"]}]}' [174 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:35:30.1570358Z", "_kf": true}, "2024-05-26T14:35:29.448Z"]
+2024-05-26 14:35:35,501 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:35:43,391 - DEBUG: % sending keepalive ping
+2024-05-26 14:35:43,392 - DEBUG: > PING 70 13 80 8d [binary, 4 bytes]
+2024-05-26 14:35:43,439 - DEBUG: < PONG 70 13 80 8d [binary, 4 bytes]
+2024-05-26 14:35:43,439 - DEBUG: % received keepalive pong
+2024-05-26 14:35:45,230 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,24E|Ba,2E","M"...5-26T14:35:44.482Z"]}]}' [174 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:35:45.1570211Z", "_kf": true}, "2024-05-26T14:35:44.482Z"]
+2024-05-26 14:35:45,708 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:35:55,929 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:36:00,183 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,24F|Ba,2E","M"...5-26T14:35:59.543Z"]}]}' [173 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:36:00.157139Z", "_kf": true}, "2024-05-26T14:35:59.543Z"]
+2024-05-26 14:36:03,441 - DEBUG: % sending keepalive ping
+2024-05-26 14:36:03,441 - DEBUG: > PING cf 3d 70 2c [binary, 4 bytes]
+2024-05-26 14:36:03,483 - DEBUG: < PONG cf 3d 70 2c [binary, 4 bytes]
+2024-05-26 14:36:03,483 - DEBUG: % received keepalive pong
+2024-05-26 14:36:05,786 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:36:15,228 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,250|Ba,2E","M"...05-26T14:36:14.61Z"]}]}' [173 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:36:15.1725916Z", "_kf": true}, "2024-05-26T14:36:14.61Z"]
+2024-05-26 14:36:15,821 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:36:23,486 - DEBUG: % sending keepalive ping
+2024-05-26 14:36:23,486 - DEBUG: > PING 5f 86 3f a4 [binary, 4 bytes]
+2024-05-26 14:36:23,527 - DEBUG: < PONG 5f 86 3f a4 [binary, 4 bytes]
+2024-05-26 14:36:23,527 - DEBUG: % received keepalive pong
+2024-05-26 14:36:25,837 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:36:30,198 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,251|Ba,2E","M"...5-26T14:36:29.662Z"]}]}' [174 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:36:30.1726255Z", "_kf": true}, "2024-05-26T14:36:29.662Z"]
+2024-05-26 14:36:35,846 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:36:43,528 - DEBUG: % sending keepalive ping
+2024-05-26 14:36:43,528 - DEBUG: > PING b5 33 91 79 [binary, 4 bytes]
+2024-05-26 14:36:43,572 - DEBUG: < PONG b5 33 91 79 [binary, 4 bytes]
+2024-05-26 14:36:43,573 - DEBUG: % received keepalive pong
+2024-05-26 14:36:45,234 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,252|Ba,2E","M"...5-26T14:36:44.697Z"]}]}' [174 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:36:45.1881943Z", "_kf": true}, "2024-05-26T14:36:44.697Z"]
+2024-05-26 14:36:45,852 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:36:55,869 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:37:00,243 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,253|Ba,2E","M"...5-26T14:36:59.723Z"]}]}' [174 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:37:00.2194166Z", "_kf": true}, "2024-05-26T14:36:59.723Z"]
+2024-05-26 14:37:03,573 - DEBUG: % sending keepalive ping
+2024-05-26 14:37:03,574 - DEBUG: > PING 7b 62 a9 e9 [binary, 4 bytes]
+2024-05-26 14:37:03,718 - DEBUG: < PONG 7b 62 a9 e9 [binary, 4 bytes]
+2024-05-26 14:37:03,719 - DEBUG: % received keepalive pong
+2024-05-26 14:37:05,943 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:37:15,408 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,254|Ba,2E","M"...05-26T14:37:14.75Z"]}]}' [173 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:37:15.2350368Z", "_kf": true}, "2024-05-26T14:37:14.75Z"]
+2024-05-26 14:37:15,963 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:37:23,720 - DEBUG: % sending keepalive ping
+2024-05-26 14:37:23,720 - DEBUG: > PING 18 52 f2 2b [binary, 4 bytes]
+2024-05-26 14:37:23,760 - DEBUG: < PONG 18 52 f2 2b [binary, 4 bytes]
+2024-05-26 14:37:23,760 - DEBUG: % received keepalive pong
+2024-05-26 14:37:25,974 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:37:29,441 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,254|Ba,2F","M"...5-26T14:37:27.342Z"]}]}' [325 bytes]
+ ["RaceControlMessages", {"Messages": {"46": {"Utc": "2024-05-26T14:37:27", "Lap": 40, "Category": "Flag", "Flag": "BLUE", "Scope": "Driver", "RacingNumber": "77", "Message": "WAVED BLUE FLAG FOR CAR 77 (BOT) TIMED AT 16:37:27"}}}, "2024-05-26T14:37:27.342Z"]
+2024-05-26 14:37:30,360 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,255|Ba,2F","M"...5-26T14:37:29.792Z"]}]}' [174 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:37:30.2506137Z", "_kf": true}, "2024-05-26T14:37:29.792Z"]
+2024-05-26 14:37:35,998 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:37:39,783 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,255|Ba,30","M"...5-26T14:37:37.728Z"]}]}' [325 bytes]
+ ["RaceControlMessages", {"Messages": {"47": {"Utc": "2024-05-26T14:37:38", "Lap": 41, "Category": "Flag", "Flag": "BLUE", "Scope": "Driver", "RacingNumber": "77", "Message": "WAVED BLUE FLAG FOR CAR 77 (BOT) TIMED AT 16:37:37"}}}, "2024-05-26T14:37:37.728Z"]
+2024-05-26 14:37:43,763 - DEBUG: % sending keepalive ping
+2024-05-26 14:37:43,763 - DEBUG: > PING 5a 68 b0 06 [binary, 4 bytes]
+2024-05-26 14:37:43,945 - DEBUG: < PONG 5a 68 b0 06 [binary, 4 bytes]
+2024-05-26 14:37:43,945 - DEBUG: % received keepalive pong
+2024-05-26 14:37:45,331 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,256|Ba,30","M"...5-26T14:37:44.842Z"]}]}' [173 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:37:45.266217Z", "_kf": true}, "2024-05-26T14:37:44.842Z"]
+2024-05-26 14:37:46,009 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:37:48,144 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,256|Ba,31","M"...5-26T14:37:46.064Z"]}]}' [325 bytes]
+ ["RaceControlMessages", {"Messages": {"48": {"Utc": "2024-05-26T14:37:46", "Lap": 41, "Category": "Flag", "Flag": "BLUE", "Scope": "Driver", "RacingNumber": "77", "Message": "WAVED BLUE FLAG FOR CAR 77 (BOT) TIMED AT 16:37:45"}}}, "2024-05-26T14:37:46.064Z"]
+2024-05-26 14:37:56,045 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:38:00,355 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,257|Ba,31","M"...5-26T14:37:59.895Z"]}]}' [174 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:38:00.2820442Z", "_kf": true}, "2024-05-26T14:37:59.895Z"]
+2024-05-26 14:38:03,946 - DEBUG: % sending keepalive ping
+2024-05-26 14:38:03,946 - DEBUG: > PING cf 0e b0 5d [binary, 4 bytes]
+2024-05-26 14:38:03,986 - DEBUG: < PONG cf 0e b0 5d [binary, 4 bytes]
+2024-05-26 14:38:03,986 - DEBUG: % received keepalive pong
+2024-05-26 14:38:06,076 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:38:15,479 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,258|Ba,31","M"...05-26T14:38:14.93Z"]}]}' [173 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T14:38:15.3130651Z", "_kf": true}, "2024-05-26T14:38:14.93Z"]
+2024-05-26 14:38:16,244 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:38:23,987 - DEBUG: % sending keepalive ping
+2024-05-26 14:38:23,987 - DEBUG: > PING 60 e0 77 8e [binary, 4 bytes]
+2024-05-26 14:38:24,031 - DEBUG: < PONG 60 e0 77 8e [binary, 4 bytes]
+2024-05-26 14:38:24,031 - DEBUG: % received keepalive pong
+2024-05-26 14:38:24,828 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,258|Ba,32","M"...5-26T14:38:22.684Z"]}]}' [325 bytes]
+ ["RaceControlMessages", {"Messages": {"49": {"Utc": "2024-05-26T14:38:23", "Lap": 41, "Category": "Flag", "Flag": "BLUE", "Scope": "Driver", "RacingNumber": "24", "Message": "WAVED BLUE FLAG FOR CAR 24 (ZHO) TIMED AT 16:38:22"}}}, "2024-05-26T14:38:22.684Z"]
+2024-05-26 14:38:26,281 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 14:38:27,093 - DEBUG: ! failing connection with code 1006
+2024-05-26 14:38:27,093 - DEBUG: = connection is CLOSED
+
+
+
+
+
+
+
+
+
+
+"]
+2024-05-26 13:03:42,091 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 13:03:46,416 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,DE|Ba,E","M":[...5-26T13:03:44.366Z"]}]}' [289 bytes]
+ ["RaceControlMessages", {"Messages": {"13": {"Utc": "2024-05-26T13:03:44", "Lap": 1, "Category": "Flag", "Flag": "YELLOW", "Scope": "Sector", "Sector": 5, "Message": "YELLOW IN TRACK SECTOR 5"}}}, "2024-05-26T13:03:44.366Z"]
+2024-05-26 13:03:50,307 - DEBUG: % sending keepalive ping
+2024-05-26 13:03:50,307 - DEBUG: > PING a3 6b 68 fc [binary, 4 bytes]
+2024-05-26 13:03:50,348 - DEBUG: < PONG a3 6b 68 fc [binary, 4 bytes]
+2024-05-26 13:03:50,349 - DEBUG: % received keepalive pong
+2024-05-26 13:03:52,096 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 13:03:55,290 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,DF|Ba,E","M":[...T13:03:53.1560229Z"]}]}' [175 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T13:03:55.263819Z", "_kf": true}, "2024-05-26T13:03:53.1560229Z"]
+2024-05-26 13:03:56,912 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,DF|Ba,F","M":[...5-26T13:03:54.859Z"]}]}' [287 bytes]
+ ["RaceControlMessages", {"Messages": {"14": {"Utc": "2024-05-26T13:03:55", "Lap": 1, "Category": "Flag", "Flag": "CLEAR", "Scope": "Sector", "Sector": 6, "Message": "CLEAR IN TRACK SECTOR 6"}}}, "2024-05-26T13:03:54.859Z"]
+2024-05-26 13:03:58,933 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,DF|Ba,10","M":...5-26T13:03:56.874Z"]}]}' [290 bytes]
+ ["RaceControlMessages", {"Messages": {"15": {"Utc": "2024-05-26T13:03:57", "Lap": 1, "Category": "Flag", "Flag": "YELLOW", "Scope": "Sector", "Sector": 6, "Message": "YELLOW IN TRACK SECTOR 6"}}}, "2024-05-26T13:03:56.874Z"]
+2024-05-26 13:04:02,118 - DEBUG: < TEXT '{}' [2 bytes]
+2024-05-26 13:04:03,022 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,DF|Ba,11","M":...5-26T13:04:00.954Z"]}]}' [288 bytes]
+ ["RaceControlMessages", {"Messages": {"16": {"Utc": "2024-05-26T13:04:01", "Lap": 1, "Category": "Flag", "Flag": "CLEAR", "Scope": "Sector", "Sector": 5, "Message": "CLEAR IN TRACK SECTOR 5"}}}, "2024-05-26T13:04:00.954Z"]
+2024-05-26 13:04:04,586 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,DF|Ba,12","M":...5-26T13:04:02.536Z"]}]}' [288 bytes]
+ ["RaceControlMessages", {"Messages": {"17": {"Utc": "2024-05-26T13:04:02", "Lap": 1, "Category": "Flag", "Flag": "CLEAR", "Scope": "Sector", "Sector": 6, "Message": "CLEAR IN TRACK SECTOR 6"}}}, "2024-05-26T13:04:02.536Z"]
+2024-05-26 13:04:04,990 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,DF|Ba,13","M":...5-26T13:04:02.966Z"]}]}' [306 bytes]
+ ["RaceControlMessages", {"Messages": {"18": {"Utc": "2024-05-26T13:04:03", "Lap": 1, "Category": "Flag", "Flag": "DOUBLE YELLOW", "Scope": "Sector", "Sector": 10, "Message": "DOUBLE YELLOW IN TRACK SECTOR 10"}}}, "2024-05-26T13:04:02.966Z"]
+2024-05-26 13:04:05,999 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,DF|Ba,14","M":...5-26T13:04:03.963Z"]}]}' [290 bytes]
+ ["RaceControlMessages", {"Messages": {"19": {"Utc": "2024-05-26T13:04:04", "Lap": 1, "Category": "Flag", "Flag": "YELLOW", "Scope": "Sector", "Sector": 9, "Message": "YELLOW IN TRACK SECTOR 9"}}}, "2024-05-26T13:04:03.963Z"]
+2024-05-26 13:04:07,025 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,DF|Ba,15","M":...5-26T13:04:04.964Z"]}]}' [292 bytes]
+ ["RaceControlMessages", {"Messages": {"20": {"Utc": "2024-05-26T13:04:05", "Lap": 1, "Category": "Flag", "Flag": "YELLOW", "Scope": "Sector", "Sector": 11, "Message": "YELLOW IN TRACK SECTOR 11"}}}, "2024-05-26T13:04:04.964Z"]
+2024-05-26 13:04:07,562 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,DF|Ba,16","M":...5-26T13:04:05.529Z"]}]}' [290 bytes]
+ ["RaceControlMessages", {"Messages": {"21": {"Utc": "2024-05-26T13:04:05", "Lap": 1, "Category": "Flag", "Flag": "CLEAR", "Scope": "Sector", "Sector": 10, "Message": "CLEAR IN TRACK SECTOR 10"}}}, "2024-05-26T13:04:05.529Z"]
+2024-05-26 13:04:09,792 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,DF|Ba,17","M":...5-26T13:04:07.745Z"]}]}' [259 bytes]
+ ["RaceControlMessages", {"Messages": {"22": {"Utc": "2024-05-26T13:04:08", "Lap": 1, "Category": "Flag", "Flag": "RED", "Scope": "Track", "Message": "RED FLAG"}}}, "2024-05-26T13:04:07.745Z"]
+2024-05-26 13:04:09,918 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,DF|Ba,18","M":...5-26T13:04:07.879Z"]}]}' [288 bytes]
+ ["RaceControlMessages", {"Messages": {"23": {"Utc": "2024-05-26T13:04:08", "Lap": 1, "Category": "Flag", "Flag": "CLEAR", "Scope": "Sector", "Sector": 3, "Message": "CLEAR IN TRACK SECTOR 3"}}}, "2024-05-26T13:04:07.879Z"]
+2024-05-26 13:04:09,937 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,DF|Ba,19","M":...5-26T13:04:07.902Z"]}]}' [288 bytes]
+ ["RaceControlMessages", {"Messages": {"24": {"Utc": "2024-05-26T13:04:08", "Lap": 1, "Category": "Flag", "Flag": "CLEAR", "Scope": "Sector", "Sector": 4, "Message": "CLEAR IN TRACK SECTOR 4"}}}, "2024-05-26T13:04:07.902Z"]
+2024-05-26 13:04:09,980 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,DF|Ba,1A","M":...5-26T13:04:07.949Z"]}]}' [288 bytes]
+ ["RaceControlMessages", {"Messages": {"25": {"Utc": "2024-05-26T13:04:08", "Lap": 1, "Category": "Flag", "Flag": "CLEAR", "Scope": "Sector", "Sector": 9, "Message": "CLEAR IN TRACK SECTOR 9"}}}, "2024-05-26T13:04:07.949Z"]
+2024-05-26 13:04:10,049 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,DF|Ba,1B","M":...5-26T13:04:07.961Z"]}]}' [290 bytes]
+ ["RaceControlMessages", {"Messages": {"26": {"Utc": "2024-05-26T13:04:08", "Lap": 1, "Category": "Flag", "Flag": "CLEAR", "Scope": "Sector", "Sector": 11, "Message": "CLEAR IN TRACK SECTOR 11"}}}, "2024-05-26T13:04:07.961Z"]
+2024-05-26 13:04:10,350 - DEBUG: % sending keepalive ping
+2024-05-26 13:04:10,350 - DEBUG: > PING 58 ed 91 3b [binary, 4 bytes]
+2024-05-26 13:04:10,397 - DEBUG: < TEXT '{"C":"d-2ACCE7EE-B,0|Dt,0|Du,3|e,E0|Ba,1B","M":...5-26T13:04:08.096Z"]}]}' [173 bytes]
+ ["Heartbeat", {"Utc": "2024-05-26T13:04:10.2950686Z", "_kf": true}, "2024-05-26T13:04:08.096Z"]
+2024-05-26 13:04:10,398 - DEBUG: < PONG 58 ed 91 3b [binary, 4 bytes]
