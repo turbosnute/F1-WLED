@@ -77,7 +77,7 @@ class SignalRClientMod2:
     """
     _connection_url = 'https://livetiming.formula1.com/signalr'
 
-    def __init__(self, filename: str, WLED_GREEN: int, WLED_TRACKCLEAR: int, WLED_YELLOW: int, WLED_RED: int, WLED_CHEQUERED: int, WLED_SC: int, WLED_HOST: str = '', WLED_DELAY: int = 0, filemode: str = 'w', debug: bool = False,
+    def __init__(self, WLED_GREEN: int, WLED_TRACKCLEAR: int, WLED_YELLOW: int, WLED_RED: int, WLED_CHEQUERED: int, WLED_SC: int, WLED_HOST: str = '', WLED_DELAY: int = 0, filemode: str = 'w', debug: bool = False,
                  timeout: int = 60, logger: Optional = None):
 
         self.headers = {'User-agent': 'BestHTTP',
@@ -103,8 +103,8 @@ class SignalRClientMod2:
         self.WLED_DELAY = WLED_DELAY
 
         self.debug = debug
-        self.filename = filename
-        self.filemode = filemode
+        self.filename = 'output.txt'
+        self.filemode = 'w'
         self.timeout = timeout
         self._connection = None
 
@@ -117,7 +117,7 @@ class SignalRClientMod2:
         else:
             self.logger = logger
 
-        self._output_file = None
+        self._output_file = open(self.filename, self.filemode)
         self._t_last_message = None
 
     def _to_file(self, msg):
@@ -153,6 +153,9 @@ class SignalRClientMod2:
         null = subprocess.Popen(command, shell=True)
 
     def handle_message(self, msg):
+        self._output_file.write(msg + '\n')
+        self._output_file.flush()
+
         #Fix and load json
         msg = self.fix_json(msg)
         print(Fore.CYAN, msg, Fore.RESET)
@@ -205,6 +208,7 @@ class SignalRClientMod2:
                 
                 if action != '':
                     self.to_wled(action)
+
 
     async def _on_do_nothing(self, msg):
         # just do nothing with the message; intended for debug mode where some
