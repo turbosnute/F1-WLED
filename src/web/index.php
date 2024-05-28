@@ -125,7 +125,7 @@
             <input type="hidden" id="confdelay" name="confdelay" value="<?php echo $wled_delay; ?>">
             <!-- Slider to speficy delay. Between 0 and 80 seconds -->
             <div class="mb-3">
-                <label for="wled_delay" class="form-label">Delay</label>
+                <label for="wled_delay" class="form-label">Delay (F1TV typically have a 45-50 sec. delay.</label>
                 <input type="range" class="form-range" value="<?php echo $wled_delay; ?>" min="0" max="80" id="delay" name="wled_delay" id="wled_delay" oninput="this.nextElementSibling.value = this.value"><output><?php echo $wled_delay; ?></output> seconds
             </div>
             <!-- Text boxes for environment variables -->
@@ -159,22 +159,21 @@
             </div>
 
             <button type="submit" class="btn btn-primary">Save Config</button>
-
-            <section>
-                
-                <p><strong>F1-WLED Status: </strong><span id="status">We are checking...</span></p>
-            </section>
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-            <script>
-            $(document).ready(function(){
-                setInterval(function(){
-                    $.get("check_process.php", function(data, status){
-                        $("#status").html(data);
-                    });
-                }, 2000); // check every 2 seconds
-            });
-            </script>
-         </form>
+        </form>
+        <hr />
+        <section>
+            <p><strong>F1-WLED Status: </strong><span id="status">We are checking...</span></p>
+        </section>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+            setInterval(function(){
+                $.get("check_process.php", function(data, status){
+                    $("#status").html(data);
+                });
+            }, 2000); // check every 2 seconds
+        });
+        </script>
         </main>
     </div>
   </body>
