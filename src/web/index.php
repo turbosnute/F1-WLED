@@ -108,28 +108,28 @@
         }
     </script>
     <div class="container">
-        <div class="row">
-            <div class="col">
-                <h1>F1-WLED Configuration</h1>
-                <?php if (isset($_SESSION['saved'])) { $_SESSION['saved'] = NULL; ?>
+    <div class="row">
+        <div class="col">
+            <h1>F1-WLED</h1>
+            <?php if (isset($_SESSION['saved'])) { $_SESSION['saved'] = NULL; ?>
             <div class="flash_message alert alert-success" role="alert">
                 Configuration saved.
             </div>
             <?php } elseif (isset($_SESSION['process_started'])) { ?>
             <div class="flash_message alert alert-success" role="alert">
-            F1-WLED Started.
+                F1-WLED Started.
             </div>
             <?php } elseif (isset($_SESSION['process_killed'])) { $_SESSION['process_killed'] = NULL; ?>
             <div class="flash_message alert alert-danger" role="alert">
-            F1-WLED Stopped.
+                F1-WLED Stopped.
             </div>
             <?php } else { ?>
             <div class="alert alert-light" role="alert">
                 Welcome to the F1-WLED configuration page. Here you can set the WLED presets for the different flags and the delay. 
             </div>
             <?php } ?>
-            </div>
         </div>
+    </div>
     <div class="row">
     <div class="col">
         <main>
