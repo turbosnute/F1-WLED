@@ -1,13 +1,15 @@
 <?php
     // check_process.php
-    $processName = '^python3 \./f1wled\.py'; // the process name
+    session_start();
+
+    $processName = 'f1wled\.py'; // the process name
     $output = array();
     exec("pgrep -f '$processName'", $output); // execute the pgrep command
     
     // if the output is not empty, the process is running
     if (!empty($output)) {
-        echo "Running";
+        echo "<span style='color:green;'>Running</span><br /><p><a type='button' href='stop_process.php' class='btn btn-danger'>Stop F1-WLED</a></p>";
     } else {
-        echo "Not running";
+        echo "<span style='color:red;'>Not Running</span><br /><p><a type='button' href='start_process.php' class='btn btn-success'>Start F1-WLED</a></p>";
     }
 ?>

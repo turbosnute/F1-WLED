@@ -1,5 +1,5 @@
 <?php
-
+    session_start();
     /* Check if config is available (in config file). */
     $config_path = "/config/config.json";
     
@@ -112,9 +112,17 @@
          <div class="py-5 text-center">
             <h1>F1-WLED Config</h1>
          </div>
-            <?php if (isset($_GET['saved'])) { ?>
+            <?php if (isset($_SESSION['saved'])) { $_SESSION['saved'] = NULL; ?>
             <div class="flash_message alert alert-success" role="alert">
                 Configuration saved.
+            </div>
+            <?php } elseif (isset($_SESSION['process_started'])) { $_SESSION['process_started'] = NULL; ?>
+            <div class="flash_message alert alert-success" role="alert">
+            F1-WLED Started.
+            </div>
+            <?php } elseif (isset($_SESSION['process_killed'])) { $_SESSION['process_killed'] = NULL; ?>
+            <div class="flash_message alert alert-danger" role="alert">
+            F1-WLED Stopped.
             </div>
             <?php } else { ?>
             <div class="alert alert-light" role="alert">
@@ -164,6 +172,11 @@
         <section>
             <p><strong>F1-WLED Status: </strong><span id="status">We are checking...</span></p>
         </section>
+        <!--
+        <section>
+            <textarea id="output" rows="30" cols="200"></textarea>
+        </section>
+        -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
         $(document).ready(function(){
@@ -174,6 +187,15 @@
             }, 2000); // check every 2 seconds
         });
         </script>
+        <!---
+        <script>
+        var source = new EventSource("stream_output.php");
+
+        source.onmessage = function(event) {
+            document.getElementById("output").value += event.data + "\n";
+        };
+        </script>
+        --
         </main>
     </div>
   </body>

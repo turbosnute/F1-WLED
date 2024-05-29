@@ -1,4 +1,6 @@
 <?php
+    session_start();
+
     $wled_green = (int)$_POST['wled_green'];
     $wled_yellow = (int)$_POST['wled_yellow'];
     $wled_red = (int)$_POST['wled_red'];
@@ -29,6 +31,6 @@
     fwrite($file, $config_file_content);
     fclose($file);
 
-    
+    $_SESSION['saved'] = "succesful";
     header('Location: index.php?saved=succesful');
 ?>

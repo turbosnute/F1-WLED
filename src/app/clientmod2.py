@@ -103,7 +103,7 @@ class SignalRClientMod2:
         self.WLED_DELAY = WLED_DELAY
 
         self.debug = debug
-        self.filename = 'output.txt'
+        self.filename = '/app/output.txt'
         self.filemode = 'w'
         self.timeout = timeout
         self._connection = None
@@ -243,7 +243,6 @@ class SignalRClientMod2:
             self.logger.exception("Exception while writing message to file")
 
     async def _run(self):
-        self._output_file = open(self.filename, self.filemode)
         # Create connection
         session = requests.Session()
         session.headers = self.headers

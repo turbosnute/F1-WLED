@@ -3,7 +3,7 @@
 header('Content-Type: text/event-stream');
 header('Cache-Control: no-cache');
 
-$filename = "/app/log.txt";
+$filename = "/app/op.txt";
 $lastmodif    = 0;
 $currentmodif = 0;
 
