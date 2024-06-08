@@ -185,7 +185,7 @@
         </section>
         <section>
             <p><strong>Output: </strong></p>
-            <textarea id="content" class="form-control" rows="25" style="font-size: smaller;"></textarea>
+            <textarea id="content" class="form-control" rows="20" style="font-size: smaller;"></textarea>
         </section>
         <!--
         <section>
