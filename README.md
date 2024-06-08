@@ -6,27 +6,20 @@
 ```
 
 ## Requirements
-- WLED lamp/panel/something with API and presets for Green, yellow, red, chequered flag + safetycar.
+- WLED lamp/panel/something with API and presets for Green, red, chequered flag + safetycar.
 
 ## Build
 ```
+cd f1-wled/
 sudo docker build -t f1-wled .
 ```
 
 ## Run
 ```
-sudo docker run -it -v "$PWD/src/web":/var/www/html/ -v f1wled:/config/  -p 8800:80 f1-wled bash
+sudo docker run -it -v "$PWD/src/web":/var/www/html/ -v f1wled:/config/ -p 8800:80 f1-wled
 ```
 
-- Then run "apache2-foreground"
-- navigate to "http:<dockerhost>:8800" with a browser to set the config
-- ctrl+c to kill apache in side the container
-- run "./f1wled" from bash inside the container
+- navigate to `http://dockerhost:8800` with a browser to set and save the config. Then start F1-wled from the same web interface. 
 
-## Configure
-...
-
-## TO-DO
-- Apache should always run in background.
-- How should the script start? And should it automatically be reloaded when new config is saved?
-- Script status on website?
+## To-Do
+- Implement yellow flags?
