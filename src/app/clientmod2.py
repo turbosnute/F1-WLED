@@ -189,8 +189,9 @@ class SignalRClientMod2:
                         print(Fore.GREEN + "Green Flag" + Fore.RESET + " " + message['Message'])
                         action = 'GREEN'
                     elif message['Flag'] == 'YELLOW' or message['Flag'] == 'DOUBLE YELLOW':
-                        print(Fore.YELLOW + "Yellow Flag" + Fore.RESET + " " + message['Message'])
-                        action = 'YELLOW'
+                        #print(Fore.YELLOW + "Yellow Flag" + Fore.RESET + " " + message['Message'])
+                        #action = 'YELLOW'
+                        action = '' # Do nothing for yellow flags.
                     elif message['Flag'] == 'RED':
                         print(Fore.RED + "Red Flag" + Fore.RESET)
                         action = 'RED'

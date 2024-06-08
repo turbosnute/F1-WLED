@@ -3,4 +3,4 @@ url=$1
 dealay=$2
 sleep $dealay
 null=$(curl -s $url)
-#echo $url > /app/debug0rz.txt
+echo $url >> /app/output.txt
