@@ -111,20 +111,16 @@
         <section>
             <h1>F1-WLED</h1>
             <?php if (isset($_SESSION['saved'])) { $_SESSION['saved'] = NULL; ?>
-            <div class="flash_message alert alert-success" role="alert">
+            <div class="flash_message alert alert-success" style="z-index:5;position:absolute;top:0;left:0;" role="alert">
                 Configuration saved.
             </div>
             <?php } elseif (isset($_SESSION['process_started'])) { ?>
-            <div class="flash_message alert alert-success" role="alert">
+            <div class="flash_message alert alert-success" style="z-index:5;position:absolute;top:0;left:0;" role="alert">
                 F1-WLED Started.
             </div>
             <?php } elseif (isset($_SESSION['process_killed'])) { $_SESSION['process_killed'] = NULL; ?>
-            <div class="flash_message alert alert-danger" role="alert">
+            <div class="flash_message alert alert-danger" style="z-index:5;position:absolute;top:0;left:0;" role="alert">
                 F1-WLED Stopped.
-            </div>
-            <?php } else { ?>
-            <div class="alert alert-light" role="alert">
-                Welcome to the F1-WLED configuration page. Here you can set the WLED presets for the different flags and the delay. 
             </div>
             <?php } ?>
         </section>
@@ -132,7 +128,7 @@
             <p class="d-inline-flex gap-1">
                 <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                     Show Config
-                </button>
+                </button><span id="status">We are checking...</span>
             </p>
             <div class="collapse" id="collapseExample">
                 <div class="card card-body">
@@ -140,7 +136,7 @@
                         <input type="hidden" id="confdelay" name="confdelay" value="<?php echo $wled_delay; ?>">
                         <!-- Slider to speficy delay. Between 0 and 80 seconds -->
                         <div class="mb-3">
-                            <label for="wled_delay" class="form-label"><strong>Delay</strong> (F1TV typically have a 45-50 sec. delay)</label>
+                            <label for="wled_delay" class="form-label"><strong>Delay</strong> (F1TV typically have a 45-60 sec. delay)</label>
                             <input type="range" class="form-range" value="<?php echo $wled_delay; ?>" min="0" max="80" id="delay" name="wled_delay" id="wled_delay" oninput="this.nextElementSibling.value = this.value"><output><?php echo $wled_delay; ?></output> seconds
                         </div>
                         <!-- Text boxes for environment variables -->
@@ -179,9 +175,6 @@
                     </form>
                 </div><!-- card-body -->
             </div><!-- collapse -->
-        </section>
-        <section>
-            <p><strong>F1-WLED Status: </strong><span id="status">We are checking...</span></p>
         </section>
         <section>
             <p><strong>Output: </strong></p>
