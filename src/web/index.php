@@ -111,15 +111,15 @@
         <section>
             <h1>F1-WLED</h1>
             <?php if (isset($_SESSION['saved'])) { $_SESSION['saved'] = NULL; ?>
-            <div class="flash_message alert alert-success" style="z-index:5;position:absolute;top:0;left:0;" role="alert">
+            <div class="flash_message alert alert-success" style="z-index:5;position:absolute;top:0;right:0;" role="alert">
                 Configuration saved.
             </div>
             <?php } elseif (isset($_SESSION['process_started'])) { ?>
-            <div class="flash_message alert alert-success" style="z-index:5;position:absolute;top:0;left:0;" role="alert">
+            <div class="flash_message alert alert-success" style="z-index:5;position:absolute;top:0;right:0;" role="alert">
                 F1-WLED Started.
             </div>
             <?php } elseif (isset($_SESSION['process_killed'])) { $_SESSION['process_killed'] = NULL; ?>
-            <div class="flash_message alert alert-danger" style="z-index:5;position:absolute;top:0;left:0;" role="alert">
+            <div class="flash_message alert alert-danger" style="z-index:5;position:absolute;top:0;right:0;" role="alert">
                 F1-WLED Stopped.
             </div>
             <?php } ?>
