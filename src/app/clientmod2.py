@@ -77,7 +77,7 @@ class SignalRClientMod2:
     """
     _connection_url = 'https://livetiming.formula1.com/signalr'
 
-    def __init__(self, WLED_GREEN: int, WLED_TRACKCLEAR: int, WLED_YELLOW: int, WLED_RED: int, WLED_CHEQUERED: int, WLED_SC: int, WLED_HOST: str = '', WLED_DELAY: int = 0, filemode: str = 'w', debug: bool = False,
+    def __init__(self, WLED_GREEN: int, WLED_TRACKCLEAR: int, WLED_RED: int, WLED_CHEQUERED: int, WLED_SC: int, WLED_HOST: str = '', WLED_DELAY: int = 0, filemode: str = 'w', debug: bool = False,
                  timeout: int = 60, logger: Optional = None):
 
         self.headers = {'User-agent': 'BestHTTP',
@@ -95,7 +95,7 @@ class SignalRClientMod2:
         self.topics = ["Heartbeat", "RaceControlMessages"]
         self.WLED_GREEN = WLED_GREEN
         self.WLED_TRACKCLEAR = WLED_TRACKCLEAR
-        self.WLED_YELLOW = WLED_YELLOW
+        #self.WLED_YELLOW = WLED_YELLOW
         self.WLED_RED = WLED_RED
         self.WLED_CHEQUERED = WLED_CHEQUERED
         self.WLED_SC = WLED_SC
@@ -147,6 +147,7 @@ class SignalRClientMod2:
 
         url = "http://" + self.WLED_HOST + "/win&PL=" + str(preset)
         print(Fore.GREEN, url, Fore.RESET)
+        "Called " + url + " with " + str(self.WLED_DELAY) + " delay"
         #response = requests.get(url, timeout=1)
         #print(response.status_code)
         command = "nohup /app/cmd.sh '" + url + "' " + str(self.WLED_DELAY) + " > /dev/null 2>&1 &"
