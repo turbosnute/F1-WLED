@@ -23,3 +23,4 @@ sudo docker run -it -v "$PWD/src/web":/var/www/html/ -v f1wled:/config/ -p 8800:
 
 ## To-Do
 - Implement yellow flags?
+- Will `track clear` always be sent after safety car is in?
