@@ -1,6 +1,6 @@
 <?php
 // get_content.php
-$filename = "/app/op.txt";
+$filename = "/app/output.txt";
 if (file_exists($filename)) {
     $content = file_get_contents($filename);
     //echo nl2br($content); // convert newlines to <br> for HTML display
