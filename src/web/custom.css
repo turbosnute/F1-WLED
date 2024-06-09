@@ -1,0 +1,17 @@
+.flash_message {
+    animation: slide-up 0.9s forwards;
+    animation-delay: 1s;
+    -webkit-animation-delay: 1s; 
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    opacity: 0.85;
+}
+
+@-webkit-keyframes slide-up {
+    from {transition: translateY(0);opacity: 0.85}
+    to {transition: translateY(-150px);opacity: 0;top:0px;}
+}
