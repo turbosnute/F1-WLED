@@ -1,6 +1,6 @@
 #! /bin/bash
 url=$1
-dealay=$2
-sleep $dealay
+delay=$2
+sleep $delay
 null=$(curl -s $url)
 echo $url >> /app/debug.txt
