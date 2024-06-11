@@ -14,6 +14,8 @@ import subprocess
 import fastf1
 from fastf1.signalr_aio import Connection
 
+sector_status = {}
+
 
 def messages_from_raw(r: Iterable):
     """Extract data messages from raw recorded SignalR data.
@@ -214,6 +216,29 @@ class SignalRClientMod2:
                 if action != '':
                     self.to_wled(action)
 
+    def handle_replay(self, replay):
+        #TODO: Implement replay functionality
+        if 'R' in replay:
+            if 'RaceControlMessages' in replay['R']:
+                 # Handle messages
+                 for message in replay['R']['RaceControlMessages']['Messages']:
+                    if message['Flag'] == 'YELLOW' or message['Flag'] == 'DOUBLE YELLOW':
+                        print(Fore.YELLOW + "Yellow Flag" + Fore.RESET)
+                        if message['Scope'] == 'Sector':
+                            sector_status[message['Sector']] = 'YELLOW'
+                        elif message['Scope'] == 'Track':
+                            sector_status['Track'] = 'YELLOW'
+                    elif message['Flag'] == 'CLEAR':
+                        if message['Scope'] == 'Sector':
+                            sector_status[message['Sector']] = 'CLEAR'
+                        elif message['Scope'] == 'Track':
+                            sector_status = {'Track': 'CLEAR'}
+                    elif message['Flag'] == 'GREEN':
+                        sector_status = {'Track': 'GREEN'}
+                    elif message['Flag'] == 'RED':
+                        sector_status = {'Track': 'RED'}
+                    elif message['Flag'] == 'CHEQUERED':
+                        sector_status = {'Track': 'CHEQUERED'}
 
     async def _on_do_nothing(self, msg):
         # just do nothing with the message; intended for debug mode where some
