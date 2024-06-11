@@ -14,8 +14,6 @@ import subprocess
 import fastf1
 from fastf1.signalr_aio import Connection
 
-sector_status = {}
-
 
 def messages_from_raw(r: Iterable):
     """Extract data messages from raw recorded SignalR data.
@@ -110,6 +108,9 @@ class SignalRClientMod2:
         self.timeout = timeout
         self._connection = None
 
+        self.sector_status = {}
+        self.current_status = ""
+
         if not logger:
             logging.basicConfig(
                 format="%(asctime)s - %(levelname)s: %(message)s"
@@ -167,78 +168,105 @@ class SignalRClientMod2:
         print(Fore.CYAN, msg, Fore.RESET)
         msg = json.loads(msg)
         
-        activities = list()
-
-        if 'M' in msg and len(msg['M']) > 0:
-            for m in msg['M']:
-                if 'A' in m:
-                    activities.append(m['A'])
+        if 'R' in msg:
+            self.handle_replay(msg)
         else:
-            activities.append(msg)
-        
-        for activity in activities:
-            if 'RaceControlMessages' in activity:
-                messages = activity[1]['Messages']
+            activities = list()
+
+            if 'M' in msg and len(msg['M']) > 0:
+                for m in msg['M']:
+                    if 'A' in m:
+                        activities.append(m['A'])
             else:
-                messages = {}
+                activities.append(msg)
+            
+            for activity in activities:
+                if 'RaceControlMessages' in activity:
+                    messages = activity[1]['Messages']
+                else:
+                    messages = {}
 
-            for m in messages:
-                message = messages[m]
-                # Message should be something like: {'Utc': '2024-05-18T15:01:42', 'Category': 'Other', 'Message': 'FIA STEWARDS: Q1 INCIDENT INVOLVING CARS 24 (ZHO), 1 (VER), 11 (PER), 55 (SAI), 10 (GAS), 16 (LEC), 2 (SAR), 3 (RIC) NO FURTHER ACTION - FAILING TO FOLLOW RACE DIRECTORS INSTRUCTIONS - MAXIMUM DELTA TIME'}
-                action = ''
+                for m in messages:
+                    message = messages[m]
+                    # Message should be something like: {'Utc': '2024-05-18T15:01:42', 'Category': 'Other', 'Message': 'FIA STEWARDS: Q1 INCIDENT INVOLVING CARS 24 (ZHO), 1 (VER), 11 (PER), 55 (SAI), 10 (GAS), 16 (LEC), 2 (SAR), 3 (RIC) NO FURTHER ACTION - FAILING TO FOLLOW RACE DIRECTORS INSTRUCTIONS - MAXIMUM DELTA TIME'}
+                    action = ''
 
-                if message['Category'] == 'Flag':
-                    if message['Flag'] == 'GREEN':
-                        print(Fore.GREEN + "Green Flag" + Fore.RESET + " " + message['Message'])
-                        action = 'GREEN'
-                    elif message['Flag'] == 'YELLOW' or message['Flag'] == 'DOUBLE YELLOW':
-                        #print(Fore.YELLOW + "Yellow Flag" + Fore.RESET + " " + message['Message'])
-                        #action = 'YELLOW'
-                        action = '' # Do nothing for yellow flags.
-                    elif message['Flag'] == 'RED':
-                        print(Fore.RED + "Red Flag" + Fore.RESET)
-                        action = 'RED'
-                    elif message['Flag'] == 'CLEAR':
-                        if message['Message'] == 'TRACK CLEAR':
-                            print(Fore.CYAN + "Clear Flag" + Fore.RESET + " " + message['Message'])
-                            action = 'TRACKCLEAR'
+                    if message['Category'] == 'Flag':
+                        if message['Flag'] == 'GREEN':
+                            print(Fore.GREEN + "Green Flag" + Fore.RESET + " " + message['Message'])
+                            action = 'GREEN'
+                        elif message['Flag'] == 'YELLOW' or message['Flag'] == 'DOUBLE YELLOW':
+                            #print(Fore.YELLOW + "Yellow Flag" + Fore.RESET + " " + message['Message'])
+                            #action = 'YELLOW'
+                            action = '' # Do nothing for yellow flags.
+                        elif message['Flag'] == 'RED':
+                            print(Fore.RED + "Red Flag" + Fore.RESET)
+                            action = 'RED'
+                        elif message['Flag'] == 'CLEAR':
+                            if message['Message'] == 'TRACK CLEAR':
+                                print(Fore.CYAN + "Clear Flag" + Fore.RESET + " " + message['Message'])
+                                action = 'TRACKCLEAR'
+                            else:
+                                print(Back.CYAN + Fore.BLACK + message['Message'] + Fore.RESET + Back.RESET)
+                        elif message['Flag'] == 'CHEQUERED':
+                            print(Fore.MAGENTA + "Chequered Flag" + Fore.RESET + " " + message['Message'])
+                            action = 'CHEQUERED'
                         else:
-                            print(Back.CYAN + Fore.BLACK + message['Message'] + Fore.RESET + Back.RESET)
-                    elif message['Flag'] == 'CHEQUERED':
-                        print(Fore.MAGENTA + "Chequered Flag" + Fore.RESET + " " + message['Message'])
-                        action = 'CHEQUERED'
-                    else:
-                        print(Fore.MAGENTA + message['Message'] + Fore.RESET)
-                elif message['Category'] == 'SafetyCar':
-                    print(Back.YELLOW + "Safety Car" + Back.RESET + " " + message['Message'])
-                    action = 'SC'
-                
-                if action != '':
-                    self.to_wled(action)
+                            print(Fore.MAGENTA + message['Message'] + Fore.RESET)
+                    elif message['Category'] == 'SafetyCar':
+                        print(Back.YELLOW + "Safety Car" + Back.RESET + " " + message['Message'])
+                        action = 'SC'
+                    
+                    if action != '':
+                        self.to_wled(action)
 
     def handle_replay(self, replay):
         #TODO: Implement replay functionality
+        self.sector_status = {}
+        action = ''
+
         if 'R' in replay:
             if 'RaceControlMessages' in replay['R']:
                  # Handle messages
-                 for message in replay['R']['RaceControlMessages']['Messages']:
-                    if message['Flag'] == 'YELLOW' or message['Flag'] == 'DOUBLE YELLOW':
-                        print(Fore.YELLOW + "Yellow Flag" + Fore.RESET)
-                        if message['Scope'] == 'Sector':
-                            sector_status[message['Sector']] = 'YELLOW'
-                        elif message['Scope'] == 'Track':
-                            sector_status['Track'] = 'YELLOW'
-                    elif message['Flag'] == 'CLEAR':
-                        if message['Scope'] == 'Sector':
-                            sector_status[message['Sector']] = 'CLEAR'
-                        elif message['Scope'] == 'Track':
-                            sector_status = {'Track': 'CLEAR'}
-                    elif message['Flag'] == 'GREEN':
-                        sector_status = {'Track': 'GREEN'}
-                    elif message['Flag'] == 'RED':
-                        sector_status = {'Track': 'RED'}
-                    elif message['Flag'] == 'CHEQUERED':
-                        sector_status = {'Track': 'CHEQUERED'}
+                 messages = replay['R']['RaceControlMessages']['Messages']
+                 for message in messages:
+                    if message['Category'] == 'Flag':
+                        if message['Flag'] == 'YELLOW' or message['Flag'] == 'DOUBLE YELLOW':
+                            if message['Scope'] == 'Sector':
+                                self.sector_status[message['Sector']] = 'YELLOW'
+                            elif message['Scope'] == 'Track':
+                                self.sector_status['Track'] = 'YELLOW'
+                        elif message['Flag'] == 'CLEAR':
+                            if message['Scope'] == 'Sector':
+                                self.sector_status[message['Sector']] = 'CLEAR'
+                            elif message['Scope'] == 'Track':
+                                self.sector_status = {'Track': 'TRACKCLEAR'}
+                                self.current_status = 'TRACKCLEAR'
+                        elif message['Flag'] == 'GREEN':
+                            self.sector_status = {'Track': 'GREEN'}
+                        elif message['Flag'] == 'RED':
+                            self.sector_status = {'Track': 'RED'}
+                            self.current_status = 'RED'
+                        elif message['Flag'] == 'CHEQUERED':
+                            self.sector_status = {'Track': 'CHEQUERED'}
+                    elif message['Category'] == 'SafetyCar':
+                        if message['Status'] == 'DEPLOYED':
+                            self.current_status = 'SC'
+
+            if self.current_status != 'RED' and self.current_status != 'SC':
+                if 'Track' in self.sector_status and len(self.sector_status) == 1:
+                        # Only track status
+                        action = self.sector_status['Track']
+                else:
+                    action = 'TRACKCLEAR'
+                    for sector in self.sector_status:
+                        if self.sector_status[sector] == 'YELLOW':
+                            action = 'YELLOW'
+                            break
+            else: # Safety car or red flag trumps yellow flags.
+                action = self.current_status
+            
+            print(action)
 
     async def _on_do_nothing(self, msg):
         # just do nothing with the message; intended for debug mode where some
