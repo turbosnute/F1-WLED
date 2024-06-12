@@ -200,7 +200,8 @@ class SignalRClientMod2:
                             action = '' # Do nothing for yellow flags.
                             if message['Scope'] == 'Sector':
                                 self.sector_status[message['Sector']] = 'YELLOW'
-                                action = 'YELLOW'
+                                self.current_status != 'RED' and self.current_status != 'SC':
+                                    action = 'YELLOW'
                         elif message['Flag'] == 'RED':
                             print(Fore.RED + "Red Flag" + Fore.RESET)
                             action = 'RED'
@@ -216,6 +217,15 @@ class SignalRClientMod2:
                                 self.sector_status[message['Sector']] = 'CLEAR'
                                 # Check if all sectors are clear.
                                 #print(Back.CYAN + Fore.BLACK + message['Message'] + Fore.RESET + Back.RESET)
+                                action = 'TRACKCLEAR'
+                                for sector in self.sector_status:
+                                    if self.sector_status[sector] == 'YELLOW':
+                                        action = 'YELLOW'
+                                        break
+                                if self.current_status != 'RED' and self.current_status != 'SC' and action == 'TRACKCLEAR':
+                                    action = 'TRACKCLEAR'
+                                else:
+                                    action = ''
                         elif message['Flag'] == 'CHEQUERED':
                             print(Fore.MAGENTA + "Chequered Flag" + Fore.RESET + " " + message['Message'])
                             action = 'CHEQUERED'
