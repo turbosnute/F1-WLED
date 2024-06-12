@@ -196,26 +196,36 @@ class SignalRClientMod2:
                             print(Fore.GREEN + "Green Flag" + Fore.RESET + " " + message['Message'])
                             action = 'GREEN'
                         elif message['Flag'] == 'YELLOW' or message['Flag'] == 'DOUBLE YELLOW':
-                            #print(Fore.YELLOW + "Yellow Flag" + Fore.RESET + " " + message['Message'])
-                            #action = 'YELLOW'
+                            print(Fore.YELLOW + "Yellow Flag" + Fore.RESET + " " + message['Message'])
                             action = '' # Do nothing for yellow flags.
+                            if message['Scope'] == 'Sector':
+                                self.sector_status[message['Sector']] = 'YELLOW'
+                                action = 'YELLOW'
                         elif message['Flag'] == 'RED':
                             print(Fore.RED + "Red Flag" + Fore.RESET)
                             action = 'RED'
+                            self.sector_status = {'Track': 'RED'}
+                            self.current_status = 'RED'
                         elif message['Flag'] == 'CLEAR':
-                            if message['Message'] == 'TRACK CLEAR':
+                            if message['Scope'] == 'Track': # Track Clear.
                                 print(Fore.CYAN + "Clear Flag" + Fore.RESET + " " + message['Message'])
+                                self.sector_status = {'Track': 'TRACKCLEAR'}
+                                self.current_status = 'TRACKCLEAR'
                                 action = 'TRACKCLEAR'
-                            else:
-                                print(Back.CYAN + Fore.BLACK + message['Message'] + Fore.RESET + Back.RESET)
+                            else: # Clear flag for a sector. 
+                                self.sector_status[message['Sector']] = 'CLEAR'
+                                # Check if all sectors are clear.
+                                #print(Back.CYAN + Fore.BLACK + message['Message'] + Fore.RESET + Back.RESET)
                         elif message['Flag'] == 'CHEQUERED':
                             print(Fore.MAGENTA + "Chequered Flag" + Fore.RESET + " " + message['Message'])
                             action = 'CHEQUERED'
+                            self.track_status = {'Track': 'CHEQUERED'}
                         else:
                             print(Fore.MAGENTA + message['Message'] + Fore.RESET)
                     elif message['Category'] == 'SafetyCar':
                         print(Back.YELLOW + "Safety Car" + Back.RESET + " " + message['Message'])
                         action = 'SC'
+                        self.current_status = 'SC'
                     
                     if action != '':
                         self.to_wled(action)
