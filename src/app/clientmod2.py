@@ -266,7 +266,8 @@ class SignalRClientMod2:
             else: # Safety car or red flag trumps yellow flags.
                 action = self.current_status
             
-            print(action)
+            if action != '':
+                self.to_wled(action)
 
     async def _on_do_nothing(self, msg):
         # just do nothing with the message; intended for debug mode where some
