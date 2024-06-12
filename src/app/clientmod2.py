@@ -200,7 +200,7 @@ class SignalRClientMod2:
                             action = '' # Do nothing for yellow flags.
                             if message['Scope'] == 'Sector':
                                 self.sector_status[message['Sector']] = 'YELLOW'
-                                self.current_status != 'RED' and self.current_status != 'SC':
+                                if self.current_status != 'RED' and self.current_status != 'SC':
                                     action = 'YELLOW'
                         elif message['Flag'] == 'RED':
                             print(Fore.RED + "Red Flag" + Fore.RESET)
