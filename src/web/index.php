@@ -131,12 +131,10 @@
                             <label for="wled_host" class="form-label"><strong>WLED Host</strong> (ip or dns)</label>
                             <input type="text" class="form-control" id="wled_host" name="wled_host" value="<?php echo $wled_host; ?>" required>
                         </div>
-                        <!--
                         <div class="mb-3">
                             <label for="wled_yellow" class="form-label"><strong>WLED Yellow Flag Preset</strong> (number)</label>
                             <input type="text" class="form-control" id="wled_yellow" name="wled_yellow" value="<?php echo $wled_yellow; ?>" required>
                         </div>
-                        -->
                         <div class="mb-3">
                             <label for="wled_red" class="form-label"><strong>WLED Red Flag Preset</strong> (number)</label>
                             <input type="text" class="form-control" id="wled_red" name="wled_red" value="<?php echo $wled_red; ?>" required>

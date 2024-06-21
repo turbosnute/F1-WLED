@@ -77,7 +77,7 @@ class SignalRClientMod2:
     """
     _connection_url = 'https://livetiming.formula1.com/signalr'
 
-    def __init__(self, WLED_GREEN: int, WLED_TRACKCLEAR: int, WLED_RED: int, WLED_CHEQUERED: int, WLED_SC: int, WLED_HOST: str = '', WLED_DELAY: int = 0, filemode: str = 'w', debug: bool = False,
+    def __init__(self, WLED_GREEN: int, WLED_TRACKCLEAR: int, WLED_RED: int, WLED_YELLOW: int, WLED_CHEQUERED: int, WLED_SC: int, WLED_HOST: str = '', WLED_DELAY: int = 0, filemode: str = 'w', debug: bool = False,
                  timeout: int = 60, logger: Optional = None):
 
         self.headers = {'User-agent': 'BestHTTP',

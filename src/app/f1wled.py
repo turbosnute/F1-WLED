@@ -13,7 +13,7 @@ try:
 
     # Assign the data to individual variables
     WLED_GREEN = data['wled_green']
-    #WLED_YELLOW = data['wled_yellow']
+    WLED_YELLOW = data['wled_yellow']
     WLED_RED = data['wled_red']
     WLED_SC = data['wled_sc']
     WLED_CHEQUERED = data['wled_checkered']
@@ -32,6 +32,6 @@ except KeyError as e:
 log = logging.getLogger()
 log.setLevel(logging.DEBUG)
 
-client = SignalRClientMod2(WLED_GREEN=WLED_GREEN, WLED_TRACKCLEAR=WLED_TRACKCLEAR, WLED_RED=WLED_RED, WLED_CHEQUERED=WLED_CHEQUERED, WLED_SC=WLED_SC, WLED_HOST=WLED_HOST, WLED_DELAY=WLED_DELAY, debug=True)
+client = SignalRClientMod2(WLED_GREEN=WLED_GREEN, WLED_TRACKCLEAR=WLED_TRACKCLEAR, WLED_RED=WLED_RED, WLED_YELLOW=WLED_YELLOW, WLED_CHEQUERED=WLED_CHEQUERED, WLED_SC=WLED_SC, WLED_HOST=WLED_HOST, WLED_DELAY=WLED_DELAY, debug=True)
 
 client.start()

@@ -2,7 +2,7 @@
     session_start();
 
     $wled_green = (int)$_POST['wled_green'];
-    #$wled_yellow = (int)$_POST['wled_yellow'];
+    $wled_yellow = (int)$_POST['wled_yellow'];
     $wled_red = (int)$_POST['wled_red'];
     $wled_sc = (int)$_POST['wled_sc'];
     $wled_checkered = (int)$_POST['wled_checkered'];
@@ -11,13 +11,14 @@
     $wled_delay = (int)$_POST['wled_delay'];
     
     // Check if variables is numeric:
-    if (!is_numeric($wled_green) || !is_numeric($wled_red) || !is_numeric($wled_sc) || !is_numeric($wled_checkered) || !is_numeric($wled_trackclear) || !is_numeric($wled_delay)) {
+    if (!is_numeric($wled_green) || !is_numeric($wled_red) || !is_numeric($wled_yellow) || !is_numeric($wled_sc) || !is_numeric($wled_checkered) || !is_numeric($wled_trackclear) || !is_numeric($wled_delay)) {
         die("Invalid input! Please enter a number for the delay and the colors.");
     }
 
     $config_file_content = "{
         \"wled_green\": $wled_green,
         \"wled_red\": $wled_red,
+        \"wled_yellow\": $wled_yellow,
         \"wled_sc\": $wled_sc,
         \"wled_checkered\": $wled_checkered,
         \"wled_trackclear\": $wled_trackclear,
