@@ -156,7 +156,15 @@
                             <input type="text" class="form-control" id="wled_trackclear" name="wled_trackclear" value="<?php echo $wled_clear; ?>" required>
                         </div>
 
-                        <button type="submit" class="btn btn-primary">Save Config</button> <a class="btn btn-default mybtn" href="rolex.php">Rolex</a>
+                        <button type="submit" class="btn btn-primary">Save Config</button>
+                        <?php
+                            if (file_exists($config_path)) {
+                                // File exists
+                                ?>
+                                &nbsp;<a class="btn btn-default mybtn" data-toggle="tooltip" data-placement="top" title="Sets the delay to the number of seconds since the last half hour. Press this when you see the rolex clock tick on the live stream to set the delay."href="rolex.php">Rolex</a>
+                                <?php
+                            }                       
+                        ?>
                     </form>
                 </div><!-- card-body -->
             </div><!-- collapse -->
@@ -192,6 +200,9 @@
                     });
                 }, 1000); // update every second
             });
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            })
         </script>
     <?php
                 $_SESSION['process_started'] = NULL;
