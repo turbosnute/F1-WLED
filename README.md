@@ -6,7 +6,7 @@
 ```
 
 ## Requirements
-- WLED lamp/panel/something with API and presets for Green, red, chequered flag + safetycar.
+- WLED lamp/panel/something with API and presets for Green, Yellow, Red, Chequered Flag + Safetycar.
 
 ## Build
 ```

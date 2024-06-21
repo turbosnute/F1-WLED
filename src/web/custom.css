@@ -15,3 +15,18 @@
     from {transition: translateY(0);opacity: 0.85}
     to {transition: translateY(-150px);opacity: 0;top:0px;}
 }
+
+.mybtn {
+    background-color: #006039!important;
+    color:#FFFFFF!important;
+}
+
+.mybtn:hover {
+    background-color: #006039!important;
+    color: #A37E2C!important;
+}
+
+.mybtn:active {
+    background-color: #006039!important;
+    color: white!important;
+}
