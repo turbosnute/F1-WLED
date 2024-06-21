@@ -26,4 +26,6 @@
 
     // Save the updated config data to the config file
     file_put_contents($client_config_path, $config_data);
+
+    header('Location: index.php');
 ?>
